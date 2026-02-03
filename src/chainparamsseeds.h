@@ -7,7 +7,7 @@
  * Each line contains a BIP155 serialized (networkID, addr, port) tuple.
  */
 static const uint8_t chainparams_seed_main[] = {
-    0x01,0x04,0xae,0x04,0x2d,0x21,0x29,0x46,  // 174.4.45.33:10566
+    0x01,0x04,0xae,0x04,0x2d,0x21,0x31,0x16,  // 174.4.45.33:12566
 };
 
 // Empty testnet seeds - node will use DNS seeds or -addnode
