@@ -7,8 +7,8 @@
 export LC_ALL=C
 
 # Fixes permission issues when there is a container UID/GID mismatch with the owner
-# of the mounted bitcoinsilver src dir.
-git config --global --add safe.directory /bitcoinsilver
+# of the mounted caps src dir.
+git config --global --add safe.directory /caps
 
 export PATH="/python_build/bin:${PATH}"
 

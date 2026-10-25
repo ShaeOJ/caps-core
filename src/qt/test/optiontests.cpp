@@ -4,7 +4,7 @@
 
 #include <common/args.h>
 #include <init.h>
-#include <qt/bitcoinsilver.h>
+#include <qt/caps.h>
 #include <qt/guiutil.h>
 #include <qt/test/optiontests.h>
 #include <test/util/setup_common.h>
@@ -73,7 +73,7 @@ void OptionTests::migrateSettings()
 
 void OptionTests::integerGetArgBug()
 {
-    // Test regression https://github.com/MrVistos/bitcoinsilver/issues/24457. Ensure
+    // Test regression https://github.com/MrVistos/caps/issues/24457. Ensure
     // that setting integer prune value doesn't cause an exception to be thrown
     // in the OptionsModel constructor
     gArgs.LockSettings([&](common::Settings& settings) {
@@ -91,10 +91,10 @@ void OptionTests::integerGetArgBug()
 
 void OptionTests::parametersInteraction()
 {
-    // Test that the bug https://github.com/bitcoinsilver-core/gui/issues/567 does not resurface.
-    // It was fixed via https://github.com/bitcoinsilver-core/gui/pull/568.
-    // With fListen=false in ~/.config/BitcoinSilver/BitcoinSilver-Qt.conf and all else left as default,
-    // bitcoinsilver-qt should set both -listen and -listenonion to false and start successfully.
+    // Test that the bug https://github.com/caps-core/gui/issues/567 does not resurface.
+    // It was fixed via https://github.com/caps-core/gui/pull/568.
+    // With fListen=false in ~/.config/Caps/Caps-Qt.conf and all else left as default,
+    // caps-qt should set both -listen and -listenonion to false and start successfully.
     gArgs.LockSettings([&](common::Settings& s) {
         s.forced_settings.erase("listen");
         s.forced_settings.erase("listenonion");

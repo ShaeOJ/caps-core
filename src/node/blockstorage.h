@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_BLOCKSTORAGE_H
-#define BITCOINSILVER_NODE_BLOCKSTORAGE_H
+#ifndef CAPS_NODE_BLOCKSTORAGE_H
+#define CAPS_NODE_BLOCKSTORAGE_H
 
 #include <attributes.h>
 #include <chain.h>
@@ -373,4 +373,4 @@ public:
 void ImportBlocks(ChainstateManager& chainman, std::vector<fs::path> vImportFiles);
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_BLOCKSTORAGE_H
+#endif // CAPS_NODE_BLOCKSTORAGE_H

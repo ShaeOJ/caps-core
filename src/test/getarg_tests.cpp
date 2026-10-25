@@ -310,60 +310,60 @@ BOOST_AUTO_TEST_CASE(patharg)
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), win_root_path);
 #endif
 
-    const fs::path absolute_path{"/home/user/.bitcoinsilver"};
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinsilver");
+    const fs::path absolute_path{"/home/user/.caps"};
+    ResetArgs(local_args, "-dir=/home/user/.caps");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/root/../home/user/.bitcoinsilver");
+    ResetArgs(local_args, "-dir=/root/../home/user/.caps");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/./user/.bitcoinsilver");
+    ResetArgs(local_args, "-dir=/home/./user/.caps");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinsilver/");
+    ResetArgs(local_args, "-dir=/home/user/.caps/");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinsilver//");
+    ResetArgs(local_args, "-dir=/home/user/.caps//");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinsilver/.");
+    ResetArgs(local_args, "-dir=/home/user/.caps/.");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinsilver/./");
+    ResetArgs(local_args, "-dir=/home/user/.caps/./");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinsilver/.//");
+    ResetArgs(local_args, "-dir=/home/user/.caps/.//");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    const fs::path relative_path{"user/.bitcoinsilver"};
-    ResetArgs(local_args, "-dir=user/.bitcoinsilver");
+    const fs::path relative_path{"user/.caps"};
+    ResetArgs(local_args, "-dir=user/.caps");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=somewhere/../user/.bitcoinsilver");
+    ResetArgs(local_args, "-dir=somewhere/../user/.caps");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/./.bitcoinsilver");
+    ResetArgs(local_args, "-dir=user/./.caps");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinsilver/");
+    ResetArgs(local_args, "-dir=user/.caps/");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinsilver//");
+    ResetArgs(local_args, "-dir=user/.caps//");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinsilver/.");
+    ResetArgs(local_args, "-dir=user/.caps/.");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinsilver/./");
+    ResetArgs(local_args, "-dir=user/.caps/./");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinsilver/.//");
+    ResetArgs(local_args, "-dir=user/.caps/.//");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
     // Check negated and default argument handling. Specifying an empty argument
     // is the same as not specifying the argument. This is convenient for
     // scripting so later command line arguments can override earlier command
-    // line arguments or bitcoinsilver.conf values. Currently the -dir= case cannot be
+    // line arguments or caps.conf values. Currently the -dir= case cannot be
     // distinguished from -dir case with no assignment, but #16545 would add the
     // ability to distinguish these in the future (and treat the no-assign case
     // like an imperative command or an error).

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_FLATFILE_H
-#define BITCOINSILVER_FLATFILE_H
+#ifndef CAPS_FLATFILE_H
+#define CAPS_FLATFILE_H
 
 #include <string>
 
@@ -86,4 +86,4 @@ public:
     bool Flush(const FlatFilePos& pos, bool finalize = false);
 };
 
-#endif // BITCOINSILVER_FLATFILE_H
+#endif // CAPS_FLATFILE_H

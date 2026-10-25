@@ -5,8 +5,8 @@
 /**
  * Functionality for communicating with Tor.
  */
-#ifndef BITCOINSILVER_TORCONTROL_H
-#define BITCOINSILVER_TORCONTROL_H
+#ifndef CAPS_TORCONTROL_H
+#define CAPS_TORCONTROL_H
 
 #include <netaddress.h>
 #include <util/fs.h>
@@ -98,7 +98,7 @@ private:
     static void eventcb(struct bufferevent *bev, short what, void *ctx);
 };
 
-/****** BitcoinSilver specific TorController implementation ********/
+/****** Caps specific TorController implementation ********/
 
 /** Controller that connects to Tor control socket, authenticate, then create
  * and maintain an ephemeral onion service.
@@ -153,4 +153,4 @@ public:
     static void reconnect_cb(evutil_socket_t fd, short what, void *arg);
 };
 
-#endif // BITCOINSILVER_TORCONTROL_H
+#endif // CAPS_TORCONTROL_H

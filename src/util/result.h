@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_RESULT_H
-#define BITCOINSILVER_UTIL_RESULT_H
+#ifndef CAPS_UTIL_RESULT_H
+#define CAPS_UTIL_RESULT_H
 
 #include <attributes.h>
 #include <util/translation.h>
@@ -84,4 +84,4 @@ bilingual_str ErrorString(const Result<T>& result)
 }
 } // namespace util
 
-#endif // BITCOINSILVER_UTIL_RESULT_H
+#endif // CAPS_UTIL_RESULT_H

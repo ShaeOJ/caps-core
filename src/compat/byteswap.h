@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_COMPAT_BYTESWAP_H
-#define BITCOINSILVER_COMPAT_BYTESWAP_H
+#ifndef CAPS_COMPAT_BYTESWAP_H
+#define CAPS_COMPAT_BYTESWAP_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <cstdint>
@@ -56,4 +56,4 @@ inline uint64_t bswap_64(uint64_t x)
 
 #endif // defined(MAC_OSX)
 
-#endif // BITCOINSILVER_COMPAT_BYTESWAP_H
+#endif // CAPS_COMPAT_BYTESWAP_H

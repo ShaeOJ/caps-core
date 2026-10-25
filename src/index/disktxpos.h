@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_INDEX_DISKTXPOS_H
-#define BITCOINSILVER_INDEX_DISKTXPOS_H
+#ifndef CAPS_INDEX_DISKTXPOS_H
+#define CAPS_INDEX_DISKTXPOS_H
 
 #include <flatfile.h>
 #include <serialize.h>
@@ -23,4 +23,4 @@ struct CDiskTxPos : public FlatFilePos
     CDiskTxPos() {}
 };
 
-#endif // BITCOINSILVER_INDEX_DISKTXPOS_H
+#endif // CAPS_INDEX_DISKTXPOS_H

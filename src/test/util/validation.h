@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TEST_UTIL_VALIDATION_H
-#define BITCOINSILVER_TEST_UTIL_VALIDATION_H
+#ifndef CAPS_TEST_UTIL_VALIDATION_H
+#define CAPS_TEST_UTIL_VALIDATION_H
 
 #include <validation.h>
 
@@ -26,4 +26,4 @@ public:
         const CBlockIndex* pindex);
 };
 
-#endif // BITCOINSILVER_TEST_UTIL_VALIDATION_H
+#endif // CAPS_TEST_UTIL_VALIDATION_H

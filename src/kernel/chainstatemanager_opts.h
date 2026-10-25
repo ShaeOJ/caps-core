@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_KERNEL_CHAINSTATEMANAGER_OPTS_H
-#define BITCOINSILVER_KERNEL_CHAINSTATEMANAGER_OPTS_H
+#ifndef CAPS_KERNEL_CHAINSTATEMANAGER_OPTS_H
+#define CAPS_KERNEL_CHAINSTATEMANAGER_OPTS_H
 
 #include <kernel/notifications_interface.h>
 
@@ -49,4 +49,4 @@ struct ChainstateManagerOpts {
 
 } // namespace kernel
 
-#endif // BITCOINSILVER_KERNEL_CHAINSTATEMANAGER_OPTS_H
+#endif // CAPS_KERNEL_CHAINSTATEMANAGER_OPTS_H

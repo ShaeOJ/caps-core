@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_CHECK_H
-#define BITCOINSILVER_UTIL_CHECK_H
+#ifndef CAPS_UTIL_CHECK_H
+#define CAPS_UTIL_CHECK_H
 
 #include <attributes.h>
 
@@ -91,4 +91,4 @@ T&& inline_assertion_check(LIFETIMEBOUND T&& val, [[maybe_unused]] const char* f
     throw NonFatalCheckError(                                         \
         "Unreachable code reached (non-fatal)", __FILE__, __LINE__, __func__)
 
-#endif // BITCOINSILVER_UTIL_CHECK_H
+#endif // CAPS_UTIL_CHECK_H

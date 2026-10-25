@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_VERSIONBITS_H
-#define BITCOINSILVER_VERSIONBITS_H
+#ifndef CAPS_VERSIONBITS_H
+#define CAPS_VERSIONBITS_H
 
 #include <chain.h>
 #include <sync.h>
@@ -104,4 +104,4 @@ public:
     void Clear() EXCLUSIVE_LOCKS_REQUIRED(!m_mutex);
 };
 
-#endif // BITCOINSILVER_VERSIONBITS_H
+#endif // CAPS_VERSIONBITS_H

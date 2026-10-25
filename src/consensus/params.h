@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CONSENSUS_PARAMS_H
-#define BITCOINSILVER_CONSENSUS_PARAMS_H
+#ifndef CAPS_CONSENSUS_PARAMS_H
+#define CAPS_CONSENSUS_PARAMS_H
 
 #include <uint256.h>
 
@@ -122,7 +122,7 @@ struct Params {
     uint256 defaultAssumeValid;
 
     /**
-     * If true, witness commitments contain a payload equal to a BitcoinSilver Script solution
+     * If true, witness commitments contain a payload equal to a Caps Script solution
      * to the signet challenge. See BIP325.
      */
     bool signet_blocks{false};
@@ -148,4 +148,4 @@ struct Params {
 
 } // namespace Consensus
 
-#endif // BITCOINSILVER_CONSENSUS_PARAMS_H
+#endif // CAPS_CONSENSUS_PARAMS_H

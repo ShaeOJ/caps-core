@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_CONTEXT_H
-#define BITCOINSILVER_NODE_CONTEXT_H
+#ifndef CAPS_NODE_CONTEXT_H
+#define CAPS_NODE_CONTEXT_H
 
 #include <kernel/context.h>
 
@@ -46,7 +46,7 @@ class KernelNotifications;
 //! any member functions. It should just be a collection of references that can
 //! be used without pulling in unwanted dependencies or functionality.
 struct NodeContext {
-    //! libbitcoinsilver_kernel context
+    //! libcaps_kernel context
     std::unique_ptr<kernel::Context> kernel;
     //! Init interface for initializing current process and connecting to other processes.
     interfaces::Init* init{nullptr};
@@ -79,4 +79,4 @@ struct NodeContext {
 };
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_CONTEXT_H
+#endif // CAPS_NODE_CONTEXT_H

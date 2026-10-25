@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_PREVECTOR_H
-#define BITCOINSILVER_PREVECTOR_H
+#ifndef CAPS_PREVECTOR_H
+#define CAPS_PREVECTOR_H
 
 #include <assert.h>
 #include <cstdlib>
@@ -533,4 +533,4 @@ public:
     }
 };
 
-#endif // BITCOINSILVER_PREVECTOR_H
+#endif // CAPS_PREVECTOR_H

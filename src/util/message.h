@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_MESSAGE_H
-#define BITCOINSILVER_UTIL_MESSAGE_H
+#ifndef CAPS_UTIL_MESSAGE_H
+#define CAPS_UTIL_MESSAGE_H
 
 #include <uint256.h>
 
@@ -47,7 +47,7 @@ enum class SigningResult {
 };
 
 /** Verify a signed message.
- * @param[in] address Signer's bitcoinsilver address, it must refer to a public key.
+ * @param[in] address Signer's caps address, it must refer to a public key.
  * @param[in] signature The signature in base64 format.
  * @param[in] message The message that was signed.
  * @return result code */
@@ -74,4 +74,4 @@ uint256 MessageHash(const std::string& message);
 
 std::string SigningResultString(const SigningResult res);
 
-#endif // BITCOINSILVER_UTIL_MESSAGE_H
+#endif // CAPS_UTIL_MESSAGE_H

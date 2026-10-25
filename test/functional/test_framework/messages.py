@@ -4,11 +4,11 @@
 # Copyright (c) 2010-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""BitcoinSilver test framework primitive and message structures
+"""Caps test framework primitive and message structures
 
 CBlock, CTransaction, CBlockHeader, CTxIn, CTxOut, etc....:
     data structures that should map to corresponding structures in
-    bitcoinsilver/primitives
+    caps/primitives
 
 msg_block, msg_tx, msg_headers, etc.:
     data structures that represent network messages
@@ -227,13 +227,13 @@ def from_binary(cls, stream):
     return obj
 
 
-# Objects that map to bitcoinsilverd objects, which can be serialized/deserialized
+# Objects that map to capsd objects, which can be serialized/deserialized
 
 
 class CAddress:
     __slots__ = ("net", "ip", "nServices", "port", "time")
 
-    # see https://github.com/bitcoinsilver/bips/blob/master/bip-0155.mediawiki
+    # see https://github.com/caps/bips/blob/master/bip-0155.mediawiki
     NET_IPV4 = 1
     NET_IPV6 = 2
     NET_TORV3 = 4
@@ -404,7 +404,7 @@ class CBlockLocator:
 
     def serialize(self):
         r = b""
-        r += struct.pack("<i", 0)  # BitcoinSilver ignores version field. Set it to 0.
+        r += struct.pack("<i", 0)  # Caps ignores version field. Set it to 0.
         r += ser_uint256_vector(self.vHave)
         return r
 
@@ -581,7 +581,7 @@ class CTransaction:
         if len(self.vin) == 0:
             flags = struct.unpack("<B", f.read(1))[0]
             # Not sure why flags can't be zero, but this
-            # matches the implementation in bitcoinsilverd
+            # matches the implementation in capsd
             if (flags != 0):
                 self.vin = deser_vector(f, CTxIn)
                 self.vout = deser_vector(f, CTxOut)
@@ -1131,7 +1131,7 @@ class msg_version:
         self.nStartingHeight = struct.unpack("<i", f.read(4))[0]
 
         # Relay field is optional for version 70001 onwards
-        # But, unconditionally check it to match behaviour in bitcoinsilverd
+        # But, unconditionally check it to match behaviour in capsd
         try:
             self.relay = struct.unpack("<b", f.read(1))[0]
         except struct.error:
@@ -1512,7 +1512,7 @@ class msg_headers:
         self.headers = headers if headers is not None else []
 
     def deserialize(self, f):
-        # comment in bitcoinsilverd indicates these should be deserialized as blocks
+        # comment in capsd indicates these should be deserialized as blocks
         blocks = deser_vector(f, CBlock)
         for x in blocks:
             self.headers.append(CBlockHeader(x))

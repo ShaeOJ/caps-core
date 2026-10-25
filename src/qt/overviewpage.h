@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_OVERVIEWPAGE_H
-#define BITCOINSILVER_QT_OVERVIEWPAGE_H
+#ifndef CAPS_QT_OVERVIEWPAGE_H
+#define CAPS_QT_OVERVIEWPAGE_H
 
 #include <interfaces/wallet.h>
 
@@ -68,4 +68,4 @@ private Q_SLOTS:
     void setMonospacedFont(bool use_embedded_font);
 };
 
-#endif // BITCOINSILVER_QT_OVERVIEWPAGE_H
+#endif // CAPS_QT_OVERVIEWPAGE_H

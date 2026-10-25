@@ -1,0 +1,631 @@
+'vswhere.exe' is not recognized as an internal or external command,
+operable program or batch file.
+**********************************************************************
+** Visual Studio 2022 Developer Command Prompt v17.0
+** Copyright (c) 2025 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+MSBuild version 17.14.19+164abd434 for .NET Framework
+Build started 2026-02-02 6:34:44 PM.
+
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" on node 1 (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_consensus\libcaps_consensus.vcxproj" (2) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_consensus\libcaps_.2B384FA8.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_consensus\libcaps_.2B384FA8.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_consensus.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_consensus\x64\Release\libcaps_consensus\libcaps_consensus.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_consensus\libcaps_.2B384FA8.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_consensus\libcaps_.2B384FA8.tlog\libcaps_consensus.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_consensus\libcaps_consensus.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_cli\libcaps_cli.vcxproj" (3) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_cli\libcaps_cli.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_cli\libcaps_cli.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_cli.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_cli\x64\Release\libcaps_cli\libcaps_cli.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_cli\libcaps_cli.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_cli\libcaps_cli.tlog\libcaps_cli.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_cli\libcaps_cli.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_common\libcaps_common.vcxproj" (4) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_common\libcaps_common.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_common\libcaps_common.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_common.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_common\x64\Release\libcaps_common\libcaps_common.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_common\libcaps_common.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_common\libcaps_common.tlog\libcaps_common.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_common\libcaps_common.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_crypto\libcaps_crypto.vcxproj" (5) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_crypto\libcaps_crypto.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_crypto\libcaps_crypto.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_crypto.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_crypto\x64\Release\libcaps_crypto\libcaps_crypto.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_crypto\libcaps_crypto.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_crypto\libcaps_crypto.tlog\libcaps_crypto.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_crypto\libcaps_crypto.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj" (6) on node 1 (default targets).
+moccode:
+Skipping target "moccode" because all output files are up-to-date with respect to the input files.
+mocheader:
+Skipping target "mocheader" because all output files are up-to-date with respect to the input files.
+forms:
+Skipping target "forms" because all output files are up-to-date with respect to the input files.
+translation:
+Skipping target "translation" because all output files are up-to-date with respect to the input files.
+resource:
+Skipping target "resource" because all output files are up-to-date with respect to the input files.
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Touching "x64\Release\libcaps_qt\libcaps_qt.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /IC:\Qt_static\include /IC:\Qt_static\include\QtNetwork /IC:\Qt_static\include\QtCore /IC:\Qt_static\include\QtWidgets /IC:\Qt_static\include\QtGui /I.\QtGeneratedFiles\qt\.. /I..\..\src /I..\..\src\minisketch\include /I..\..\src\univalue\include /I..\..\src\secp256k1\include /I..\..\src\leveldb\include /I..\..\src\leveldb\helpers\memenv /I"C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\include" /nologo /W3 /WX /diagnostics:column /sdl /Od /Oi /D _AMD64_ /D _UNICODE /D UNICODE /D _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING /D SECP256K1_STATIC /D ZMQ_STATIC /D NOMINMAX /D WIN32 /D HAVE_CONFIG_H /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _CONSOLE /D _WIN32_WINNT=0x0601 /D _WIN32_IE=0x0501 /D WIN32_LEAN_AND_MEAN /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\libcaps_qt\\" /Fd"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\x64\Release\libcaps_qt\libcaps_qt.pdb" /external:W3 /Gd /TP /wd4018 /wd4244 /wd4267 /wd4715 /wd4805 /FC /errorReport:queue /utf-8 /Zc:__cplusplus /std:c++20 ..\..\src\qt\capsstrings.cpp
+  capsstrings.cpp
+Lib:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\x64\Release\libcaps_qt\libcaps_qt.lib" /LIBPATH:"C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\lib" /LIBPATH:"C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\lib\manual-link" /NOLOGO /MACHINE:X64 /ignore:4221 x64\Release\libcaps_qt\addressbookpage.obj
+  x64\Release\libcaps_qt\addresstablemodel.obj
+  x64\Release\libcaps_qt\askpassphrasedialog.obj
+  x64\Release\libcaps_qt\bantablemodel.obj
+  x64\Release\libcaps_qt\caps.obj
+  x64\Release\libcaps_qt\capsaddressvalidator.obj
+  x64\Release\libcaps_qt\capsamountfield.obj
+  x64\Release\libcaps_qt\capsgui.obj
+  x64\Release\libcaps_qt\capsstrings.obj
+  x64\Release\libcaps_qt\capsunits.obj
+  x64\Release\libcaps_qt\clientmodel.obj
+  x64\Release\libcaps_qt\coincontroldialog.obj
+  x64\Release\libcaps_qt\coincontroltreewidget.obj
+  x64\Release\libcaps_qt\createwalletdialog.obj
+  x64\Release\libcaps_qt\csvmodelwriter.obj
+  x64\Release\libcaps_qt\editaddressdialog.obj
+  x64\Release\libcaps_qt\guiutil.obj
+  x64\Release\libcaps_qt\initexecutor.obj
+  x64\Release\libcaps_qt\intro.obj
+  x64\Release\libcaps_qt\modaloverlay.obj
+  x64\Release\libcaps_qt\networkstyle.obj
+  x64\Release\libcaps_qt\notificator.obj
+  x64\Release\libcaps_qt\openuridialog.obj
+  x64\Release\libcaps_qt\optionsdialog.obj
+  x64\Release\libcaps_qt\optionsmodel.obj
+  x64\Release\libcaps_qt\overviewpage.obj
+  x64\Release\libcaps_qt\paymentserver.obj
+  x64\Release\libcaps_qt\peertablemodel.obj
+  x64\Release\libcaps_qt\peertablesortproxy.obj
+  x64\Release\libcaps_qt\platformstyle.obj
+  x64\Release\libcaps_qt\psbtoperationsdialog.obj
+  x64\Release\libcaps_qt\qrimagewidget.obj
+  x64\Release\libcaps_qt\qvalidatedlineedit.obj
+  x64\Release\libcaps_qt\qvaluecombobox.obj
+  x64\Release\libcaps_qt\receivecoinsdialog.obj
+  x64\Release\libcaps_qt\receiverequestdialog.obj
+  x64\Release\libcaps_qt\recentrequeststablemodel.obj
+  x64\Release\libcaps_qt\rpcconsole.obj
+  x64\Release\libcaps_qt\sendcoinsdialog.obj
+  x64\Release\libcaps_qt\sendcoinsentry.obj
+  x64\Release\libcaps_qt\signverifymessagedialog.obj
+  x64\Release\libcaps_qt\splashscreen.obj
+  x64\Release\libcaps_qt\trafficgraphwidget.obj
+  x64\Release\libcaps_qt\transactiondesc.obj
+  x64\Release\libcaps_qt\transactiondescdialog.obj
+  x64\Release\libcaps_qt\transactionfilterproxy.obj
+  x64\Release\libcaps_qt\transactionoverviewwidget.obj
+  x64\Release\libcaps_qt\transactionrecord.obj
+  x64\Release\libcaps_qt\transactiontablemodel.obj
+  x64\Release\libcaps_qt\transactionview.obj
+  x64\Release\libcaps_qt\utilitydialog.obj
+  x64\Release\libcaps_qt\walletcontroller.obj
+  x64\Release\libcaps_qt\walletframe.obj
+  x64\Release\libcaps_qt\walletmodel.obj
+  x64\Release\libcaps_qt\walletmodeltransaction.obj
+  x64\Release\libcaps_qt\walletview.obj
+  x64\Release\libcaps_qt\winshutdownmonitor.obj
+  x64\Release\libcaps_qt\moc_addressbookpage.obj
+  x64\Release\libcaps_qt\moc_addresstablemodel.obj
+  x64\Release\libcaps_qt\moc_askpassphrasedialog.obj
+  x64\Release\libcaps_qt\moc_bantablemodel.obj
+  x64\Release\libcaps_qt\moc_caps.obj
+  x64\Release\libcaps_qt\moc_capsaddressvalidator.obj
+  x64\Release\libcaps_qt\moc_capsamountfield.obj
+  x64\Release\libcaps_qt\moc_capsgui.obj
+  x64\Release\libcaps_qt\moc_capsunits.obj
+  x64\Release\libcaps_qt\moc_clientmodel.obj
+  x64\Release\libcaps_qt\moc_coincontroldialog.obj
+  x64\Release\libcaps_qt\moc_coincontroltreewidget.obj
+  x64\Release\libcaps_qt\moc_createwalletdialog.obj
+  x64\Release\libcaps_qt\moc_csvmodelwriter.obj
+  x64\Release\libcaps_qt\moc_editaddressdialog.obj
+  x64\Release\libcaps_qt\moc_guiutil.obj
+  x64\Release\libcaps_qt\moc_initexecutor.obj
+  x64\Release\libcaps_qt\moc_intro.obj
+  x64\Release\libcaps_qt\moc_modaloverlay.obj
+  x64\Release\libcaps_qt\moc_networkstyle.obj
+  x64\Release\libcaps_qt\moc_notificator.obj
+  x64\Release\libcaps_qt\moc_openuridialog.obj
+  x64\Release\libcaps_qt\moc_optionsdialog.obj
+  x64\Release\libcaps_qt\moc_optionsmodel.obj
+  x64\Release\libcaps_qt\moc_overviewpage.obj
+  x64\Release\libcaps_qt\moc_paymentserver.obj
+  x64\Release\libcaps_qt\moc_peertablemodel.obj
+  x64\Release\libcaps_qt\moc_peertablesortproxy.obj
+  x64\Release\libcaps_qt\moc_platformstyle.obj
+  x64\Release\libcaps_qt\moc_psbtoperationsdialog.obj
+  x64\Release\libcaps_qt\moc_qrimagewidget.obj
+  x64\Release\libcaps_qt\moc_qvalidatedlineedit.obj
+  x64\Release\libcaps_qt\moc_qvaluecombobox.obj
+  x64\Release\libcaps_qt\moc_receivecoinsdialog.obj
+  x64\Release\libcaps_qt\moc_receiverequestdialog.obj
+  x64\Release\libcaps_qt\moc_recentrequeststablemodel.obj
+  x64\Release\libcaps_qt\moc_rpcconsole.obj
+  x64\Release\libcaps_qt\moc_sendcoinsdialog.obj
+  x64\Release\libcaps_qt\moc_sendcoinsentry.obj
+  x64\Release\libcaps_qt\moc_signverifymessagedialog.obj
+  x64\Release\libcaps_qt\moc_splashscreen.obj
+  x64\Release\libcaps_qt\moc_trafficgraphwidget.obj
+  x64\Release\libcaps_qt\moc_transactiondesc.obj
+  x64\Release\libcaps_qt\moc_transactiondescdialog.obj
+  x64\Release\libcaps_qt\moc_transactionfilterproxy.obj
+  x64\Release\libcaps_qt\moc_transactionoverviewwidget.obj
+  x64\Release\libcaps_qt\moc_transactionrecord.obj
+  x64\Release\libcaps_qt\moc_transactiontablemodel.obj
+  x64\Release\libcaps_qt\moc_transactionview.obj
+  x64\Release\libcaps_qt\moc_utilitydialog.obj
+  x64\Release\libcaps_qt\moc_walletcontroller.obj
+  x64\Release\libcaps_qt\moc_walletframe.obj
+  x64\Release\libcaps_qt\moc_walletmodel.obj
+  x64\Release\libcaps_qt\moc_walletmodeltransaction.obj
+  x64\Release\libcaps_qt\moc_walletview.obj
+  x64\Release\libcaps_qt\moc_winshutdownmonitor.obj
+  x64\Release\libcaps_qt\qrc_caps.obj
+  x64\Release\libcaps_qt\qrc_caps_locale.obj
+  libcaps_qt.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\x64\Release\libcaps_qt\libcaps_qt.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_qt\libcaps_qt.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_qt\libcaps_qt.tlog\libcaps_qt.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_node\libcaps_node.vcxproj" (7) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_node\libcaps_node.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_node\libcaps_node.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_node.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_node\x64\Release\libcaps_node\libcaps_node.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_node\libcaps_node.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_node\libcaps_node.tlog\libcaps_node.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_node\libcaps_node.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_util\libcaps_util.vcxproj" (8) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_util\libcaps_util.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_util\libcaps_util.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_util.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_util\x64\Release\libcaps_util\libcaps_util.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_util\libcaps_util.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_util\libcaps_util.tlog\libcaps_util.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_util\libcaps_util.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_wallet\libcaps_wallet.vcxproj" (9) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_wallet\libcaps_wallet.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_wallet\libcaps_wallet.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_wallet.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_wallet\x64\Release\libcaps_wallet\libcaps_wallet.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_wallet\libcaps_wallet.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_wallet\libcaps_wallet.tlog\libcaps_wallet.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_wallet\libcaps_wallet.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_zmq\libcaps_zmq.vcxproj" (10) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_zmq\libcaps_zmq.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_zmq\libcaps_zmq.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_zmq.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_zmq\x64\Release\libcaps_zmq\libcaps_zmq.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_zmq\libcaps_zmq.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_zmq\libcaps_zmq.tlog\libcaps_zmq.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_zmq\libcaps_zmq.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libleveldb\libleveldb.vcxproj" (11) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libleveldb\libleveldb.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libleveldb\libleveldb.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libleveldb.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libleveldb\x64\Release\libleveldb\libleveldb.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libleveldb\libleveldb.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libleveldb\libleveldb.tlog\libleveldb.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libleveldb\libleveldb.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libsecp256k1\libsecp256k1.vcxproj" (12) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libsecp256k1\libsecp256k1.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libsecp256k1\libsecp256k1.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libsecp256k1.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libsecp256k1\x64\Release\libsecp256k1\libsecp256k1.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libsecp256k1\libsecp256k1.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libsecp256k1\libsecp256k1.tlog\libsecp256k1.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libsecp256k1\libsecp256k1.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libunivalue\libunivalue.vcxproj" (13) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libunivalue\libunivalue.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libunivalue\libunivalue.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libunivalue.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libunivalue\x64\Release\libunivalue\libunivalue.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libunivalue\libunivalue.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libunivalue\libunivalue.tlog\libunivalue.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libunivalue\libunivalue.vcxproj" (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Touching "x64\Release\caps-qt\caps-qt.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /IC:\Qt_static\include /IC:\Qt_static\include\QtNetwork /IC:\Qt_static\include\QtCore /IC:\Qt_static\include\QtWidgets /IC:\Qt_static\include\QtGui /I..\..\src /I..\..\src\minisketch\include /I..\..\src\univalue\include /I..\..\src\secp256k1\include /I..\..\src\leveldb\include /I..\..\src\leveldb\helpers\memenv /I"C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\include" /nologo /W3 /WX /diagnostics:column /sdl /Od /Oi /D _UNICODE /D UNICODE /D _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING /D SECP256K1_STATIC /D ZMQ_STATIC /D NOMINMAX /D WIN32 /D HAVE_CONFIG_H /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _CONSOLE /D _WIN32_WINNT=0x0601 /D _WIN32_IE=0x0501 /D WIN32_LEAN_AND_MEAN /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\caps-qt\\" /Fd"x64\Release\caps-qt\vc143.pdb" /external:W3 /Gd /TP /wd4018 /wd4244 /wd4267 /wd4715 /wd4805 /FC /errorReport:queue /utf-8 /Zc:__cplusplus /std:c++20 ..\..\src\qt\main.cpp "..\..\src\init\caps-qt.cpp"
+  main.cpp
+  caps-qt.cpp
+  Generating Code...
+ResourceCompile:
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\rc.exe /D _UNICODE /D UNICODE /D HAVE_CONFIG_H /D _UNICODE /D UNICODE /l"0x0409" /I..\..\src /I"C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\include" /nologo /fo"x64\Release\caps-qt\caps-qt-res.res" "..\..\src\qt\res\caps-qt-res.rc" 
+Link:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\x64\Release\caps-qt.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\lib" /LIBPATH:"C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\lib\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib C:\Qt_static\plugins\platforms\qminimal.lib C:\Qt_static\plugins\platforms\qwindows.lib C:\Qt_static\plugins\styles\qwindowsvistastyle.lib C:\Qt_static\lib\Qt5WindowsUIAutomationSupport.lib C:\Qt_static\lib\qtfreetype.lib C:\Qt_static\lib\qtharfbuzz.lib C:\Qt_static\lib\qtlibpng.lib C:\Qt_static\lib\qtpcre2.lib C:\Qt_static\lib\Qt5AccessibilitySupport.lib C:\Qt_static\lib\Qt5Core.lib C:\Qt_static\lib\Qt5Concurrent.lib C:\Qt_static\lib\Qt5EventDispatcherSupport.lib C:\Qt_static\lib\Qt5FontDatabaseSupport.lib C:\Qt_static\lib\Qt5Gui.lib C:\Qt_static\lib\Qt5Network.lib C:\Qt_static\lib\Qt5PlatformCompositorSupport.lib C:\Qt_static\lib\Qt5ThemeSupport.lib C:\Qt_static\lib\Qt5Widgets.lib C:\Qt_static\lib\Qt5WinExtras.lib C:\Qt_static\lib\qtmain.lib Wtsapi32.lib userenv.lib netapi32.lib imm32.lib Dwmapi.lib version.lib winmm.lib UxTheme.lib bcrypt.lib Iphlpapi.lib ws2_32.lib Shlwapi.lib kernel32.lib user32.lib gdi32.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\lib\*.lib" /MANIFEST:NO /DEBUG:FULL /PDB:"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\x64\Release\caps-qt.pdb" /SUBSYSTEM:WINDOWS /OPT:NOREF /OPT:NOICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\x64\Release\caps-qt.lib" /MACHINE:X64 /ignore:4206 /LTCG:OFF "x64\Release\caps-qt\caps-qt-res.res"
+  "x64\Release\caps-qt\main.obj"
+  "x64\Release\caps-qt\caps-qt.obj"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_consensus\x64\Release\libcaps_consensus\libcaps_consensus.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_cli\x64\Release\libcaps_cli\libcaps_cli.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_common\x64\Release\libcaps_common\libcaps_common.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_crypto\x64\Release\libcaps_crypto\libcaps_crypto.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\x64\Release\libcaps_qt\libcaps_qt.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_node\x64\Release\libcaps_node\libcaps_node.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_util\x64\Release\libcaps_util\libcaps_util.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_wallet\x64\Release\libcaps_wallet\libcaps_wallet.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_zmq\x64\Release\libcaps_zmq\libcaps_zmq.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libleveldb\x64\Release\libleveldb\libleveldb.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libsecp256k1\x64\Release\libsecp256k1\libsecp256k1.lib"
+  "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libunivalue\x64\Release\libunivalue\libunivalue.lib"
+     Creating library C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\x64\Release\caps-qt.lib and object C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\x64\Release\caps-qt.exp
+  caps-qt.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\x64\Release\caps-qt.exe
+AppLocalFromInstalled:
+  pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\x64\Release\caps-qt.exe" "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\bin" "x64\Release\caps-qt\caps-qt.tlog\caps-qt.write.1u.tlog" "x64\Release\caps-qt\vcpkg.applocal.log"
+FinalizeBuildStatus:
+  Deleting file "x64\Release\caps-qt\caps-qt.tlog\unsuccessfulbuild".
+  Touching "x64\Release\caps-qt\caps-qt.tlog\caps-qt.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:25.77

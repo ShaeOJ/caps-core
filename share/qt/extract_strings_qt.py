@@ -75,11 +75,11 @@ f.write("""
 #define UNUSED
 #endif
 """)
-f.write('static const char UNUSED *bitcoinsilver_strings[] = {\n')
-f.write('QT_TRANSLATE_NOOP("bitcoinsilver-core", "%s"),\n' % (os.getenv('COPYRIGHT_HOLDERS'),))
+f.write('static const char UNUSED *caps_strings[] = {\n')
+f.write('QT_TRANSLATE_NOOP("caps-core", "%s"),\n' % (os.getenv('COPYRIGHT_HOLDERS'),))
 messages.sort(key=operator.itemgetter(0))
 for (msgid, msgstr) in messages:
     if msgid != EMPTY:
-        f.write('QT_TRANSLATE_NOOP("bitcoinsilver-core", %s),\n' % ('\n'.join(msgid)))
+        f.write('QT_TRANSLATE_NOOP("caps-core", %s),\n' % ('\n'.join(msgid)))
 f.write('};\n')
 f.close()

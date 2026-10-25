@@ -3045,11 +3045,11 @@ bool PeerManagerImpl::ProcessOrphanTx(Peer& peer)
                 // adding such txids to the reject filter would potentially
                 // interfere with relay of valid transactions from peers that
                 // do not support wtxid-based relay. See
-                // https://github.com/MrVistos/bitcoinsilver/issues/8279 for details.
+                // https://github.com/MrVistos/caps/issues/8279 for details.
                 // We can remove this restriction (and always add wtxids to
                 // the filter even for witness stripped transactions) once
                 // wtxid-based relay is broadly deployed.
-                // See also comments in https://github.com/MrVistos/bitcoinsilver/pull/18044#discussion_r443419034
+                // See also comments in https://github.com/MrVistos/caps/pull/18044#discussion_r443419034
                 // for concerns around weakening security of unupgraded nodes
                 // if we start doing this too early.
                 m_recent_rejects.insert(porphanTx->GetWitnessHash());
@@ -3409,6 +3409,12 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
             std::string strSubVer;
             vRecv >> LIMITED_STRING(strSubVer, MAX_SUBVERSION_LENGTH);
             cleanSubVer = SanitizeString(strSubVer);
+        }
+        // Reject peers running BitcoinSilver client
+        if (cleanSubVer.find("BitcoinSilver") != std::string::npos) {
+            LogPrint(BCLog::NET, "peer=%d using incompatible client %s; disconnecting\n", pfrom.GetId(), cleanSubVer);
+            pfrom.fDisconnect = true;
+            return;
         }
         if (!vRecv.empty()) {
             vRecv >> starting_height;
@@ -4332,11 +4338,11 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
                 // adding such txids to the reject filter would potentially
                 // interfere with relay of valid transactions from peers that
                 // do not support wtxid-based relay. See
-                // https://github.com/MrVistos/bitcoinsilver/issues/8279 for details.
+                // https://github.com/MrVistos/caps/issues/8279 for details.
                 // We can remove this restriction (and always add wtxids to
                 // the filter even for witness stripped transactions) once
                 // wtxid-based relay is broadly deployed.
-                // See also comments in https://github.com/MrVistos/bitcoinsilver/pull/18044#discussion_r443419034
+                // See also comments in https://github.com/MrVistos/caps/pull/18044#discussion_r443419034
                 // for concerns around weakening security of unupgraded nodes
                 // if we start doing this too early.
                 m_recent_rejects.insert(tx.GetWitnessHash());

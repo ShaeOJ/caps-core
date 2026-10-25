@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_SHUTDOWN_H
-#define BITCOINSILVER_SHUTDOWN_H
+#ifndef CAPS_SHUTDOWN_H
+#define CAPS_SHUTDOWN_H
 
 /** Request shutdown of the application. */
 void StartShutdown();
@@ -22,4 +22,4 @@ bool ShutdownRequested();
  */
 void WaitForShutdown();
 
-#endif // BITCOINSILVER_SHUTDOWN_H
+#endif // CAPS_SHUTDOWN_H

@@ -2,10 +2,10 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_TRANSACTIONTABLEMODEL_H
-#define BITCOINSILVER_QT_TRANSACTIONTABLEMODEL_H
+#ifndef CAPS_QT_TRANSACTIONTABLEMODEL_H
+#define CAPS_QT_TRANSACTIONTABLEMODEL_H
 
-#include <qt/bitcoinsilverunits.h>
+#include <qt/capsunits.h>
 
 #include <QAbstractTableModel>
 #include <QStringList>
@@ -120,4 +120,4 @@ public Q_SLOTS:
     friend class TransactionTablePriv;
 };
 
-#endif // BITCOINSILVER_QT_TRANSACTIONTABLEMODEL_H
+#endif // CAPS_QT_TRANSACTIONTABLEMODEL_H

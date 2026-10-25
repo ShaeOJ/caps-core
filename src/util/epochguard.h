@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_EPOCHGUARD_H
-#define BITCOINSILVER_UTIL_EPOCHGUARD_H
+#ifndef CAPS_UTIL_EPOCHGUARD_H
+#define CAPS_UTIL_EPOCHGUARD_H
 
 #include <threadsafety.h>
 #include <util/macros.h>
@@ -99,4 +99,4 @@ public:
 
 #define WITH_FRESH_EPOCH(epoch) const Epoch::Guard UNIQUE_NAME(epoch_guard_)(epoch)
 
-#endif // BITCOINSILVER_UTIL_EPOCHGUARD_H
+#endif // CAPS_UTIL_EPOCHGUARD_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TXORPHANAGE_H
-#define BITCOINSILVER_TXORPHANAGE_H
+#ifndef CAPS_TXORPHANAGE_H
+#define CAPS_TXORPHANAGE_H
 
 #include <net.h>
 #include <primitives/block.h>
@@ -102,4 +102,4 @@ protected:
     int EraseTxNoLock(const uint256& txid) EXCLUSIVE_LOCKS_REQUIRED(m_mutex);
 };
 
-#endif // BITCOINSILVER_TXORPHANAGE_H
+#endif // CAPS_TXORPHANAGE_H

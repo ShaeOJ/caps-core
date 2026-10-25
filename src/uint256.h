@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UINT256_H
-#define BITCOINSILVER_UINT256_H
+#ifndef CAPS_UINT256_H
+#define CAPS_UINT256_H
 
 #include <crypto/common.h>
 #include <span.h>
@@ -133,4 +133,4 @@ inline uint256 uint256S(const std::string& str)
     return rv;
 }
 
-#endif // BITCOINSILVER_UINT256_H
+#endif // CAPS_UINT256_H

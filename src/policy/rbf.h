@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_POLICY_RBF_H
-#define BITCOINSILVER_POLICY_RBF_H
+#ifndef CAPS_POLICY_RBF_H
+#define CAPS_POLICY_RBF_H
 
 #include <consensus/amount.h>
 #include <primitives/transaction.h>
@@ -106,4 +106,4 @@ std::optional<std::string> PaysForRBF(CAmount original_fees,
                                       CFeeRate relay_fee,
                                       const uint256& txid);
 
-#endif // BITCOINSILVER_POLICY_RBF_H
+#endif // CAPS_POLICY_RBF_H

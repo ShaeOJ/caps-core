@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_ZMQ_ZMQUTIL_H
-#define BITCOINSILVER_ZMQ_ZMQUTIL_H
+#ifndef CAPS_ZMQ_ZMQUTIL_H
+#define CAPS_ZMQ_ZMQUTIL_H
 
 #include <string>
 
 void zmqError(const std::string& str);
 
-#endif // BITCOINSILVER_ZMQ_ZMQUTIL_H
+#endif // CAPS_ZMQ_ZMQUTIL_H

@@ -10,8 +10,8 @@
 //! separate header files. More complicated wallet public types like
 //! CCoinControl that are used externally can have separate headers.
 
-#ifndef BITCOINSILVER_WALLET_TYPES_H
-#define BITCOINSILVER_WALLET_TYPES_H
+#ifndef CAPS_WALLET_TYPES_H
+#define CAPS_WALLET_TYPES_H
 
 #include <type_traits>
 
@@ -19,7 +19,7 @@ namespace wallet {
 /**
  * IsMine() return codes, which depend on ScriptPubKeyMan implementation.
  * Not every ScriptPubKeyMan covers all types, please refer to
- * https://github.com/MrVistos/bitcoinsilver/blob/master/doc/release-notes/release-notes-0.21.0.md#ismine-semantics
+ * https://github.com/MrVistos/caps/blob/master/doc/release-notes/release-notes-0.21.0.md#ismine-semantics
  * for better understanding.
  *
  * For LegacyScriptPubKeyMan,
@@ -52,7 +52,7 @@ using isminefilter = std::underlying_type<isminetype>::type;
 /**
  * Address purpose field that has been been stored with wallet sending and
  * receiving addresses since BIP70 payment protocol support was added in
- * https://github.com/MrVistos/bitcoinsilver/pull/2539. This field is not currently
+ * https://github.com/MrVistos/caps/pull/2539. This field is not currently
  * used for any logic inside the wallet, but it is still shown in RPC and GUI
  * interfaces and saved for new addresses. It is basically redundant with an
  * address's IsMine() result.
@@ -64,4 +64,4 @@ enum class AddressPurpose {
 };
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_TYPES_H
+#endif // CAPS_WALLET_TYPES_H

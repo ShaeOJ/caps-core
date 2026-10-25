@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_ADDRMAN_IMPL_H
-#define BITCOINSILVER_ADDRMAN_IMPL_H
+#ifndef CAPS_ADDRMAN_IMPL_H
+#define CAPS_ADDRMAN_IMPL_H
 
 #include <logging.h>
 #include <logging/timer.h>
@@ -286,4 +286,4 @@ private:
     int CheckAddrman() const EXCLUSIVE_LOCKS_REQUIRED(cs);
 };
 
-#endif // BITCOINSILVER_ADDRMAN_IMPL_H
+#endif // CAPS_ADDRMAN_IMPL_H

@@ -3,11 +3,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_VALIDATION_H
-#define BITCOINSILVER_VALIDATION_H
+#ifndef CAPS_VALIDATION_H
+#define CAPS_VALIDATION_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <arith_uint256.h>
@@ -1275,4 +1275,4 @@ bool IsBIP30Repeat(const CBlockIndex& block_index);
 /** Identifies blocks which coinbase output was subsequently overwritten in the UTXO set (see BIP30) */
 bool IsBIP30Unspendable(const CBlockIndex& block_index);
 
-#endif // BITCOINSILVER_VALIDATION_H
+#endif // CAPS_VALIDATION_H

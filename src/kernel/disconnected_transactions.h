@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_KERNEL_DISCONNECTED_TRANSACTIONS_H
-#define BITCOINSILVER_KERNEL_DISCONNECTED_TRANSACTIONS_H
+#ifndef CAPS_KERNEL_DISCONNECTED_TRANSACTIONS_H
+#define CAPS_KERNEL_DISCONNECTED_TRANSACTIONS_H
 
 #include <core_memusage.h>
 #include <memusage.h>
@@ -134,4 +134,4 @@ public:
         return ret;
     }
 };
-#endif // BITCOINSILVER_KERNEL_DISCONNECTED_TRANSACTIONS_H
+#endif // CAPS_KERNEL_DISCONNECTED_TRANSACTIONS_H

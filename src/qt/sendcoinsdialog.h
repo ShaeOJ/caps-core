@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_SENDCOINSDIALOG_H
-#define BITCOINSILVER_QT_SENDCOINSDIALOG_H
+#ifndef CAPS_QT_SENDCOINSDIALOG_H
+#define CAPS_QT_SENDCOINSDIALOG_H
 
 #include <qt/clientmodel.h>
 #include <qt/walletmodel.h>
@@ -148,4 +148,4 @@ private:
     QString m_psbt_button_text{tr("Create Unsigned")};
 };
 
-#endif // BITCOINSILVER_QT_SENDCOINSDIALOG_H
+#endif // CAPS_QT_SENDCOINSDIALOG_H

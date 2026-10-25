@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_TEST_UTIL_H
-#define BITCOINSILVER_WALLET_TEST_UTIL_H
+#ifndef CAPS_WALLET_TEST_UTIL_H
+#define CAPS_WALLET_TEST_UTIL_H
 
 #include <addresstype.h>
 #include <wallet/db.h>
@@ -128,4 +128,4 @@ std::unique_ptr<WalletDatabase> CreateMockableWalletDatabase(MockableData record
 MockableDatabase& GetMockableDatabase(CWallet& wallet);
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_TEST_UTIL_H
+#endif // CAPS_WALLET_TEST_UTIL_H

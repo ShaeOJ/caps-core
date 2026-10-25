@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_SQLITE_H
-#define BITCOINSILVER_WALLET_SQLITE_H
+#ifndef CAPS_WALLET_SQLITE_H
+#define CAPS_WALLET_SQLITE_H
 
 #include <sync.h>
 #include <wallet/db.h>
@@ -151,4 +151,4 @@ std::unique_ptr<SQLiteDatabase> MakeSQLiteDatabase(const fs::path& path, const D
 std::string SQLiteDatabaseVersion();
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_SQLITE_H
+#endif // CAPS_WALLET_SQLITE_H

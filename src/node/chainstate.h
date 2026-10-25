@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_CHAINSTATE_H
-#define BITCOINSILVER_NODE_CHAINSTATE_H
+#ifndef CAPS_NODE_CHAINSTATE_H
+#define CAPS_NODE_CHAINSTATE_H
 
 #include <util/translation.h>
 #include <validation.h>
@@ -70,4 +70,4 @@ ChainstateLoadResult LoadChainstate(ChainstateManager& chainman, const CacheSize
 ChainstateLoadResult VerifyLoadedChainstate(ChainstateManager& chainman, const ChainstateLoadOptions& options);
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_CHAINSTATE_H
+#endif // CAPS_NODE_CHAINSTATE_H

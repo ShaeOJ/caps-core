@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_NOTIFICATOR_H
-#define BITCOINSILVER_QT_NOTIFICATOR_H
+#ifndef CAPS_QT_NOTIFICATOR_H
+#define CAPS_QT_NOTIFICATOR_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <QIcon>
@@ -74,4 +74,4 @@ private:
 #endif
 };
 
-#endif // BITCOINSILVER_QT_NOTIFICATOR_H
+#endif // CAPS_QT_NOTIFICATOR_H

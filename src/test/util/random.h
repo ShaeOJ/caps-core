@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TEST_UTIL_RANDOM_H
-#define BITCOINSILVER_TEST_UTIL_RANDOM_H
+#ifndef CAPS_TEST_UTIL_RANDOM_H
+#define CAPS_TEST_UTIL_RANDOM_H
 
 #include <consensus/amount.h>
 #include <random.h>
@@ -72,4 +72,4 @@ static inline CAmount InsecureRandMoneyAmount()
     return static_cast<CAmount>(InsecureRandRange(MAX_MONEY + 1));
 }
 
-#endif // BITCOINSILVER_TEST_UTIL_RANDOM_H
+#endif // CAPS_TEST_UTIL_RANDOM_H

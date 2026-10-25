@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_SUPPORT_ALLOCATORS_POOL_H
-#define BITCOINSILVER_SUPPORT_ALLOCATORS_POOL_H
+#ifndef CAPS_SUPPORT_ALLOCATORS_POOL_H
+#define CAPS_SUPPORT_ALLOCATORS_POOL_H
 
 #include <array>
 #include <cassert>
@@ -346,4 +346,4 @@ bool operator!=(const PoolAllocator<T1, MAX_BLOCK_SIZE_BYTES, ALIGN_BYTES>& a,
     return !(a == b);
 }
 
-#endif // BITCOINSILVER_SUPPORT_ALLOCATORS_POOL_H
+#endif // CAPS_SUPPORT_ALLOCATORS_POOL_H

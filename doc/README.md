@@ -1,41 +1,41 @@
-BitcoinSilver
+Caps
 =============
 
 Setup
 ---------------------
-BitcoinSilver is the original BitcoinSilver client and it builds the backbone of the network. It downloads and, by default, stores the entire history of BitcoinSilver transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Caps is the original Caps client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Caps transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download BitcoinSilver, visit [https://github.com/MrVistos/bitcoinsilver/releases](https://github.com/MrVistos/bitcoinsilver/releases).
+To download Caps, visit [https://github.com/MrVistos/caps/releases](https://github.com/MrVistos/caps/releases).
 
 Running
 ---------------------
-The following are some helpful notes on how to run BitcoinSilver on your native platform.
+The following are some helpful notes on how to run Caps on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/bitcoinsilver-qt` (GUI) or
-- `bin/bitcoinsilverd` (headless)
+- `bin/caps-qt` (GUI) or
+- `bin/capsd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run bitcoinsilver-qt.exe.
+Unpack the files into a directory, and then run caps-qt.exe.
 
 ### macOS
 
-Drag BitcoinSilver to your applications folder, and then run BitcoinSilver.
+Drag Caps to your applications folder, and then run Caps.
 
 ### Need Help?
 
-* See the documentation at the [BitcoinSilver Readme](https://github.com/MrVistos/bitcoinsilver/)
+* See the documentation at the [Caps Readme](https://github.com/MrVistos/caps/)
 for help and more information.
-* Ask for help on [BitcoinSilver Discord](https://discord.com/invite/MCGn7dzvgd).
+* Ask for help on [Caps Discord](https://discord.com/invite/MCGn7dzvgd).
 * Ask for help on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [Technical Support board](https://bitcointalk.org/index.php?board=4.0).
 
 Building
 ---------------------
-The following are developer notes on how to build BitcoinSilver on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Caps on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -48,12 +48,12 @@ The following are developer notes on how to build BitcoinSilver on your native p
 
 Development
 ---------------------
-The BitcoinSilver repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Caps repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://doxygen.mrvistos.github.io/bitcoinsilver//)
+- [Source Code Documentation (External Link)](https://doxygen.mrvistos.github.io/caps//)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)
@@ -69,7 +69,7 @@ The BitcoinSilver repo's [root README](/README.md) contains relevant information
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
-- [bitcoinsilver.conf Configuration File](bitcoinsilver-conf.md)
+- [caps.conf Configuration File](caps-conf.md)
 - [CJDNS Support](cjdns.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)

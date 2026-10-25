@@ -1,0 +1,20 @@
+Processing config: C:\Program Files (x86)\NSIS\nsisconf.nsh
+Processing script file: "caps-setup.nsi" (ACP)
+
+Processed 1 file, writing output (x86-unicode):
+
+Output: "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\release\caps-1.0.0-win64-setup.exe"
+Install: 5 pages (320 bytes), 1 section (2072 bytes), 382 instructions (10696 bytes), 208 strings (8950 bytes), 1 language table (322 bytes).
+Uninstall: 2 pages (192 bytes), 1 section (2072 bytes), 63 instructions (1764 bytes), 108 strings (2940 bytes), 1 language table (250 bytes).
+Datablock optimizer saved 26498 bytes (~0.0%).
+
+Using lzma (compress whole) compression.
+
+EXE header size:              205312 / 38912 bytes
+Install code:                          (22824 bytes)
+Install data:                          (71516996 bytes)
+Uninstall code+data:                   (174489 bytes)
+Compressed data:            21041384 / 71714309 bytes
+CRC (0x0EF04F67):                  4 / 4 bytes
+
+Total size:                 21246700 / 71753225 bytes (29.6%)

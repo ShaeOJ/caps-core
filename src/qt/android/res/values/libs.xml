@@ -2,13 +2,13 @@
 <resources>
     <array name="load_local_libs">
         <item>
-            arm64-v8a;libbitcoinsilver-qt_arm64-v8a.so
+            arm64-v8a;libcaps-qt_arm64-v8a.so
         </item>
         <item>
-            armeabi-v7a;libbitcoinsilver-qt_armeabi-v7a.so
+            armeabi-v7a;libcaps-qt_armeabi-v7a.so
         </item>
         <item>
-            x86_64;libbitcoinsilver-qt_x86_64.so
+            x86_64;libcaps-qt_x86_64.so
         </item>
     </array>
 </resources>

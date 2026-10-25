@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_QVALIDATEDLINEEDIT_H
-#define BITCOINSILVER_QT_QVALIDATEDLINEEDIT_H
+#ifndef CAPS_QT_QVALIDATEDLINEEDIT_H
+#define CAPS_QT_QVALIDATEDLINEEDIT_H
 
 #include <QLineEdit>
 
@@ -41,4 +41,4 @@ private Q_SLOTS:
     void checkValidity();
 };
 
-#endif // BITCOINSILVER_QT_QVALIDATEDLINEEDIT_H
+#endif // CAPS_QT_QVALIDATEDLINEEDIT_H

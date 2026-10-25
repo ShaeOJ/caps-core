@@ -1,0 +1,93 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/caps/.caps" ]; then
+	CAPSD_DEFAULT_DATADIR="/var/lib/caps/.caps"
+else
+	CAPSD_DEFAULT_DATADIR="/var/lib/capsd"
+fi
+
+CAPSD_CONFIGFILE=${CAPSD_CONFIGFILE:-/etc/caps/caps.conf}
+CAPSD_PIDDIR=${CAPSD_PIDDIR:-/var/run/capsd}
+CAPSD_PIDFILE=${CAPSD_PIDFILE:-${CAPSD_PIDDIR}/capsd.pid}
+CAPSD_DATADIR=${CAPSD_DATADIR:-${CAPSD_DEFAULT_DATADIR}}
+CAPSD_USER=${CAPSD_USER:-${CAPS_USER:-caps}}
+CAPSD_GROUP=${CAPSD_GROUP:-caps}
+CAPSD_BIN=${CAPSD_BIN:-/usr/bin/capsd}
+CAPSD_NICE=${CAPSD_NICE:-${NICELEVEL:-0}}
+CAPSD_OPTS="${CAPSD_OPTS:-${CAPS_OPTS}}"
+
+name="Caps Daemon"
+description="Caps cryptocurrency P2P network daemon"
+
+command="/usr/bin/capsd"
+command_args="-pid=\"${CAPSD_PIDFILE}\" \
+		-conf=\"${CAPSD_CONFIGFILE}\" \
+		-datadir=\"${CAPSD_DATADIR}\" \
+		-daemon \
+		${CAPSD_OPTS}"
+
+required_files="${CAPSD_CONFIGFILE}"
+start_stop_daemon_args="-u ${CAPSD_USER} \
+			-N ${CAPSD_NICE} -w 2000"
+pidfile="${CAPSD_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${CAPSD_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${CAPSD_USER}:${CAPSD_GROUP}" \
+	"${CAPSD_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${CAPSD_USER}:${CAPSD_GROUP}" \
+	"${CAPSD_PIDDIR}"
+
+	checkpath -f \
+	-o "${CAPSD_USER}:${CAPSD_GROUP}" \
+	-m 0660 \
+	"${CAPSD_CONFIGFILE}"
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if grep -qs '^rpcuser=' "${CAPSD_CONFIGFILE}" && \
+		! grep -qs '^rpcpassword=' "${CAPSD_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run capsd."
+		eerror "The setting must appear in ${CAPSD_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Caps Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

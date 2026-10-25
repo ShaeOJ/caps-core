@@ -2,15 +2,15 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/bitcoinsilver-qt
+bin_PROGRAMS += qt/caps-qt
 
-if BUILD_BITCOINSILVER_GUI
-  bin_PROGRAMS += bitcoinsilver-gui
+if BUILD_CAPS_GUI
+  bin_PROGRAMS += caps-gui
 endif
 
-EXTRA_LIBRARIES += qt/libbitcoinsilverqt.a
+EXTRA_LIBRARIES += qt/libcapsqt.a
 
-# bitcoinsilver qt core #
+# caps qt core #
 include Makefile.qt_locale.include
 
 QT_FORMS_UI = \
@@ -40,11 +40,11 @@ QT_MOC_CPP = \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_createwalletdialog.cpp \
   qt/moc_bantablemodel.cpp \
-  qt/moc_bitcoinsilver.cpp \
-  qt/moc_bitcoinsilveraddressvalidator.cpp \
-  qt/moc_bitcoinsilveramountfield.cpp \
-  qt/moc_bitcoinsilvergui.cpp \
-  qt/moc_bitcoinsilverunits.cpp \
+  qt/moc_caps.cpp \
+  qt/moc_capsaddressvalidator.cpp \
+  qt/moc_capsamountfield.cpp \
+  qt/moc_capsgui.cpp \
+  qt/moc_capsunits.cpp \
   qt/moc_clientmodel.cpp \
   qt/moc_coincontroldialog.cpp \
   qt/moc_coincontroltreewidget.cpp \
@@ -89,32 +89,32 @@ QT_MOC_CPP = \
   qt/moc_walletmodel.cpp \
   qt/moc_walletview.cpp
 
-BITCOINSILVER_MM = \
+CAPS_MM = \
   qt/macdockiconhandler.mm \
   qt/macnotificationhandler.mm \
   qt/macos_appnap.mm
 
 QT_MOC = \
-  qt/bitcoinsilveramountfield.moc \
+  qt/capsamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_bitcoinsilver.cpp
-QT_QRC = qt/bitcoinsilver.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_bitcoinsilver_locale.cpp
-QT_QRC_LOCALE = qt/bitcoinsilver_locale.qrc
+QT_QRC_CPP = qt/qrc_caps.cpp
+QT_QRC = qt/caps.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_caps_locale.cpp
+QT_QRC_LOCALE = qt/caps_locale.qrc
 
-BITCOINSILVER_QT_H = \
+CAPS_QT_H = \
   qt/addressbookpage.h \
   qt/addresstablemodel.h \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
-  qt/bitcoinsilver.h \
-  qt/bitcoinsilveraddressvalidator.h \
-  qt/bitcoinsilveramountfield.h \
-  qt/bitcoinsilvergui.h \
-  qt/bitcoinsilverunits.h \
+  qt/caps.h \
+  qt/capsaddressvalidator.h \
+  qt/capsamountfield.h \
+  qt/capsgui.h \
+  qt/capsunits.h \
   qt/clientmodel.h \
   qt/coincontroldialog.h \
   qt/coincontroltreewidget.h \
@@ -174,9 +174,9 @@ QT_RES_FONTS = \
 QT_RES_ICONS = \
   qt/res/icons/add.png \
   qt/res/icons/address-book.png \
-  qt/res/icons/bitcoinsilver.ico \
-  qt/res/icons/bitcoinsilver_testnet.ico \
-  qt/res/icons/bitcoinsilver.png \
+  qt/res/icons/caps.ico \
+  qt/res/icons/caps_testnet.ico \
+  qt/res/icons/caps.png \
   qt/res/icons/chevron.png \
   qt/res/icons/clock1.png \
   qt/res/icons/clock2.png \
@@ -219,13 +219,13 @@ QT_RES_ICONS = \
   qt/res/icons/tx_mined.png \
   qt/res/icons/warning.png
 
-BITCOINSILVER_QT_BASE_CPP = \
+CAPS_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
-  qt/bitcoinsilver.cpp \
-  qt/bitcoinsilveraddressvalidator.cpp \
-  qt/bitcoinsilveramountfield.cpp \
-  qt/bitcoinsilvergui.cpp \
-  qt/bitcoinsilverunits.cpp \
+  qt/caps.cpp \
+  qt/capsaddressvalidator.cpp \
+  qt/capsamountfield.cpp \
+  qt/capsgui.cpp \
+  qt/capsunits.cpp \
   qt/clientmodel.cpp \
   qt/csvmodelwriter.cpp \
   qt/guiutil.cpp \
@@ -246,9 +246,9 @@ BITCOINSILVER_QT_BASE_CPP = \
   qt/trafficgraphwidget.cpp \
   qt/utilitydialog.cpp
 
-BITCOINSILVER_QT_WINDOWS_CPP = qt/winshutdownmonitor.cpp
+CAPS_QT_WINDOWS_CPP = qt/winshutdownmonitor.cpp
 
-BITCOINSILVER_QT_WALLET_CPP = \
+CAPS_QT_WALLET_CPP = \
   qt/addressbookpage.cpp \
   qt/addresstablemodel.cpp \
   qt/askpassphrasedialog.cpp \
@@ -280,32 +280,32 @@ BITCOINSILVER_QT_WALLET_CPP = \
   qt/walletmodeltransaction.cpp \
   qt/walletview.cpp
 
-BITCOINSILVER_QT_CPP = $(BITCOINSILVER_QT_BASE_CPP)
+CAPS_QT_CPP = $(CAPS_QT_BASE_CPP)
 if TARGET_WINDOWS
-BITCOINSILVER_QT_CPP += $(BITCOINSILVER_QT_WINDOWS_CPP)
+CAPS_QT_CPP += $(CAPS_QT_WINDOWS_CPP)
 endif
 if ENABLE_WALLET
-BITCOINSILVER_QT_CPP += $(BITCOINSILVER_QT_WALLET_CPP)
+CAPS_QT_CPP += $(CAPS_QT_WALLET_CPP)
 endif # ENABLE_WALLET
 
 QT_RES_ANIMATION = $(wildcard $(srcdir)/qt/res/animation/spinner-*.png)
 
-BITCOINSILVER_QT_RC = qt/res/bitcoinsilver-qt-res.rc
+CAPS_QT_RC = qt/res/caps-qt-res.rc
 
-BITCOINSILVER_QT_INCLUDES = -DQT_NO_KEYWORDS -DQT_USE_QSTRINGBUILDER
+CAPS_QT_INCLUDES = -DQT_NO_KEYWORDS -DQT_USE_QSTRINGBUILDER
 
-qt_libbitcoinsilverqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(BITCOINSILVER_QT_INCLUDES) \
+qt_libcapsqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(CAPS_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(QR_CFLAGS) $(BOOST_CPPFLAGS)
-qt_libbitcoinsilverqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-qt_libbitcoinsilverqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
+qt_libcapsqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libcapsqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_libbitcoinsilverqt_a_SOURCES = $(BITCOINSILVER_QT_CPP) $(BITCOINSILVER_QT_H) $(QT_FORMS_UI) \
+qt_libcapsqt_a_SOURCES = $(CAPS_QT_CPP) $(CAPS_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(QT_RES_FONTS) $(QT_RES_ICONS) $(QT_RES_ANIMATION)
 if TARGET_DARWIN
-  qt_libbitcoinsilverqt_a_SOURCES += $(BITCOINSILVER_MM)
+  qt_libcapsqt_a_SOURCES += $(CAPS_MM)
 endif
 
-nodist_qt_libbitcoinsilverqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
+nodist_qt_libcapsqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -313,43 +313,43 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinsilverqt_a_OBJECTS) $(qt_bitcoinsilver_qt_OBJECTS) $(bitcoinsilver_gui_OBJECTS) : | $(QT_MOC)
+$(qt_libcapsqt_a_OBJECTS) $(qt_caps_qt_OBJECTS) $(caps_gui_OBJECTS) : | $(QT_MOC)
 
-# bitcoinsilver-qt and bitcoinsilver-gui binaries #
-bitcoinsilver_qt_cppflags = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(BITCOINSILVER_QT_INCLUDES) \
+# caps-qt and caps-gui binaries #
+caps_qt_cppflags = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(CAPS_QT_INCLUDES) \
   $(QT_INCLUDES) $(QR_CFLAGS)
-bitcoinsilver_qt_cxxflags = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+caps_qt_cxxflags = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-bitcoinsilver_qt_sources = qt/main.cpp
+caps_qt_sources = qt/main.cpp
 if TARGET_WINDOWS
-  bitcoinsilver_qt_sources += $(BITCOINSILVER_QT_RC)
+  caps_qt_sources += $(CAPS_QT_RC)
 endif
-bitcoinsilver_qt_ldadd = qt/libbitcoinsilverqt.a $(LIBBITCOINSILVER_NODE)
+caps_qt_ldadd = qt/libcapsqt.a $(LIBCAPS_NODE)
 if ENABLE_WALLET
-bitcoinsilver_qt_ldadd += $(LIBBITCOINSILVER_UTIL) $(LIBBITCOINSILVER_WALLET)
+caps_qt_ldadd += $(LIBCAPS_UTIL) $(LIBCAPS_WALLET)
 endif
 if ENABLE_ZMQ
-bitcoinsilver_qt_ldadd += $(LIBBITCOINSILVER_ZMQ) $(ZMQ_LIBS)
+caps_qt_ldadd += $(LIBCAPS_ZMQ) $(ZMQ_LIBS)
 endif
-bitcoinsilver_qt_ldadd += $(LIBBITCOINSILVER_CLI) $(LIBBITCOINSILVER_COMMON) $(LIBBITCOINSILVER_UTIL) $(LIBBITCOINSILVER_CONSENSUS) $(LIBBITCOINSILVER_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+caps_qt_ldadd += $(LIBCAPS_CLI) $(LIBCAPS_COMMON) $(LIBCAPS_UTIL) $(LIBCAPS_CONSENSUS) $(LIBCAPS_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
   $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(SQLITE_LIBS)
-bitcoinsilver_qt_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
-bitcoinsilver_qt_libtoolflags = $(AM_LIBTOOLFLAGS) --tag CXX
+caps_qt_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+caps_qt_libtoolflags = $(AM_LIBTOOLFLAGS) --tag CXX
 
-qt_bitcoinsilver_qt_CPPFLAGS = $(bitcoinsilver_qt_cppflags)
-qt_bitcoinsilver_qt_CXXFLAGS = $(bitcoinsilver_qt_cxxflags)
-qt_bitcoinsilver_qt_SOURCES = $(bitcoinsilver_qt_sources) init/bitcoinsilver-qt.cpp
-qt_bitcoinsilver_qt_LDADD = $(bitcoinsilver_qt_ldadd)
-qt_bitcoinsilver_qt_LDFLAGS = $(bitcoinsilver_qt_ldflags)
-qt_bitcoinsilver_qt_LIBTOOLFLAGS = $(bitcoinsilver_qt_libtoolflags)
+qt_caps_qt_CPPFLAGS = $(caps_qt_cppflags)
+qt_caps_qt_CXXFLAGS = $(caps_qt_cxxflags)
+qt_caps_qt_SOURCES = $(caps_qt_sources) init/caps-qt.cpp
+qt_caps_qt_LDADD = $(caps_qt_ldadd)
+qt_caps_qt_LDFLAGS = $(caps_qt_ldflags)
+qt_caps_qt_LIBTOOLFLAGS = $(caps_qt_libtoolflags)
 
-bitcoinsilver_gui_CPPFLAGS = $(bitcoinsilver_qt_cppflags)
-bitcoinsilver_gui_CXXFLAGS = $(bitcoinsilver_qt_cxxflags)
-bitcoinsilver_gui_SOURCES = $(bitcoinsilver_qt_sources) init/bitcoinsilver-gui.cpp
-bitcoinsilver_gui_LDADD = $(bitcoinsilver_qt_ldadd) $(LIBBITCOINSILVER_IPC) $(LIBBITCOINSILVER_UTIL) $(LIBMULTIPROCESS_LIBS)
-bitcoinsilver_gui_LDFLAGS = $(bitcoinsilver_qt_ldflags)
-bitcoinsilver_gui_LIBTOOLFLAGS = $(bitcoinsilver_qt_libtoolflags)
+caps_gui_CPPFLAGS = $(caps_qt_cppflags)
+caps_gui_CXXFLAGS = $(caps_qt_cxxflags)
+caps_gui_SOURCES = $(caps_qt_sources) init/caps-gui.cpp
+caps_gui_LDADD = $(caps_qt_ldadd) $(LIBCAPS_IPC) $(LIBCAPS_UTIL) $(LIBMULTIPROCESS_LIBS)
+caps_gui_LDFLAGS = $(caps_qt_ldflags)
+caps_gui_LIBTOOLFLAGS = $(caps_qt_libtoolflags)
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
@@ -359,50 +359,50 @@ SECONDARY: $(QT_QM)
 $(srcdir)/qt/bitcoinstrings.cpp: FORCE
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" $(PYTHON) ../share/qt/extract_strings_qt.py \
-    $(libbitcoinsilver_node_a_SOURCES) $(libbitcoinsilver_wallet_a_SOURCES) $(libbitcoinsilver_common_a_SOURCES) \
-    $(libbitcoinsilver_zmq_a_SOURCES) $(libbitcoinsilver_consensus_a_SOURCES) $(libbitcoinsilver_util_a_SOURCES) \
-    $(BITCOINSILVER_QT_BASE_CPP) $(BITCOINSILVER_QT_WINDOWS_CPP) $(BITCOINSILVER_QT_WALLET_CPP) $(BITCOINSILVER_QT_H) $(BITCOINSILVER_MM)
+    $(libcaps_node_a_SOURCES) $(libcaps_wallet_a_SOURCES) $(libcaps_common_a_SOURCES) \
+    $(libcaps_zmq_a_SOURCES) $(libcaps_consensus_a_SOURCES) $(libcaps_util_a_SOURCES) \
+    $(CAPS_QT_BASE_CPP) $(CAPS_QT_WINDOWS_CPP) $(CAPS_QT_WALLET_CPP) $(CAPS_QT_H) $(CAPS_MM)
 
-# The resulted bitcoinsilver_en.xlf source file should follow Transifex requirements.
+# The resulted caps_en.xlf source file should follow Transifex requirements.
 # See: https://docs.transifex.com/formats/xliff#how-to-distinguish-between-a-source-file-and-a-translation-file
-translate: $(srcdir)/qt/bitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOINSILVER_QT_BASE_CPP) $(BITCOINSILVER_QT_WINDOWS_CPP) $(BITCOINSILVER_QT_WALLET_CPP) $(BITCOINSILVER_QT_H) $(BITCOINSILVER_MM)
+translate: $(srcdir)/qt/bitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(CAPS_QT_BASE_CPP) $(CAPS_QT_WINDOWS_CPP) $(CAPS_QT_WALLET_CPP) $(CAPS_QT_H) $(CAPS_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) -no-obsolete -I $(srcdir) -locations relative $^ -ts $(srcdir)/qt/locale/bitcoinsilver_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) -no-obsolete -I $(srcdir) -locations relative $^ -ts $(srcdir)/qt/locale/caps_en.ts
 	@test -n $(LCONVERT) || echo "lconvert is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LCONVERT) -drop-translations -o $(srcdir)/qt/locale/bitcoinsilver_en.xlf -i $(srcdir)/qt/locale/bitcoinsilver_en.ts
-	@$(SED) -i.old -e 's|source-language="en" target-language="en"|source-language="en"|' -e '/<target xml:space="preserve"><\/target>/d' $(srcdir)/qt/locale/bitcoinsilver_en.xlf
-	@rm -f $(srcdir)/qt/locale/bitcoinsilver_en.xlf.old
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LCONVERT) -drop-translations -o $(srcdir)/qt/locale/caps_en.xlf -i $(srcdir)/qt/locale/caps_en.ts
+	@$(SED) -i.old -e 's|source-language="en" target-language="en"|source-language="en"|' -e '/<target xml:space="preserve"><\/target>/d' $(srcdir)/qt/locale/caps_en.xlf
+	@rm -f $(srcdir)/qt/locale/caps_en.xlf.old
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC) || (echo "rcc $(RCC) not found, but is required for generating qrc cpp files"; exit 1)
 	@cp -f $< $(@D)/temp_$(<F)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name bitcoinsilver_locale --format-version 1 $(@D)/temp_$(<F) > $@
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name caps_locale --format-version 1 $(@D)/temp_$(<F) > $@
 	@rm $(@D)/temp_$(<F)
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(QT_RES_FONTS) $(QT_RES_ICONS) $(QT_RES_ANIMATION)
 	@test -f $(RCC) || (echo "rcc $(RCC) not found, but is required for generating qrc cpp files"; exit 1)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name bitcoinsilver --format-version 1 $< > $@
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name caps --format-version 1 $< > $@
 
-CLEAN_QT = $(nodist_qt_libbitcoinsilverqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_bitcoinsilver_locale.qrc
+CLEAN_QT = $(nodist_qt_libcapsqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_caps_locale.qrc
 
 CLEANFILES += $(CLEAN_QT)
 
-bitcoinsilver_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinsilverqt_a_OBJECTS) $(qt_bitcoinsilver_qt_OBJECTS) qt/bitcoinsilver-qt$(EXEEXT) $(LIBBITCOINSILVERQT)
+caps_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libcapsqt_a_OBJECTS) $(qt_caps_qt_OBJECTS) qt/caps-qt$(EXEEXT) $(LIBCAPSQT)
 
-bitcoinsilver_qt : qt/bitcoinsilver-qt$(EXEEXT)
+caps_qt : qt/caps-qt$(EXEEXT)
 
 APK_LIB_DIR = qt/android/libs/$(ANDROID_ARCH)
 QT_BASE_VERSION = $(lastword $(shell $(MOC) --version))
 QT_BASE_PATH = $(shell find ../depends/sources/ -maxdepth 1 -type f -regex ".*qtbase.*$(QT_BASE_VERSION)\.tar.xz")
 QT_BASE_TLD = $(shell tar tf $(QT_BASE_PATH) --exclude='*/*')
 
-bitcoinsilver_qt_apk: FORCE
+caps_qt_apk: FORCE
 	mkdir -p $(APK_LIB_DIR)
 	cp $(dir $(lastword $(CC)))../sysroot/usr/lib/$(host_alias)/libc++_shared.so $(APK_LIB_DIR)
 	tar xf $(QT_BASE_PATH) -C qt/android/src/ $(QT_BASE_TLD)src/android/jar/src --strip-components=5
 	tar xf $(QT_BASE_PATH) -C qt/android/src/ $(QT_BASE_TLD)src/android/java/src --strip-components=5
-	cp qt/bitcoinsilver-qt $(APK_LIB_DIR)/libbitcoinsilver-qt_$(ANDROID_ARCH).so
+	cp qt/caps-qt $(APK_LIB_DIR)/libcaps-qt_$(ANDROID_ARCH).so
 	cd qt/android && gradle wrapper --gradle-version=6.6.1
 	cd qt/android && ./gradlew build
 

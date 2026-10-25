@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_ZMQ_ZMQRPC_H
-#define BITCOINSILVER_ZMQ_ZMQRPC_H
+#ifndef CAPS_ZMQ_ZMQRPC_H
+#define CAPS_ZMQ_ZMQRPC_H
 
 class CRPCTable;
 
 void RegisterZMQRPCCommands(CRPCTable& t);
 
-#endif // BITCOINSILVER_ZMQ_ZMQRPC_H
+#endif // CAPS_ZMQ_ZMQRPC_H

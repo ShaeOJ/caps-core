@@ -6,10 +6,10 @@ define(_CLIENT_VERSION_RC, 0)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2024)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[BitcoinSilver]])
-AC_INIT([BitcoinSilver],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_BUILD)m4_if(_CLIENT_VERSION_RC, [0], [], [rc]_CLIENT_VERSION_RC),[https://github.com/MrVistos/bitcoinsilver/issues],[bitcoinsilver],[https://mrvistos.github.io/bitcoinsilver//])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Caps]])
+AC_INIT([Caps],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_BUILD)m4_if(_CLIENT_VERSION_RC, [0], [], [rc]_CLIENT_VERSION_RC),[https://github.com/AquaCaps/caps/issues],[caps],[https://aquacaps.github.io/caps/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
-AC_CONFIG_HEADERS([src/config/bitcoinsilver-config.h])
+AC_CONFIG_HEADERS([src/config/caps-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
@@ -29,17 +29,17 @@ if test -n "$PKG_CONFIG_LIBDIR"; then
   PKG_CONFIG="env PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR $PKG_CONFIG"
 fi
 
-BITCOINSILVER_DAEMON_NAME=bitcoinsilverd
-BITCOINSILVER_GUI_NAME=bitcoinsilver-qt
-BITCOINSILVER_TEST_NAME=test_bitcoin
-BITCOINSILVER_CLI_NAME=bitcoinsilver-cli
-BITCOINSILVER_TX_NAME=bitcoinsilver-tx
-BITCOINSILVER_UTIL_NAME=bitcoinsilver-util
-BITCOINSILVER_CHAINSTATE_NAME=bitcoinsilver-chainstate
-BITCOINSILVER_WALLET_TOOL_NAME=bitcoinsilver-wallet
+CAPS_DAEMON_NAME=capsd
+CAPS_GUI_NAME=caps-qt
+CAPS_TEST_NAME=test_caps
+CAPS_CLI_NAME=caps-cli
+CAPS_TX_NAME=caps-tx
+CAPS_UTIL_NAME=caps-util
+CAPS_CHAINSTATE_NAME=caps-chainstate
+CAPS_WALLET_TOOL_NAME=caps-wallet
 dnl Multi Process
-BITCOINSILVER_MP_NODE_NAME=bitcoinsilver-node
-BITCOINSILVER_MP_GUI_NAME=bitcoinsilver-gui
+CAPS_MP_NODE_NAME=caps-node
+CAPS_MP_GUI_NAME=caps-gui
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 dnl This is also the default as-of libtool 2.4.7
@@ -50,9 +50,9 @@ fi
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef BITCOINSILVER_CONFIG_H])
-AH_TOP([#define BITCOINSILVER_CONFIG_H])
-AH_BOTTOM([#endif //BITCOINSILVER_CONFIG_H])
+AH_TOP([#ifndef CAPS_CONFIG_H])
+AH_TOP([#define CAPS_CONFIG_H])
+AH_BOTTOM([#endif //CAPS_CONFIG_H])
 
 dnl Automake init set-up and checks
 AM_INIT_AUTOMAKE([1.13 no-define subdir-objects foreign])
@@ -235,7 +235,7 @@ AC_ARG_ENABLE([ccache],
 
 dnl Suppress warnings from external headers (e.g. Boost, Qt).
 dnl May be useful if warnings from external headers clutter the build output
-dnl too much, so that it becomes difficult to spot BitcoinSilver warnings
+dnl too much, so that it becomes difficult to spot Caps warnings
 dnl or if they cause a build failure with --enable-werror.
 AC_ARG_ENABLE([suppress-external-warnings],
   [AS_HELP_STRING([--disable-suppress-external-warnings],
@@ -291,7 +291,7 @@ AC_ARG_WITH([mpgen],
 
 AC_ARG_ENABLE([multiprocess],
   [AS_HELP_STRING([--enable-multiprocess],
-  [build multiprocess bitcoinsilver-node, bitcoinsilver-wallet, and bitcoinsilver-gui executables in addition to monolithic bitcoinsilverd and bitcoinsilver-qt executables. Requires libmultiprocess library. Experimental (default is no)])],
+  [build multiprocess caps-node, caps-wallet, and caps-gui executables in addition to monolithic capsd and caps-qt executables. Requires libmultiprocess library. Experimental (default is no)])],
   [enable_multiprocess=$enableval],
   [enable_multiprocess=no])
 
@@ -630,57 +630,57 @@ CORE_CPPFLAGS="$CORE_CPPFLAGS -DHAVE_BUILD_INFO"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build bitcoinsilver-cli bitcoinsilver-tx bitcoinsilver-util bitcoinsilver-wallet (default=yes)])],
-  [build_bitcoinsilver_utils=$withval],
-  [build_bitcoinsilver_utils=yes])
+  [build caps-cli caps-tx caps-util caps-wallet (default=yes)])],
+  [build_caps_utils=$withval],
+  [build_caps_utils=yes])
 
 AC_ARG_ENABLE([util-cli],
   [AS_HELP_STRING([--enable-util-cli],
-  [build bitcoinsilver-cli])],
-  [build_bitcoinsilver_cli=$enableval],
-  [build_bitcoinsilver_cli=$build_bitcoinsilver_utils])
+  [build caps-cli])],
+  [build_caps_cli=$enableval],
+  [build_caps_cli=$build_caps_utils])
 
 AC_ARG_ENABLE([util-tx],
   [AS_HELP_STRING([--enable-util-tx],
-  [build bitcoinsilver-tx])],
-  [build_bitcoinsilver_tx=$enableval],
-  [build_bitcoinsilver_tx=$build_bitcoinsilver_utils])
+  [build caps-tx])],
+  [build_caps_tx=$enableval],
+  [build_caps_tx=$build_caps_utils])
 
 AC_ARG_ENABLE([util-wallet],
   [AS_HELP_STRING([--enable-util-wallet],
-  [build bitcoinsilver-wallet])],
-  [build_bitcoinsilver_wallet=$enableval],
-  [build_bitcoinsilver_wallet=$build_bitcoinsilver_utils])
+  [build caps-wallet])],
+  [build_caps_wallet=$enableval],
+  [build_caps_wallet=$build_caps_utils])
 
 AC_ARG_ENABLE([util-util],
   [AS_HELP_STRING([--enable-util-util],
-  [build bitcoinsilver-util])],
-  [build_bitcoinsilver_util=$enableval],
-  [build_bitcoinsilver_util=$build_bitcoinsilver_utils])
+  [build caps-util])],
+  [build_caps_util=$enableval],
+  [build_caps_util=$build_caps_utils])
 
 AC_ARG_ENABLE([experimental-util-chainstate],
   [AS_HELP_STRING([--enable-experimental-util-chainstate],
-  [build experimental bitcoinsilver-chainstate executable (default=no)])],
-  [build_bitcoinsilver_chainstate=$enableval],
-  [build_bitcoinsilver_chainstate=no])
+  [build experimental caps-chainstate executable (default=no)])],
+  [build_caps_chainstate=$enableval],
+  [build_caps_chainstate=no])
 
 AC_ARG_WITH([libs],
   [AS_HELP_STRING([--with-libs],
   [build libraries (default=yes)])],
-  [build_bitcoinsilver_libs=$withval],
-  [build_bitcoinsilver_libs=yes])
+  [build_caps_libs=$withval],
+  [build_caps_libs=yes])
 
 AC_ARG_WITH([experimental-kernel-lib],
   [AS_HELP_STRING([--with-experimental-kernel-lib],
-  [build experimental bitcoinkernel library (default is to build if we're building libraries and the experimental build-chainstate executable)])],
+  [build experimental capskernel library (default is to build if we're building libraries and the experimental build-chainstate executable)])],
   [build_experimental_kernel_lib=$withval],
   [build_experimental_kernel_lib=auto])
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build bitcoinsilverd daemon (default=yes)])],
-  [build_bitcoinsilverd=$withval],
-  [build_bitcoinsilverd=yes])
+  [build capsd daemon (default=yes)])],
+  [build_capsd=$withval],
+  [build_capsd=yes])
 
 case $host in
   *mingw*)
@@ -760,7 +760,7 @@ case $host in
 
          if test "$use_bdb" != "no" && $BREW list --versions berkeley-db@4 >/dev/null && test "$BDB_CFLAGS" = "" && test "$BDB_LIBS" = ""; then
            bdb_prefix=$($BREW --prefix berkeley-db@4 2>/dev/null)
-           dnl This must precede the call to BITCOINSILVER_FIND_BDB48 below.
+           dnl This must precede the call to CAPS_FIND_BDB48 below.
            BDB_CFLAGS="-I$bdb_prefix/include"
            BDB_LIBS="-L$bdb_prefix/lib -ldb_cxx-4.8"
          fi
@@ -906,7 +906,7 @@ AX_PTHREAD
 dnl Check if -latomic is required for <std::atomic>
 CHECK_ATOMIC
 
-dnl The following macro will add the necessary defines to bitcoinsilver-config.h, but
+dnl The following macro will add the necessary defines to caps-config.h, but
 dnl they also need to be passed down to any subprojects. Pull the results out of
 dnl the cache and add them to CPPFLAGS.
 AC_SYS_LARGEFILE
@@ -1016,7 +1016,7 @@ AC_CHECK_DECLS([getifaddrs, freeifaddrs],[CHECK_SOCKET],,
     #include <ifaddrs.h>]
 )
 
-dnl These are used for daemonization in bitcoinsilverd
+dnl These are used for daemonization in capsd
 AC_CHECK_DECLS([fork])
 AC_CHECK_DECLS([setsid])
 
@@ -1310,17 +1310,17 @@ AC_DEFUN([SUPPRESS_WARNINGS],
 dnl enable-fuzz should disable all other targets
 if test "$enable_fuzz" = "yes"; then
   AC_MSG_WARN([enable-fuzz will disable all other targets and force --enable-fuzz-binary=yes])
-  build_bitcoinsilver_utils=no
-  build_bitcoinsilver_cli=no
-  build_bitcoinsilver_tx=no
-  build_bitcoinsilver_util=no
-  build_bitcoinsilver_chainstate=no
-  build_bitcoinsilver_wallet=no
-  build_bitcoinsilverd=no
-  build_bitcoinsilver_libs=no
-  bitcoinsilver_enable_qt=no
-  bitcoinsilver_enable_qt_test=no
-  bitcoinsilver_enable_qt_dbus=no
+  build_caps_utils=no
+  build_caps_cli=no
+  build_caps_tx=no
+  build_caps_util=no
+  build_caps_chainstate=no
+  build_caps_wallet=no
+  build_capsd=no
+  build_caps_libs=no
+  caps_enable_qt=no
+  caps_enable_qt_test=no
+  caps_enable_qt_dbus=no
   use_bench=no
   use_tests=no
   use_external_signer=no
@@ -1331,10 +1331,10 @@ if test "$enable_fuzz" = "yes"; then
 
   AX_CHECK_PREPROC_FLAG([-DABORT_ON_FAILED_ASSUME], [DEBUG_CPPFLAGS="$DEBUG_CPPFLAGS -DABORT_ON_FAILED_ASSUME"], [], [$CXXFLAG_WERROR])
 else
-  BITCOINSILVER_QT_INIT
+  CAPS_QT_INIT
 
-  dnl sets $bitcoinsilver_enable_qt, $bitcoinsilver_enable_qt_test, $bitcoinsilver_enable_qt_dbus
-  BITCOINSILVER_QT_CONFIGURE([5.11.3])
+  dnl sets $caps_enable_qt, $caps_enable_qt_test, $caps_enable_qt_dbus
+  CAPS_QT_CONFIGURE([5.11.3])
 
   dnl Keep a copy of the original $QT_INCLUDES and use it when invoking qt's moc
   QT_INCLUDES_UNSUPPRESSED=$QT_INCLUDES
@@ -1367,7 +1367,7 @@ fi
 if test "$enable_wallet" != "no"; then
     dnl Check for libdb_cxx only if wallet enabled
     if test "$use_bdb" != "no"; then
-      BITCOINSILVER_FIND_BDB48
+      CAPS_FIND_BDB48
       if test "$suppress_external_warnings" != "no" ; then
         BDB_CPPFLAGS=SUPPRESS_WARNINGS($BDB_CPPFLAGS)
       fi
@@ -1417,7 +1417,7 @@ if test "$use_usdt" != "no"; then
 fi
 AM_CONDITIONAL([ENABLE_USDT_TRACEPOINTS], [test "$use_usdt" = "yes"])
 
-if test "$build_bitcoinsilverd$bitcoinsilver_enable_qt$use_bench$use_tests" = "nononono"; then
+if test "$build_capsd$caps_enable_qt$use_bench$use_tests" = "nononono"; then
   use_upnp=no
   use_natpmp=no
   use_zmq=no
@@ -1466,7 +1466,7 @@ if test "$use_natpmp" != "no"; then
   CPPFLAGS="$TEMP_CPPFLAGS"
 fi
 
-if test "$build_bitcoinsilver_wallet$build_bitcoinsilver_cli$build_bitcoinsilver_tx$build_bitcoinsilver_util$build_bitcoinsilverd$bitcoinsilver_enable_qt$use_tests$use_bench$enable_fuzz_binary" = "nonononononononono"; then
+if test "$build_caps_wallet$build_caps_cli$build_caps_tx$build_caps_util$build_capsd$caps_enable_qt$use_tests$use_bench$enable_fuzz_binary" = "nonononononononono"; then
   use_boost=no
 else
   use_boost=yes
@@ -1477,7 +1477,7 @@ if test "$use_boost" = "yes"; then
   dnl Check for Boost headers
   AX_BOOST_BASE([1.64.0],[],[AC_MSG_ERROR([Boost is not available!])])
   if test "$want_boost" = "no"; then
-    AC_MSG_ERROR([only libbitcoinsilverconsensus can be built without Boost])
+    AC_MSG_ERROR([only libcapsconsensus can be built without Boost])
   fi
 
   dnl we don't use multi_index serialization
@@ -1555,7 +1555,7 @@ fi
 dnl libevent check
 
 use_libevent=no
-if test "$build_bitcoinsilver_cli$build_bitcoinsilverd$bitcoinsilver_enable_qt$enable_fuzz_binary$use_tests$use_bench" != "nononononono"; then
+if test "$build_caps_cli$build_capsd$caps_enable_qt$enable_fuzz_binary$use_tests$use_bench" != "nononononono"; then
   PKG_CHECK_MODULES([EVENT], [libevent >= 2.1.8], [use_libevent=yes], [AC_MSG_ERROR([libevent version 2.1.8 or greater not found.])])
   if test "$TARGET_OS" != "windows"; then
     PKG_CHECK_MODULES([EVENT_PTHREADS], [libevent_pthreads >= 2.1.8], [], [AC_MSG_ERROR([libevent_pthreads version 2.1.8 or greater not found.])])
@@ -1589,7 +1589,7 @@ fi
 dnl QR Code encoding library check
 
 if test "$use_qr" != "no"; then
-  BITCOINSILVER_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
+  CAPS_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
 fi
 
 dnl ZMQ check
@@ -1638,8 +1638,8 @@ else
 fi
 
 AM_CONDITIONAL([BUILD_MULTIPROCESS], [test "$build_multiprocess" = "yes"])
-AM_CONDITIONAL([BUILD_BITCOINSILVER_NODE], [test "$build_multiprocess" = "yes"])
-AM_CONDITIONAL([BUILD_BITCOINSILVER_GUI], [test "$build_multiprocess" = "yes"])
+AM_CONDITIONAL([BUILD_CAPS_NODE], [test "$build_multiprocess" = "yes"])
+AM_CONDITIONAL([BUILD_CAPS_GUI], [test "$build_multiprocess" = "yes"])
 
 dnl codegen tools check
 
@@ -1652,46 +1652,46 @@ if test "$build_multiprocess" != "no"; then
   AC_SUBST(MPGEN_PREFIX)
 fi
 
-AC_MSG_CHECKING([whether to build bitcoinsilverd])
-AM_CONDITIONAL([BUILD_BITCOINSILVERD], [test $build_bitcoinsilverd = "yes"])
-AC_MSG_RESULT($build_bitcoinsilverd)
+AC_MSG_CHECKING([whether to build capsd])
+AM_CONDITIONAL([BUILD_CAPSD], [test $build_capsd = "yes"])
+AC_MSG_RESULT($build_capsd)
 
-AC_MSG_CHECKING([whether to build bitcoinsilver-cli])
-AM_CONDITIONAL([BUILD_BITCOINSILVER_CLI], [test $build_bitcoinsilver_cli = "yes"])
-AC_MSG_RESULT($build_bitcoinsilver_cli)
+AC_MSG_CHECKING([whether to build caps-cli])
+AM_CONDITIONAL([BUILD_CAPS_CLI], [test $build_caps_cli = "yes"])
+AC_MSG_RESULT($build_caps_cli)
 
-AC_MSG_CHECKING([whether to build bitcoinsilver-tx])
-AM_CONDITIONAL([BUILD_BITCOINSILVER_TX], [test $build_bitcoinsilver_tx = "yes"])
-AC_MSG_RESULT($build_bitcoinsilver_tx)
+AC_MSG_CHECKING([whether to build caps-tx])
+AM_CONDITIONAL([BUILD_CAPS_TX], [test $build_caps_tx = "yes"])
+AC_MSG_RESULT($build_caps_tx)
 
-AC_MSG_CHECKING([whether to build bitcoinsilver-wallet])
-AM_CONDITIONAL([BUILD_BITCOINSILVER_WALLET], [test $build_bitcoinsilver_wallet = "yes"])
-AC_MSG_RESULT($build_bitcoinsilver_wallet)
+AC_MSG_CHECKING([whether to build caps-wallet])
+AM_CONDITIONAL([BUILD_CAPS_WALLET], [test $build_caps_wallet = "yes"])
+AC_MSG_RESULT($build_caps_wallet)
 
-AC_MSG_CHECKING([whether to build bitcoinsilver-util])
-AM_CONDITIONAL([BUILD_BITCOINSILVER_UTIL], [test $build_bitcoinsilver_util = "yes"])
-AC_MSG_RESULT($build_bitcoinsilver_util)
+AC_MSG_CHECKING([whether to build caps-util])
+AM_CONDITIONAL([BUILD_CAPS_UTIL], [test $build_caps_util = "yes"])
+AC_MSG_RESULT($build_caps_util)
 
-AC_MSG_CHECKING([whether to build experimental bitcoinsilver-chainstate])
-if test "$build_bitcoinsilver_chainstate" = "yes"; then
+AC_MSG_CHECKING([whether to build experimental caps-chainstate])
+if test "$build_caps_chainstate" = "yes"; then
   if test "$build_experimental_kernel_lib" = "no"; then
-    AC_MSG_ERROR([experimental bitcoinsilver-chainstate cannot be built without the experimental bitcoinkernel library. Use --with-experimental-kernel-lib]);
+    AC_MSG_ERROR([experimental caps-chainstate cannot be built without the experimental capskernel library. Use --with-experimental-kernel-lib]);
   fi
 fi
-AM_CONDITIONAL([BUILD_BITCOINSILVER_CHAINSTATE], [test $build_bitcoinsilver_chainstate = "yes"])
-AC_MSG_RESULT($build_bitcoinsilver_chainstate)
+AM_CONDITIONAL([BUILD_CAPS_CHAINSTATE], [test $build_caps_chainstate = "yes"])
+AC_MSG_RESULT($build_caps_chainstate)
 
 AC_MSG_CHECKING([whether to build libraries])
-AM_CONDITIONAL([BUILD_BITCOINSILVER_LIBS], [test $build_bitcoinsilver_libs = "yes"])
+AM_CONDITIONAL([BUILD_CAPS_LIBS], [test $build_caps_libs = "yes"])
 
-if test "$build_bitcoinsilver_libs" = "yes"; then
+if test "$build_caps_libs" = "yes"; then
   AC_DEFINE([HAVE_CONSENSUS_LIB], [1], [Define this symbol if the consensus lib has been built])
-  AC_CONFIG_FILES([libbitcoinsilverconsensus.pc:libbitcoinsilverconsensus.pc.in])
+  AC_CONFIG_FILES([libcapsconsensus.pc:libcapsconsensus.pc.in])
 fi
 
-AM_CONDITIONAL([BUILD_BITCOINSILVER_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_bitcoinsilver_chainstate" = "yes" )])
+AM_CONDITIONAL([BUILD_CAPS_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_caps_chainstate" = "yes" )])
 
-AC_MSG_RESULT($build_bitcoinsilver_libs)
+AC_MSG_RESULT($build_caps_libs)
 
 AC_LANG_POP
 
@@ -1770,13 +1770,13 @@ fi
 
 dnl these are only used when qt is enabled
 BUILD_TEST_QT=""
-if test "$bitcoinsilver_enable_qt" != "no"; then
+if test "$caps_enable_qt" != "no"; then
   dnl enable dbus support
   AC_MSG_CHECKING([whether to build GUI with support for D-Bus])
-  if test "$bitcoinsilver_enable_qt_dbus" != "no"; then
+  if test "$caps_enable_qt_dbus" != "no"; then
     AC_DEFINE([USE_DBUS], [1], [Define if dbus support should be compiled in])
   fi
-  AC_MSG_RESULT([$bitcoinsilver_enable_qt_dbus])
+  AC_MSG_RESULT([$caps_enable_qt_dbus])
 
   dnl enable qr support
   AC_MSG_CHECKING([whether to build GUI with support for QR codes])
@@ -1797,8 +1797,8 @@ if test "$bitcoinsilver_enable_qt" != "no"; then
     AC_MSG_WARN([xgettext is required to update qt translations])
   fi
 
-  AC_MSG_CHECKING([whether to build test_bitcoinsilver-qt])
-  if test "$use_gui_tests$bitcoinsilver_enable_qt_test" = "yesyes"; then
+  AC_MSG_CHECKING([whether to build test_caps-qt])
+  if test "$use_gui_tests$caps_enable_qt_test" = "yesyes"; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
   else
@@ -1826,7 +1826,7 @@ else
   AC_MSG_RESULT([no])
 fi
 
-if test "$build_bitcoinsilver_wallet$build_bitcoinsilver_cli$build_bitcoinsilver_tx$build_bitcoinsilver_util$build_bitcoinsilver_libs$build_bitcoinsilverd$bitcoinsilver_enable_qt$enable_fuzz_binary$use_bench$use_tests" = "nononononononononono"; then
+if test "$build_caps_wallet$build_caps_cli$build_caps_tx$build_caps_util$build_caps_libs$build_capsd$caps_enable_qt$enable_fuzz_binary$use_bench$use_tests" = "nononononononononono"; then
   AC_MSG_ERROR([No targets! Please specify at least one of: --with-utils --with-libs --with-daemon --with-gui --enable-fuzz(-binary) --enable-bench or --enable-tests])
 fi
 
@@ -1840,7 +1840,7 @@ AM_CONDITIONAL([USE_BDB], [test "$use_bdb" = "yes"])
 AM_CONDITIONAL([ENABLE_TESTS], [test "$BUILD_TEST" = "yes"])
 AM_CONDITIONAL([ENABLE_FUZZ], [test "$enable_fuzz" = "yes"])
 AM_CONDITIONAL([ENABLE_FUZZ_BINARY], [test "$enable_fuzz_binary" = "yes"])
-AM_CONDITIONAL([ENABLE_QT], [test "$bitcoinsilver_enable_qt" = "yes"])
+AM_CONDITIONAL([ENABLE_QT], [test "$caps_enable_qt" = "yes"])
 AM_CONDITIONAL([ENABLE_QT_TESTS], [test "$BUILD_TEST_QT" = "yes"])
 AM_CONDITIONAL([ENABLE_BENCH], [test "$use_bench" = "yes"])
 AM_CONDITIONAL([USE_QRCODE], [test "$use_qr" = "yes"])
@@ -1879,16 +1879,16 @@ AC_SUBST(COPYRIGHT_YEAR, _COPYRIGHT_YEAR)
 AC_SUBST(COPYRIGHT_HOLDERS, "_COPYRIGHT_HOLDERS")
 AC_SUBST(COPYRIGHT_HOLDERS_SUBSTITUTION, "_COPYRIGHT_HOLDERS_SUBSTITUTION")
 AC_SUBST(COPYRIGHT_HOLDERS_FINAL, "_COPYRIGHT_HOLDERS_FINAL")
-AC_SUBST(BITCOINSILVER_DAEMON_NAME)
-AC_SUBST(BITCOINSILVER_GUI_NAME)
-AC_SUBST(BITCOINSILVER_TEST_NAME)
-AC_SUBST(BITCOINSILVER_CLI_NAME)
-AC_SUBST(BITCOINSILVER_TX_NAME)
-AC_SUBST(BITCOINSILVER_UTIL_NAME)
-AC_SUBST(BITCOINSILVER_CHAINSTATE_NAME)
-AC_SUBST(BITCOINSILVER_WALLET_TOOL_NAME)
-AC_SUBST(BITCOINSILVER_MP_NODE_NAME)
-AC_SUBST(BITCOINSILVER_MP_GUI_NAME)
+AC_SUBST(CAPS_DAEMON_NAME)
+AC_SUBST(CAPS_GUI_NAME)
+AC_SUBST(CAPS_TEST_NAME)
+AC_SUBST(CAPS_CLI_NAME)
+AC_SUBST(CAPS_TX_NAME)
+AC_SUBST(CAPS_UTIL_NAME)
+AC_SUBST(CAPS_CHAINSTATE_NAME)
+AC_SUBST(CAPS_WALLET_TOOL_NAME)
+AC_SUBST(CAPS_MP_NODE_NAME)
+AC_SUBST(CAPS_MP_GUI_NAME)
 
 AC_SUBST(RELDFLAGS)
 AC_SUBST(CORE_LDFLAGS)
@@ -1940,7 +1940,7 @@ AC_SUBST(HAVE_EVHTTP_CONNECTION_GET_PEER_CONST_CHAR)
 AC_CONFIG_FILES([Makefile src/Makefile doc/man/Makefile share/setup.nsi share/qt/Info.plist test/config.ini])
 AC_CONFIG_FILES([contrib/devtools/split-debug.sh],[chmod +x contrib/devtools/split-debug.sh])
 AM_COND_IF([HAVE_DOXYGEN], [AC_CONFIG_FILES([doc/Doxyfile])])
-AC_CONFIG_LINKS([contrib/devtools/iwyu/bitcoinsilver.core.imp:contrib/devtools/iwyu/bitcoinsilver.core.imp])
+AC_CONFIG_LINKS([contrib/devtools/iwyu/caps.core.imp:contrib/devtools/iwyu/caps.core.imp])
 AC_CONFIG_LINKS([contrib/filter-lcov.py:contrib/filter-lcov.py])
 AC_CONFIG_LINKS([src/.bear-tidy-config:src/.bear-tidy-config])
 AC_CONFIG_LINKS([src/.clang-tidy:src/.clang-tidy])
@@ -1976,14 +1976,14 @@ echo
 echo "Options used to compile and link:"
 echo "  external signer = $use_external_signer"
 echo "  multiprocess    = $build_multiprocess"
-echo "  with libs       = $build_bitcoinsilver_libs"
+echo "  with libs       = $build_caps_libs"
 echo "  with wallet     = $enable_wallet"
 if test "$enable_wallet" != "no"; then
     echo "    with sqlite   = $use_sqlite"
     echo "    with bdb      = $use_bdb"
 fi
-echo "  with gui / qt   = $bitcoinsilver_enable_qt"
-if test $bitcoinsilver_enable_qt != "no"; then
+echo "  with gui / qt   = $caps_enable_qt"
+if test $caps_enable_qt != "no"; then
     echo "    with qr       = $use_qr"
 fi
 echo "  with zmq        = $use_zmq"

@@ -2,10 +2,10 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_TRANSACTIONDESC_H
-#define BITCOINSILVER_QT_TRANSACTIONDESC_H
+#ifndef CAPS_QT_TRANSACTIONDESC_H
+#define CAPS_QT_TRANSACTIONDESC_H
 
-#include <qt/bitcoinsilverunits.h>
+#include <qt/capsunits.h>
 
 #include <QObject>
 #include <QString>
@@ -34,4 +34,4 @@ private:
     static QString FormatTxStatus(const interfaces::WalletTxStatus& status, bool inMempool);
 };
 
-#endif // BITCOINSILVER_QT_TRANSACTIONDESC_H
+#endif // CAPS_QT_TRANSACTIONDESC_H

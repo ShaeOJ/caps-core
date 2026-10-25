@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_MINI_MINER_H
-#define BITCOINSILVER_NODE_MINI_MINER_H
+#ifndef CAPS_NODE_MINI_MINER_H
+#define CAPS_NODE_MINI_MINER_H
 
 #include <txmempool.h>
 
@@ -123,4 +123,4 @@ public:
 };
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_MINI_MINER_H
+#endif // CAPS_NODE_MINI_MINER_H

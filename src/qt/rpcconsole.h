@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_RPCCONSOLE_H
-#define BITCOINSILVER_QT_RPCCONSOLE_H
+#ifndef CAPS_QT_RPCCONSOLE_H
+#define CAPS_QT_RPCCONSOLE_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <qt/clientmodel.h>
@@ -39,7 +39,7 @@ class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
-/** Local BitcoinSilver RPC console. */
+/** Local Caps RPC console. */
 class RPCConsole: public QWidget
 {
     Q_OBJECT
@@ -193,4 +193,4 @@ private Q_SLOTS:
     void updateAlerts(const QString& warnings);
 };
 
-#endif // BITCOINSILVER_QT_RPCCONSOLE_H
+#endif // CAPS_QT_RPCCONSOLE_H

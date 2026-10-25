@@ -17,7 +17,7 @@
 
 # eBPF Limitations:
 #
-# BitcoinSilver P2P messages can be larger than 32kb (e.g. tx, block, ...). The eBPF
+# Caps P2P messages can be larger than 32kb (e.g. tx, block, ...). The eBPF
 # VM's stack is limited to 512 bytes, and we can't allocate more than about 32kb
 # for a P2P message in the eBPF VM. The message data is cut off when the message
 # is larger than MAX_MSG_DATA_LENGTH (see definition below). This can be detected
@@ -132,15 +132,15 @@ def print_message(event, inbound):
           )
 
 
-def main(bitcoinsilverd_path):
-    bitcoinsilverd_with_usdts = USDT(path=str(bitcoinsilverd_path))
+def main(capsd_path):
+    capsd_with_usdts = USDT(path=str(capsd_path))
 
     # attaching the trace functions defined in the BPF program to the tracepoints
-    bitcoinsilverd_with_usdts.enable_probe(
+    capsd_with_usdts.enable_probe(
         probe="inbound_message", fn_name="trace_inbound_message")
-    bitcoinsilverd_with_usdts.enable_probe(
+    capsd_with_usdts.enable_probe(
         probe="outbound_message", fn_name="trace_outbound_message")
-    bpf = BPF(text=program, usdt_contexts=[bitcoinsilverd_with_usdts])
+    bpf = BPF(text=program, usdt_contexts=[capsd_with_usdts])
 
     # BCC: perf buffer handle function for inbound_messages
     def handle_inbound(_, data, size):
@@ -177,7 +177,7 @@ def main(bitcoinsilverd_path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("USAGE:", sys.argv[0], "path/to/bitcoinsilverd")
+        print("USAGE:", sys.argv[0], "path/to/capsd")
         exit()
     path = sys.argv[1]
     main(path)

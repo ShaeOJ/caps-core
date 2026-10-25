@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_CLIENTMODEL_H
-#define BITCOINSILVER_QT_CLIENTMODEL_H
+#ifndef CAPS_QT_CLIENTMODEL_H
+#define CAPS_QT_CLIENTMODEL_H
 
 #include <QObject>
 #include <QDateTime>
@@ -49,7 +49,7 @@ enum NumConnections {
     CONNECTIONS_ALL  = (CONNECTIONS_IN | CONNECTIONS_OUT),
 };
 
-/** Model for BitcoinSilver network client. */
+/** Model for Caps network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT
@@ -129,4 +129,4 @@ Q_SIGNALS:
     void showProgress(const QString &title, int nProgress);
 };
 
-#endif // BITCOINSILVER_QT_CLIENTMODEL_H
+#endif // CAPS_QT_CLIENTMODEL_H

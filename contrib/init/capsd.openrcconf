@@ -1,0 +1,33 @@
+# /etc/conf.d/capsd: config file for /etc/init.d/capsd
+
+# Config file location
+#CAPSD_CONFIGFILE="/etc/caps/caps.conf"
+
+# What directory to write pidfile to?  (created and owned by $CAPSD_USER)
+#CAPSD_PIDDIR="/var/run/capsd"
+
+# What filename to give the pidfile
+#CAPSD_PIDFILE="${CAPSD_PIDDIR}/capsd.pid"
+
+# Where to write capsd data (be mindful that the blockchain is large)
+#CAPSD_DATADIR="/var/lib/capsd"
+
+# User and group to own capsd process
+#CAPSD_USER="caps"
+#CAPSD_GROUP="caps"
+
+# Path to capsd executable
+#CAPSD_BIN="/usr/bin/capsd"
+
+# Nice value to run capsd under
+#CAPSD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#CAPSD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for capsd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+CAPSD_SIGTERM_TIMEOUT=600

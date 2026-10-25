@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLETINITINTERFACE_H
-#define BITCOINSILVER_WALLETINITINTERFACE_H
+#ifndef CAPS_WALLETINITINTERFACE_H
+#define CAPS_WALLETINITINTERFACE_H
 
 class ArgsManager;
 
@@ -27,4 +27,4 @@ public:
 
 extern const WalletInitInterface& g_wallet_init_interface;
 
-#endif // BITCOINSILVER_WALLETINITINTERFACE_H
+#endif // CAPS_WALLETINITINTERFACE_H

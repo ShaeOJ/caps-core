@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_COINCONTROL_H
-#define BITCOINSILVER_WALLET_COINCONTROL_H
+#ifndef CAPS_WALLET_COINCONTROL_H
+#define CAPS_WALLET_COINCONTROL_H
 
 #include <outputtype.h>
 #include <policy/feerate.h>
@@ -124,4 +124,4 @@ private:
 };
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_COINCONTROL_H
+#endif // CAPS_WALLET_COINCONTROL_H

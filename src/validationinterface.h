@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_VALIDATIONINTERFACE_H
-#define BITCOINSILVER_VALIDATIONINTERFACE_H
+#ifndef CAPS_VALIDATIONINTERFACE_H
+#define CAPS_VALIDATIONINTERFACE_H
 
 #include <kernel/cs_main.h>
 #include <kernel/chain.h>
@@ -211,4 +211,4 @@ public:
 
 CMainSignals& GetMainSignals();
 
-#endif // BITCOINSILVER_VALIDATIONINTERFACE_H
+#endif // CAPS_VALIDATIONINTERFACE_H

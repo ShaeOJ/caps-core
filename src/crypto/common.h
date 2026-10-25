@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CRYPTO_COMMON_H
-#define BITCOINSILVER_CRYPTO_COMMON_H
+#ifndef CAPS_CRYPTO_COMMON_H
+#define CAPS_CRYPTO_COMMON_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <stdint.h>
@@ -107,4 +107,4 @@ uint64_t static inline CountBits(uint64_t x)
     return ret;
 }
 
-#endif // BITCOINSILVER_CRYPTO_COMMON_H
+#endif // CAPS_CRYPTO_COMMON_H

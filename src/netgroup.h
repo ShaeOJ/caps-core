@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NETGROUP_H
-#define BITCOINSILVER_NETGROUP_H
+#ifndef CAPS_NETGROUP_H
+#define CAPS_NETGROUP_H
 
 #include <netaddress.h>
 #include <uint256.h>
@@ -63,4 +63,4 @@ private:
     const std::vector<bool> m_asmap;
 };
 
-#endif // BITCOINSILVER_NETGROUP_H
+#endif // CAPS_NETGROUP_H

@@ -6,7 +6,7 @@
 #include <util/fs_helpers.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <logging.h>

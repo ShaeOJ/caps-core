@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_SUPPORT_ALLOCATORS_SECURE_H
-#define BITCOINSILVER_SUPPORT_ALLOCATORS_SECURE_H
+#ifndef CAPS_SUPPORT_ALLOCATORS_SECURE_H
+#define CAPS_SUPPORT_ALLOCATORS_SECURE_H
 
 #include <support/lockedpool.h>
 #include <support/cleanse.h>
@@ -81,4 +81,4 @@ secure_unique_ptr<T> make_secure_unique(Args&&... as)
     }
 }
 
-#endif // BITCOINSILVER_SUPPORT_ALLOCATORS_SECURE_H
+#endif // CAPS_SUPPORT_ALLOCATORS_SECURE_H

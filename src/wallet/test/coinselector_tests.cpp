@@ -622,12 +622,12 @@ BOOST_AUTO_TEST_CASE(knapsack_solver_test)
         add_coin(available_coins, *wallet,  4*COIN); // now we have 5+6+7+8+18+20+30+100+200+300+400 = 1094 cents
         const auto result14 = KnapsackSolver(KnapsackGroupOutputs(available_coins, *wallet, filter_confirmed), 95 * CENT, CENT);
         BOOST_CHECK(result14);
-        BOOST_CHECK_EQUAL(result14->GetSelectedValue(), 1 * COIN);  // we should get 1 BTCS in 1 coin
+        BOOST_CHECK_EQUAL(result14->GetSelectedValue(), 1 * COIN);  // we should get 1 CAPS in 1 coin
         BOOST_CHECK_EQUAL(result14->GetInputSet().size(), 1U);
 
         const auto result15 = KnapsackSolver(KnapsackGroupOutputs(available_coins, *wallet, filter_confirmed), 195 * CENT, CENT);
         BOOST_CHECK(result15);
-        BOOST_CHECK_EQUAL(result15->GetSelectedValue(), 2 * COIN);  // we should get 2 BTCS in 1 coin
+        BOOST_CHECK_EQUAL(result15->GetSelectedValue(), 2 * COIN);  // we should get 2 CAPS in 1 coin
         BOOST_CHECK_EQUAL(result15->GetInputSet().size(), 1U);
 
         // empty the wallet and start again, now with fractions of a cent, to test small change avoidance
@@ -1167,10 +1167,10 @@ BOOST_AUTO_TEST_CASE(srd_tests)
         int max_weight = 10000; // WU
         const auto& res = SelectCoinsSRD(target, dummy_params, m_node, max_weight, [&](CWallet& wallet) {
             CoinsResult available_coins;
-            for (int j = 0; j < 60; ++j) { // 60 UTXO --> 19,8 BTCS total --> 60 × 272 WU = 16320 WU
+            for (int j = 0; j < 60; ++j) { // 60 UTXO --> 19,8 CAPS total --> 60 × 272 WU = 16320 WU
                 add_coin(available_coins, wallet, CAmount(0.33 * COIN), CFeeRate(0), 144, false, 0, true);
             }
-            for (int i = 0; i < 10; i++) { // 10 UTXO --> 20 BTCS total --> 10 × 272 WU = 2720 WU
+            for (int i = 0; i < 10; i++) { // 10 UTXO --> 20 CAPS total --> 10 × 272 WU = 2720 WU
                 add_coin(available_coins, wallet, CAmount(2 * COIN), CFeeRate(0), 144, false, 0, true);
             }
             return available_coins;
@@ -1220,9 +1220,9 @@ BOOST_AUTO_TEST_CASE(check_max_weight)
 
     {
         // Scenario 1:
-        // The actor starts with 1x 50.0 BTCS and 1515x 0.033 BTCS (~100.0 BTCS total) unspent outputs
-        // Then tries to spend 49.5 BTCS
-        // The 50.0 BTCS output should be selected, because the transaction would otherwise be too large
+        // The actor starts with 1x 50.0 CAPS and 1515x 0.033 CAPS (~100.0 CAPS total) unspent outputs
+        // Then tries to spend 49.5 CAPS
+        // The 50.0 CAPS output should be selected, because the transaction would otherwise be too large
 
         // Perform selection
 
@@ -1239,7 +1239,7 @@ BOOST_AUTO_TEST_CASE(check_max_weight)
             m_node);
 
         BOOST_CHECK(result);
-        // Verify that only the 50 BTCS UTXO was selected
+        // Verify that only the 50 CAPS UTXO was selected
         const auto& selection_res = result->GetInputSet();
         BOOST_CHECK(selection_res.size() == 1);
         BOOST_CHECK((*selection_res.begin())->GetEffectiveValue() == 50 * COIN);
@@ -1248,8 +1248,8 @@ BOOST_AUTO_TEST_CASE(check_max_weight)
     {
         // Scenario 2:
 
-        // The actor starts with 400x 0.0625 BTCS and 2000x 0.025 BTCS (75.0 BTCS total) unspent outputs
-        // Then tries to spend 49.5 BTCS
+        // The actor starts with 400x 0.0625 CAPS and 2000x 0.025 CAPS (75.0 CAPS total) unspent outputs
+        // Then tries to spend 49.5 CAPS
         // A combination of coins should be selected, such that the created transaction is not too large
 
         // Perform selection
@@ -1273,7 +1273,7 @@ BOOST_AUTO_TEST_CASE(check_max_weight)
     {
         // Scenario 3:
 
-        // The actor starts with 1515x 0.033 BTCS (49.995 BTCS total) unspent outputs
+        // The actor starts with 1515x 0.033 CAPS (49.995 CAPS total) unspent outputs
         // No results should be returned, because the transaction would be too large
 
         // Perform selection
@@ -1305,10 +1305,10 @@ BOOST_AUTO_TEST_CASE(SelectCoins_effective_value_test)
     CoinsResult available_coins;
     {
         std::unique_ptr<CWallet> dummyWallet = NewWallet(m_node, /*wallet_name=*/"dummy");
-        add_coin(available_coins, *dummyWallet, 100000); // 0.001 BTCS
+        add_coin(available_coins, *dummyWallet, 100000); // 0.001 CAPS
     }
 
-    CAmount target{99900}; // 0.000999 BTCS
+    CAmount target{99900}; // 0.000999 CAPS
 
     FastRandomContext rand;
     CoinSelectionParams cs_params{

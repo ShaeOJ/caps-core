@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CRYPTO_RIPEMD160_H
-#define BITCOINSILVER_CRYPTO_RIPEMD160_H
+#ifndef CAPS_CRYPTO_RIPEMD160_H
+#define CAPS_CRYPTO_RIPEMD160_H
 
 #include <cstdlib>
 #include <stdint.h>
@@ -25,4 +25,4 @@ public:
     CRIPEMD160& Reset();
 };
 
-#endif // BITCOINSILVER_CRYPTO_RIPEMD160_H
+#endif // CAPS_CRYPTO_RIPEMD160_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
-#ifndef BITCOINSILVER_TEST_UTIL_CHAINSTATE_H
-#define BITCOINSILVER_TEST_UTIL_CHAINSTATE_H
+#ifndef CAPS_TEST_UTIL_CHAINSTATE_H
+#define CAPS_TEST_UTIL_CHAINSTATE_H
 
 #include <clientversion.h>
 #include <logging.h>
@@ -129,4 +129,4 @@ CreateAndActivateUTXOSnapshot(
 }
 
 
-#endif // BITCOINSILVER_TEST_UTIL_CHAINSTATE_H
+#endif // CAPS_TEST_UTIL_CHAINSTATE_H

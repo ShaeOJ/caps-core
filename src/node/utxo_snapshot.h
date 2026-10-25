@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_UTXO_SNAPSHOT_H
-#define BITCOINSILVER_NODE_UTXO_SNAPSHOT_H
+#ifndef CAPS_NODE_UTXO_SNAPSHOT_H
+#define CAPS_NODE_UTXO_SNAPSHOT_H
 
 #include <kernel/cs_main.h>
 #include <serialize.h>
@@ -70,4 +70,4 @@ std::optional<fs::path> FindSnapshotChainstateDir(const fs::path& data_dir);
 
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_UTXO_SNAPSHOT_H
+#endif // CAPS_NODE_UTXO_SNAPSHOT_H

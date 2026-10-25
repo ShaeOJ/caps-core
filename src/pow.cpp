@@ -17,8 +17,14 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 
 
 
-    if (pindexLast->nHeight > 1)
+    if (pindexLast->nHeight > 1) {
+        // Emergency difficulty reset: if no block found for 60+ minutes (12 * target spacing),
+        // allow mining at minimum difficulty to unstick the chain.
+        if (pblock->GetBlockTime() > pindexLast->GetBlockTime() + params.nPowTargetSpacing * 12) {
+            return nProofOfWorkLimit;
+        }
         return LwmaCalculateNextWorkRequired(pindexLast, params);
+    }
 
     // Only change once per difficulty adjustment interval
     if ((pindexLast->nHeight+1) % params.DifficultyAdjustmentInterval() != 0)
@@ -75,7 +81,7 @@ unsigned int LwmaCalculateNextWorkRequired(const CBlockIndex* pindexLast, const 
         thisTimestamp = (block->GetBlockTime() > previousTimestamp) ? 
                             block->GetBlockTime() : previousTimestamp + 1;
 
-        int64_t solvetime = std::min(6 * T, thisTimestamp - previousTimestamp);
+        int64_t solvetime = std::min(20 * T, thisTimestamp - previousTimestamp);
         previousTimestamp = thisTimestamp;
 
         j++;

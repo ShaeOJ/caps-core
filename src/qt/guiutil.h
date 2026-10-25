@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_GUIUTIL_H
-#define BITCOINSILVER_QT_GUIUTIL_H
+#ifndef CAPS_QT_GUIUTIL_H
+#define CAPS_QT_GUIUTIL_H
 
 #include <consensus/amount.h>
 #include <net.h>
@@ -52,7 +52,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the BitcoinSilver Qt UI.
+/** Utility functions used by the Caps Qt UI.
  */
 namespace GUIUtil
 {
@@ -77,7 +77,7 @@ namespace GUIUtil
      */
     void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut);
 
-    // Parse "bitcoinsilver:" URI into recipient object, return true on successful parsing
+    // Parse "caps:" URI into recipient object, return true on successful parsing
     bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
     QString formatBitcoinURI(const SendCoinsRecipient &info);
@@ -438,4 +438,4 @@ namespace GUIUtil
 
 } // namespace GUIUtil
 
-#endif // BITCOINSILVER_QT_GUIUTIL_H
+#endif // CAPS_QT_GUIUTIL_H

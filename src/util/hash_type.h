@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_HASH_TYPE_H
-#define BITCOINSILVER_UTIL_HASH_TYPE_H
+#ifndef CAPS_UTIL_HASH_TYPE_H
+#define CAPS_UTIL_HASH_TYPE_H
 
 template <typename HashType>
 class BaseHash
@@ -69,4 +69,4 @@ public:
     const unsigned char* data() const { return m_hash.data(); }
 };
 
-#endif // BITCOINSILVER_UTIL_HASH_TYPE_H
+#endif // CAPS_UTIL_HASH_TYPE_H

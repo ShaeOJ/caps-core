@@ -2,7 +2,7 @@
 
 **Updated for FreeBSD [12.3](https://www.freebsd.org/releases/12.3R/announce/)**
 
-This guide describes how to build bitcoinsilverd, command-line utilities, and GUI on FreeBSD.
+This guide describes how to build capsd, command-line utilities, and GUI on FreeBSD.
 
 ## Preparation
 
@@ -16,16 +16,16 @@ pkg install autoconf automake boost-libs git gmake libevent libtool pkgconf
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
-### 2. Clone BitcoinSilver Repo
-Now that `git` and all the required dependencies are installed, let's clone the BitcoinSilver repository to a directory. All build scripts and commands will run from this directory.
+### 2. Clone Caps Repo
+Now that `git` and all the required dependencies are installed, let's clone the Caps repository to a directory. All build scripts and commands will run from this directory.
 ``` bash
-git clone https://github.com/MrVistos/bitcoinsilver.git
+git clone https://github.com/MrVistos/caps.git
 ```
 
 ### 3. Install Optional Dependencies
 
 #### Wallet Dependencies
-It is not necessary to build wallet functionality to run either `bitcoinsilverd` or `bitcoinsilver-qt`.
+It is not necessary to build wallet functionality to run either `capsd` or `caps-qt`.
 
 ###### Descriptor Wallet Support
 
@@ -48,7 +48,7 @@ gmake -C depends NO_BOOST=1 NO_LIBEVENT=1 NO_QT=1 NO_SQLITE=1 NO_NATPMP=1 NO_UPN
 When the build is complete, the Berkeley DB installation location will be displayed:
 
 ```
-to: /path/to/bitcoinsilver/depends/x86_64-unknown-freebsd[release-number]
+to: /path/to/caps/depends/x86_64-unknown-freebsd[release-number]
 ```
 
 Finally, set `BDB_PREFIX` to this path according to your shell:
@@ -64,7 +64,7 @@ sh/bash: export BDB_PREFIX=[path displayed above]
 #### GUI Dependencies
 ###### Qt5
 
-BitcoinSilver includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install `qt5`. Skip if you don't intend to use the GUI.
+Caps includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install `qt5`. Skip if you don't intend to use the GUI.
 ```bash
 pkg install qt5
 ```
@@ -79,7 +79,7 @@ pkg install libqrencode
 #### Notifications
 ###### ZeroMQ
 
-BitcoinSilver can provide notifications via ZeroMQ. If the package is installed, support will be compiled in.
+Caps can provide notifications via ZeroMQ. If the package is installed, support will be compiled in.
 ```bash
 pkg install libzmq4
 ```
@@ -93,11 +93,11 @@ pkg install python3 databases/py-sqlite3
 ```
 ---
 
-## Building BitcoinSilver
+## Building Caps
 
 ### 1. Configuration
 
-There are many ways to configure BitcoinSilver, here are a few common examples:
+There are many ways to configure Caps, here are a few common examples:
 
 ##### Descriptor Wallet and GUI:
 This explicitly enables the GUI and disables legacy wallet support, assuming `sqlite` and `qt` are installed.

@@ -3,11 +3,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_COMMON_SYSTEM_H
-#define BITCOINSILVER_COMMON_SYSTEM_H
+#ifndef CAPS_COMMON_SYSTEM_H
+#define CAPS_COMMON_SYSTEM_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <compat/assumptions.h>
@@ -35,4 +35,4 @@ void runCommand(const std::string& strCommand);
  */
 int GetNumCores();
 
-#endif // BITCOINSILVER_COMMON_SYSTEM_H
+#endif // CAPS_COMMON_SYSTEM_H

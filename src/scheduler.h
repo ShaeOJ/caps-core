@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_SCHEDULER_H
-#define BITCOINSILVER_SCHEDULER_H
+#ifndef CAPS_SCHEDULER_H
+#define CAPS_SCHEDULER_H
 
 #include <attributes.h>
 #include <sync.h>
@@ -152,4 +152,4 @@ public:
     size_t CallbacksPending() EXCLUSIVE_LOCKS_REQUIRED(!m_callbacks_mutex);
 };
 
-#endif // BITCOINSILVER_SCHEDULER_H
+#endif // CAPS_SCHEDULER_H

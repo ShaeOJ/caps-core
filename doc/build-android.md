@@ -1,7 +1,7 @@
 ANDROID BUILD NOTES
 ======================
 
-This guide describes how to build and package the `bitcoinsilver-qt` GUI for Android on Linux and macOS.
+This guide describes how to build and package the `caps-qt` GUI for Android on Linux and macOS.
 
 
 ## Dependencies

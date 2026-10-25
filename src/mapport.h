@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_MAPPORT_H
-#define BITCOINSILVER_MAPPORT_H
+#ifndef CAPS_MAPPORT_H
+#define CAPS_MAPPORT_H
 
 static constexpr bool DEFAULT_UPNP = false;
 
@@ -19,4 +19,4 @@ void StartMapPort(bool use_upnp, bool use_natpmp);
 void InterruptMapPort();
 void StopMapPort();
 
-#endif // BITCOINSILVER_MAPPORT_H
+#endif // CAPS_MAPPORT_H

@@ -1,5 +1,5 @@
-#ifndef BITCOINSILVER_NODE_PEERMAN_ARGS_H
-#define BITCOINSILVER_NODE_PEERMAN_ARGS_H
+#ifndef CAPS_NODE_PEERMAN_ARGS_H
+#define CAPS_NODE_PEERMAN_ARGS_H
 
 #include <net_processing.h>
 
@@ -9,4 +9,4 @@ namespace node {
 void ApplyArgsManOptions(const ArgsManager& argsman, PeerManager::Options& options);
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_PEERMAN_ARGS_H
+#endif // CAPS_NODE_PEERMAN_ARGS_H

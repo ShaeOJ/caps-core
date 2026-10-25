@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_HASH_H
-#define BITCOINSILVER_HASH_H
+#ifndef CAPS_HASH_H
+#define CAPS_HASH_H
 
 #include <attributes.h>
 #include <crypto/common.h>
@@ -21,7 +21,7 @@
 
 typedef uint256 ChainCode;
 
-/** A hasher class for BitcoinSilver's 256-bit hash (double SHA-256). */
+/** A hasher class for Caps's 256-bit hash (double SHA-256). */
 class CHash256 {
 private:
     CSHA256 sha;
@@ -46,7 +46,7 @@ public:
     }
 };
 
-/** A hasher class for BitcoinSilver's 160-bit hash (SHA-256 + RIPEMD-160). */
+/** A hasher class for Caps's 160-bit hash (SHA-256 + RIPEMD-160). */
 class CHash160 {
 private:
     CSHA256 sha;
@@ -244,4 +244,4 @@ inline uint160 RIPEMD160(Span<const unsigned char> data)
     return result;
 }
 
-#endif // BITCOINSILVER_HASH_H
+#endif // CAPS_HASH_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_WALLET_H
-#define BITCOINSILVER_WALLET_WALLET_H
+#ifndef CAPS_WALLET_WALLET_H
+#define CAPS_WALLET_WALLET_H
 
 #include <addresstype.h>
 #include <consensus/amount.h>
@@ -1100,4 +1100,4 @@ struct MigrationResult {
 [[nodiscard]] util::Result<MigrationResult> MigrateLegacyToDescriptor(const std::string& wallet_name, const SecureString& passphrase, WalletContext& context);
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_WALLET_H
+#endif // CAPS_WALLET_WALLET_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TEST_SCRIPTNUM10_H
-#define BITCOINSILVER_TEST_SCRIPTNUM10_H
+#ifndef CAPS_TEST_SCRIPTNUM10_H
+#define CAPS_TEST_SCRIPTNUM10_H
 
 #include <assert.h>
 #include <limits>
@@ -22,7 +22,7 @@ public:
 class CScriptNum10
 {
 /**
- * The ScriptNum implementation from BitcoinSilver 0.10.0, for cross-comparison.
+ * The ScriptNum implementation from Caps 0.10.0, for cross-comparison.
  */
 public:
 
@@ -179,4 +179,4 @@ private:
 };
 
 
-#endif // BITCOINSILVER_TEST_SCRIPTNUM10_H
+#endif // CAPS_TEST_SCRIPTNUM10_H

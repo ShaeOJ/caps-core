@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_DB_H
-#define BITCOINSILVER_WALLET_DB_H
+#ifndef CAPS_WALLET_DB_H
+#define CAPS_WALLET_DB_H
 
 #include <clientversion.h>
 #include <streams.h>
@@ -220,4 +220,4 @@ bool IsBDBFile(const fs::path& path);
 bool IsSQLiteFile(const fs::path& path);
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_DB_H
+#endif // CAPS_WALLET_DB_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_MEMUSAGE_H
-#define BITCOINSILVER_MEMUSAGE_H
+#ifndef CAPS_MEMUSAGE_H
+#define CAPS_MEMUSAGE_H
 
 #include <indirectmap.h>
 #include <prevector.h>
@@ -204,4 +204,4 @@ static inline size_t DynamicUsage(const std::unordered_map<Key,
 
 } // namespace memusage
 
-#endif // BITCOINSILVER_MEMUSAGE_H
+#endif // CAPS_MEMUSAGE_H

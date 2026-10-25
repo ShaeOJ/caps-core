@@ -1,0 +1,49 @@
+Caps v1.0.0 - Windows 64-bit Release
+=====================================
+
+This is the first release of Caps for Windows.
+
+INCLUDED FILES
+--------------
+- capsd.exe      : Caps daemon (node)
+- caps-cli.exe   : Command-line interface
+- caps-qt.exe    : GUI wallet application
+
+QUICK START
+-----------
+1. Run caps-qt.exe for the GUI wallet
+   OR
+   Run capsd.exe for the daemon (headless node)
+
+2. To connect to an existing node:
+   caps-qt.exe -addnode=<ip-address>
+   OR
+   capsd.exe -addnode=<ip-address>
+
+3. The blockchain data will be stored in:
+   %APPDATA%\Caps\
+
+CONFIGURATION
+-------------
+Create a caps.conf file in %APPDATA%\Caps\ with settings like:
+   rpcuser=your_username
+   rpcpassword=your_password
+   addnode=<seed-node-ip>
+
+CLI USAGE
+---------
+While capsd is running:
+   caps-cli.exe getblockchaininfo
+   caps-cli.exe getpeerinfo
+   caps-cli.exe help
+
+BUILD INFO
+----------
+- Built: February 2, 2026
+- Platform: Windows x64
+- Qt: 5.15.2 (static)
+- Compiler: MSVC 2022
+
+LICENSE
+-------
+MIT License - See COPYING file for details.

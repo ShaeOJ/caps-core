@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_PRIMITIVES_BLOCK_H
-#define BITCOINSILVER_PRIMITIVES_BLOCK_H
+#ifndef CAPS_PRIMITIVES_BLOCK_H
+#define CAPS_PRIMITIVES_BLOCK_H
 
 #include <primitives/transaction.h>
 #include <serialize.h>
@@ -155,4 +155,4 @@ struct CBlockLocator
     }
 };
 
-#endif // BITCOINSILVER_PRIMITIVES_BLOCK_H
+#endif // CAPS_PRIMITIVES_BLOCK_H

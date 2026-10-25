@@ -20,7 +20,7 @@ git diff -U0 HEAD~1.. | ./contrib/devtools/clang-format-diff.py -p1 -i -v
 copyright\_header.py
 ====================
 
-Provides utilities for managing copyright headers of `The BitcoinSilver
+Provides utilities for managing copyright headers of `The Caps
 developers` in repository source files. It has three subcommands:
 
 ```
@@ -100,11 +100,11 @@ options, as all its configuration is set at the top of the file. It runs many ti
 pypy3 contrib/devtools/headerssync-params.py
 ```
 
-gen-bitcoinsilver-conf.sh
+gen-caps-conf.sh
 ===================
 
-Generates a bitcoinsilver.conf file in `share/examples/` by parsing the output from `bitcoinsilverd --help`. This script is run during the
-release process to include a bitcoinsilver.conf with the release binaries and can also be run by users to generate a file locally.
+Generates a caps.conf file in `share/examples/` by parsing the output from `capsd --help`. This script is run during the
+release process to include a caps.conf with the release binaries and can also be run by users to generate a file locally.
 When generating a file as part of the release process, make sure to commit the changes after running the script.
 
 With in-tree builds this tool can be run from any directory within the
@@ -112,7 +112,7 @@ repository. To use this tool with out-of-tree builds set `BUILDDIR`. For
 example:
 
 ```bash
-BUILDDIR=$PWD/build contrib/devtools/gen-bitcoinsilver-conf.sh
+BUILDDIR=$PWD/build contrib/devtools/gen-caps-conf.sh
 ```
 
 security-check.py and test-security-check.py

@@ -94,14 +94,14 @@ chain for " target " development."))
 (define base-gcc gcc-10)
 (define base-linux-kernel-headers linux-libre-headers-5.15)
 
-(define* (make-bitcoinsilver-cross-toolchain target
+(define* (make-caps-cross-toolchain target
                                        #:key
                                        (base-gcc-for-libc linux-base-gcc)
                                        (base-kernel-headers base-linux-kernel-headers)
                                        (base-libc glibc-2.27)
                                        (base-gcc linux-base-gcc))
   "Convenience wrapper around MAKE-CROSS-TOOLCHAIN with default values
-desirable for building BitcoinSilver release binaries."
+desirable for building Caps release binaries."
   (make-cross-toolchain target
                         base-gcc-for-libc
                         base-kernel-headers
@@ -143,7 +143,7 @@ chain for " target " development."))
 ;; While LIEF is packaged in Guix, we maintain our own package,
 ;; to simplify building, and more easily apply updates.
 ;; Moreover, the Guix's package uses cmake, which caused build
-;; failure; see https://github.com/MrVistos/bitcoinsilver/pull/27296.
+;; failure; see https://github.com/MrVistos/caps/pull/27296.
 (define-public python-lief
   (package
     (name "python-lief")
@@ -601,7 +601,7 @@ inspecting signatures in Mach-O binaries.")
                  nss-certs
                  osslsigncode))
           ((string-contains target "-linux-")
-           (list (make-bitcoinsilver-cross-toolchain target)))
+           (list (make-caps-cross-toolchain target)))
           ((string-contains target "darwin")
            (list clang-toolchain-15 binutils cmake-minimal python-signapple zip))
           (else '())))))

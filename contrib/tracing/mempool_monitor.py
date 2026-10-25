@@ -3,7 +3,7 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-""" Example logging BitcoinSilver mempool events using the mempool:added,
+""" Example logging Caps mempool events using the mempool:added,
     mempool:removed, mempool:replaced, and mempool:rejected tracepoints. """
 
 import curses
@@ -114,16 +114,16 @@ int trace_replaced(struct pt_regs *ctx) {
 """
 
 
-def main(bitcoinsilverd_path):
-    bitcoinsilverd_with_usdts = USDT(path=str(bitcoinsilverd_path))
+def main(capsd_path):
+    capsd_with_usdts = USDT(path=str(capsd_path))
 
     # attaching the trace functions defined in the BPF program
     # to the tracepoints
-    bitcoinsilverd_with_usdts.enable_probe(probe="mempool:added", fn_name="trace_added")
-    bitcoinsilverd_with_usdts.enable_probe(probe="mempool:removed", fn_name="trace_removed")
-    bitcoinsilverd_with_usdts.enable_probe(probe="mempool:replaced", fn_name="trace_replaced")
-    bitcoinsilverd_with_usdts.enable_probe(probe="mempool:rejected", fn_name="trace_rejected")
-    bpf = BPF(text=PROGRAM, usdt_contexts=[bitcoinsilverd_with_usdts])
+    capsd_with_usdts.enable_probe(probe="mempool:added", fn_name="trace_added")
+    capsd_with_usdts.enable_probe(probe="mempool:removed", fn_name="trace_removed")
+    capsd_with_usdts.enable_probe(probe="mempool:replaced", fn_name="trace_replaced")
+    capsd_with_usdts.enable_probe(probe="mempool:rejected", fn_name="trace_rejected")
+    bpf = BPF(text=PROGRAM, usdt_contexts=[capsd_with_usdts])
 
     events = []
 
@@ -365,7 +365,7 @@ class Dashboard:
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("USAGE: ", sys.argv[0], "path/to/bitcoinsilverd")
+        print("USAGE: ", sys.argv[0], "path/to/capsd")
         exit(1)
 
     path = sys.argv[1]

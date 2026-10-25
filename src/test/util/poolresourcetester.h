@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TEST_UTIL_POOLRESOURCETESTER_H
-#define BITCOINSILVER_TEST_UTIL_POOLRESOURCETESTER_H
+#ifndef CAPS_TEST_UTIL_POOLRESOURCETESTER_H
+#define CAPS_TEST_UTIL_POOLRESOURCETESTER_H
 
 #include <support/allocators/pool.h>
 
@@ -126,4 +126,4 @@ public:
     }
 };
 
-#endif // BITCOINSILVER_TEST_UTIL_POOLRESOURCETESTER_H
+#endif // CAPS_TEST_UTIL_POOLRESOURCETESTER_H

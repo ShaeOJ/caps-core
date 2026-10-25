@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_FS_HELPERS_H
-#define BITCOINSILVER_UTIL_FS_HELPERS_H
+#ifndef CAPS_UTIL_FS_HELPERS_H
+#define CAPS_UTIL_FS_HELPERS_H
 
 #include <util/fs.h>
 
@@ -60,4 +60,4 @@ fs::path GetDefaultDataDir();
 fs::path GetSpecialFolderPath(int nFolder, bool fCreate = true);
 #endif
 
-#endif // BITCOINSILVER_UTIL_FS_HELPERS_H
+#endif // CAPS_UTIL_FS_HELPERS_H

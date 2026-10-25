@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_KERNEL_NOTIFICATIONS_INTERFACE_H
-#define BITCOINSILVER_KERNEL_NOTIFICATIONS_INTERFACE_H
+#ifndef CAPS_KERNEL_NOTIFICATIONS_INTERFACE_H
+#define CAPS_KERNEL_NOTIFICATIONS_INTERFACE_H
 
 #include <util/translation.h>
 
@@ -61,4 +61,4 @@ public:
 };
 } // namespace kernel
 
-#endif // BITCOINSILVER_KERNEL_NOTIFICATIONS_INTERFACE_H
+#endif // CAPS_KERNEL_NOTIFICATIONS_INTERFACE_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_KERNEL_NOTIFICATIONS_H
-#define BITCOINSILVER_NODE_KERNEL_NOTIFICATIONS_H
+#ifndef CAPS_NODE_KERNEL_NOTIFICATIONS_H
+#define CAPS_NODE_KERNEL_NOTIFICATIONS_H
 
 #include <kernel/notifications_interface.h>
 
@@ -49,4 +49,4 @@ void ReadNotificationArgs(const ArgsManager& args, KernelNotifications& notifica
 
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_KERNEL_NOTIFICATIONS_H
+#endif // CAPS_NODE_KERNEL_NOTIFICATIONS_H

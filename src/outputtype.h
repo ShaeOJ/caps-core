@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_OUTPUTTYPE_H
-#define BITCOINSILVER_OUTPUTTYPE_H
+#ifndef CAPS_OUTPUTTYPE_H
+#define CAPS_OUTPUTTYPE_H
 
 #include <addresstype.h>
 #include <script/signingprovider.h>
@@ -51,4 +51,4 @@ CTxDestination AddAndGetDestinationForScript(FillableSigningProvider& keystore, 
 /** Get the OutputType for a CTxDestination */
 std::optional<OutputType> OutputTypeFromDestination(const CTxDestination& dest);
 
-#endif // BITCOINSILVER_OUTPUTTYPE_H
+#endif // CAPS_OUTPUTTYPE_H

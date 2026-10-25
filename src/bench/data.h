@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_BENCH_DATA_H
-#define BITCOINSILVER_BENCH_DATA_H
+#ifndef CAPS_BENCH_DATA_H
+#define CAPS_BENCH_DATA_H
 
 #include <cstdint>
 #include <vector>
@@ -16,4 +16,4 @@ extern const std::vector<uint8_t> block413567;
 } // namespace data
 } // namespace benchmark
 
-#endif // BITCOINSILVER_BENCH_DATA_H
+#endif // CAPS_BENCH_DATA_H

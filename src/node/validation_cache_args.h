@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_VALIDATION_CACHE_ARGS_H
-#define BITCOINSILVER_NODE_VALIDATION_CACHE_ARGS_H
+#ifndef CAPS_NODE_VALIDATION_CACHE_ARGS_H
+#define CAPS_NODE_VALIDATION_CACHE_ARGS_H
 
 class ArgsManager;
 namespace kernel {
@@ -14,4 +14,4 @@ namespace node {
 void ApplyArgsManOptions(const ArgsManager& argsman, kernel::ValidationCacheSizes& cache_sizes);
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_VALIDATION_CACHE_ARGS_H
+#endif // CAPS_NODE_VALIDATION_CACHE_ARGS_H

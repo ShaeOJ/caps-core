@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_KERNEL_MEMPOOL_ENTRY_H
-#define BITCOINSILVER_KERNEL_MEMPOOL_ENTRY_H
+#ifndef CAPS_KERNEL_MEMPOOL_ENTRY_H
+#define CAPS_KERNEL_MEMPOOL_ENTRY_H
 
 #include <consensus/amount.h>
 #include <consensus/validation.h>
@@ -178,4 +178,4 @@ public:
 
 using CTxMemPoolEntryRef = CTxMemPoolEntry::CTxMemPoolEntryRef;
 
-#endif // BITCOINSILVER_KERNEL_MEMPOOL_ENTRY_H
+#endif // CAPS_KERNEL_MEMPOOL_ENTRY_H

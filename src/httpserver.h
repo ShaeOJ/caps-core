@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_HTTPSERVER_H
-#define BITCOINSILVER_HTTPSERVER_H
+#ifndef CAPS_HTTPSERVER_H
+#define CAPS_HTTPSERVER_H
 
 #include <functional>
 #include <optional>
@@ -172,4 +172,4 @@ private:
     struct event* ev;
 };
 
-#endif // BITCOINSILVER_HTTPSERVER_H
+#endif // CAPS_HTTPSERVER_H

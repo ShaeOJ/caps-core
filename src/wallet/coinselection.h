@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_COINSELECTION_H
-#define BITCOINSILVER_WALLET_COINSELECTION_H
+#ifndef CAPS_WALLET_COINSELECTION_H
+#define CAPS_WALLET_COINSELECTION_H
 
 #include <consensus/amount.h>
 #include <consensus/consensus.h>
@@ -447,4 +447,4 @@ util::Result<SelectionResult> KnapsackSolver(std::vector<OutputGroup>& groups, c
                                              CAmount change_target, FastRandomContext& rng, int max_weight);
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_COINSELECTION_H
+#endif // CAPS_WALLET_COINSELECTION_H

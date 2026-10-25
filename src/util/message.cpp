@@ -21,7 +21,7 @@
  * Text used to signify that a signed message follows and to prevent
  * inadvertently signing a transaction.
  */
-const std::string MESSAGE_MAGIC = "BitcoinSilver Signed Message:\n";
+const std::string MESSAGE_MAGIC = "Caps Signed Message:\n";
 
 MessageVerificationResult MessageVerify(
     const std::string& address,

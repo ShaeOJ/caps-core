@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TEST_UTIL_SETUP_COMMON_H
-#define BITCOINSILVER_TEST_UTIL_SETUP_COMMON_H
+#ifndef CAPS_TEST_UTIL_SETUP_COMMON_H
+#define CAPS_TEST_UTIL_SETUP_COMMON_H
 
 #include <common/args.h>
 #include <key.h>
@@ -210,4 +210,4 @@ private:
     const std::string m_reason;
 };
 
-#endif // BITCOINSILVER_TEST_UTIL_SETUP_COMMON_H
+#endif // CAPS_TEST_UTIL_SETUP_COMMON_H

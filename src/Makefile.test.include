@@ -7,11 +7,11 @@ noinst_PROGRAMS += test/fuzz/fuzz
 endif
 
 if ENABLE_TESTS
-bin_PROGRAMS += test/test_bitcoinsilver
+bin_PROGRAMS += test/test_caps
 endif
 
 TEST_SRCDIR = test
-TEST_BINARY=test/test_bitcoinsilver$(EXEEXT)
+TEST_BINARY=test/test_caps$(EXEEXT)
 FUZZ_BINARY=test/fuzz/fuzz$(EXEEXT)
 
 JSON_TEST_FILES = \
@@ -31,20 +31,20 @@ RAW_TEST_FILES = \
 
 GENERATED_TEST_FILES = $(JSON_TEST_FILES:.json=.json.h) $(RAW_TEST_FILES:.raw=.raw.h)
 
-BITCOINSILVER_TEST_SUITE = \
+CAPS_TEST_SUITE = \
   test/main.cpp \
   $(TEST_UTIL_H)
 
 FUZZ_SUITE_LD_COMMON = \
  $(LIBTEST_UTIL) \
  $(LIBTEST_FUZZ) \
- $(LIBBITCOINSILVER_NODE) \
- $(LIBBITCOINSILVER_WALLET) \
- $(LIBBITCOINSILVER_COMMON) \
- $(LIBBITCOINSILVER_UTIL) \
- $(LIBBITCOINSILVER_CONSENSUS) \
- $(LIBBITCOINSILVER_CRYPTO) \
- $(LIBBITCOINSILVER_CLI) \
+ $(LIBCAPS_NODE) \
+ $(LIBCAPS_WALLET) \
+ $(LIBCAPS_COMMON) \
+ $(LIBCAPS_UTIL) \
+ $(LIBCAPS_CONSENSUS) \
+ $(LIBCAPS_CRYPTO) \
+ $(LIBCAPS_CLI) \
  $(LIBUNIVALUE) \
  $(LIBLEVELDB) \
  $(LIBMEMENV) \
@@ -62,7 +62,7 @@ FUZZ_SUITE_LD_COMMON += $(NATPMP_LIBS)
 endif
 
 # test_bitcoin binary #
-BITCOINSILVER_TESTS =\
+CAPS_TESTS =\
   test/addrman_tests.cpp \
   test/allocator_tests.cpp \
   test/amount_tests.cpp \
@@ -170,7 +170,7 @@ BITCOINSILVER_TESTS =\
   test/xoroshiro128plusplus_tests.cpp
 
 if ENABLE_WALLET
-BITCOINSILVER_TESTS += \
+CAPS_TESTS += \
   wallet/test/feebumper_tests.cpp \
   wallet/test/psbt_wallet_tests.cpp \
   wallet/test/spend_tests.cpp \
@@ -191,7 +191,7 @@ FUZZ_SUITE_LD_COMMON +=\
  $(BDB_LIBS)
 
 if USE_BDB
-BITCOINSILVER_TESTS += wallet/test/db_tests.cpp
+CAPS_TESTS += wallet/test/db_tests.cpp
 endif
 
 FUZZ_WALLET_SRC = \
@@ -205,35 +205,35 @@ FUZZ_WALLET_SRC += \
  wallet/test/fuzz/notifications.cpp
 endif # USE_SQLITE
 
-BITCOINSILVER_TEST_SUITE += \
+CAPS_TEST_SUITE += \
   wallet/test/wallet_test_fixture.cpp \
   wallet/test/wallet_test_fixture.h \
   wallet/test/init_test_fixture.cpp \
   wallet/test/init_test_fixture.h
 endif # ENABLE_WALLET
 
-test_test_bitcoinsilver_SOURCES = $(BITCOINSILVER_TEST_SUITE) $(BITCOINSILVER_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-test_test_bitcoinsilver_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(TESTDEFS) $(BOOST_CPPFLAGS) $(EVENT_CFLAGS)
-test_test_bitcoinsilver_LDADD = $(LIBTEST_UTIL)
+test_test_caps_SOURCES = $(CAPS_TEST_SUITE) $(CAPS_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+test_test_caps_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(TESTDEFS) $(BOOST_CPPFLAGS) $(EVENT_CFLAGS)
+test_test_caps_LDADD = $(LIBTEST_UTIL)
 if ENABLE_WALLET
-test_test_bitcoinsilver_LDADD += $(LIBBITCOINSILVER_WALLET)
-test_test_bitcoinsilver_CPPFLAGS += $(BDB_CPPFLAGS)
+test_test_caps_LDADD += $(LIBCAPS_WALLET)
+test_test_caps_CPPFLAGS += $(BDB_CPPFLAGS)
 endif
 
-test_test_bitcoinsilver_LDADD += $(LIBBITCOINSILVER_NODE) $(LIBBITCOINSILVER_CLI) $(LIBBITCOINSILVER_COMMON) $(LIBBITCOINSILVER_UTIL) $(LIBBITCOINSILVER_CONSENSUS) $(LIBBITCOINSILVER_CRYPTO) $(LIBUNIVALUE) \
+test_test_caps_LDADD += $(LIBCAPS_NODE) $(LIBCAPS_CLI) $(LIBCAPS_COMMON) $(LIBCAPS_UTIL) $(LIBCAPS_CONSENSUS) $(LIBCAPS_CRYPTO) $(LIBUNIVALUE) \
   $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1) $(EVENT_LIBS) $(EVENT_PTHREADS_LIBS) $(MINISKETCH_LIBS)
-test_test_bitcoinsilver_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+test_test_caps_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
-test_test_bitcoinsilver_LDADD += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(SQLITE_LIBS)
-test_test_bitcoinsilver_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS) -static
+test_test_caps_LDADD += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(SQLITE_LIBS)
+test_test_caps_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS) -static
 
 if ENABLE_ZMQ
-test_test_bitcoinsilver_LDADD += $(LIBBITCOINSILVER_ZMQ) $(ZMQ_LIBS)
-FUZZ_SUITE_LD_COMMON += $(LIBBITCOINSILVER_ZMQ) $(ZMQ_LIBS)
+test_test_caps_LDADD += $(LIBCAPS_ZMQ) $(ZMQ_LIBS)
+FUZZ_SUITE_LD_COMMON += $(LIBCAPS_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_FUZZ_BINARY
-test_fuzz_fuzz_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(BOOST_CPPFLAGS)
+test_fuzz_fuzz_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(BOOST_CPPFLAGS)
 test_fuzz_fuzz_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 test_fuzz_fuzz_LDADD = $(FUZZ_SUITE_LD_COMMON)
 test_fuzz_fuzz_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS) $(RUNTIME_LDFLAGS)
@@ -321,7 +321,7 @@ test_fuzz_fuzz_SOURCES = \
  test/fuzz/rpc.cpp \
  test/fuzz/script.cpp \
  test/fuzz/script_assets_test_minimizer.cpp \
- test/fuzz/script_bitcoinsilver_consensus.cpp \
+ test/fuzz/script_caps_consensus.cpp \
  test/fuzz/script_descriptor_cache.cpp \
  test/fuzz/script_flags.cpp \
  test/fuzz/script_format.cpp \
@@ -354,32 +354,32 @@ test_fuzz_fuzz_SOURCES = \
  test/fuzz/versionbits.cpp
 endif # ENABLE_FUZZ_BINARY
 
-nodist_test_test_bitcoinsilver_SOURCES = $(GENERATED_TEST_FILES)
+nodist_test_test_caps_SOURCES = $(GENERATED_TEST_FILES)
 
-$(BITCOINSILVER_TESTS): $(GENERATED_TEST_FILES)
+$(CAPS_TESTS): $(GENERATED_TEST_FILES)
 
-CLEAN_BITCOINSILVER_TEST = test/*.gcda test/*.gcno test/fuzz/*.gcda test/fuzz/*.gcno test/util/*.gcda test/util/*.gcno $(GENERATED_TEST_FILES) $(addsuffix .log,$(basename $(BITCOINSILVER_TESTS)))
+CLEAN_CAPS_TEST = test/*.gcda test/*.gcno test/fuzz/*.gcda test/fuzz/*.gcno test/util/*.gcda test/util/*.gcno $(GENERATED_TEST_FILES) $(addsuffix .log,$(basename $(CAPS_TESTS)))
 
-CLEANFILES += $(CLEAN_BITCOINSILVER_TEST)
+CLEANFILES += $(CLEAN_CAPS_TEST)
 
 if TARGET_WINDOWS
-bitcoinsilver_test: $(TEST_BINARY)
+caps_test: $(TEST_BINARY)
 else
 if ENABLE_BENCH
-bitcoinsilver_test: $(TEST_BINARY) $(BENCH_BINARY)
+caps_test: $(TEST_BINARY) $(BENCH_BINARY)
 else
-bitcoinsilver_test: $(TEST_BINARY)
+caps_test: $(TEST_BINARY)
 endif
 endif
 
-bitcoinsilver_test_check: $(TEST_BINARY) FORCE
+caps_test_check: $(TEST_BINARY) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
-bitcoinsilver_test_clean : FORCE
-	rm -f $(CLEAN_BITCOINSILVER_TEST) $(test_test_bitcoinsilver_OBJECTS) $(TEST_BINARY)
+caps_test_clean : FORCE
+	rm -f $(CLEAN_CAPS_TEST) $(test_test_caps_OBJECTS) $(TEST_BINARY)
 
-check-local: $(BITCOINSILVER_TESTS:.cpp=.cpp.test)
-if BUILD_BITCOINSILVER_TX
+check-local: $(CAPS_TESTS:.cpp=.cpp.test)
+if BUILD_CAPS_TX
 	@echo "Running test/util/test_runner.py..."
 	$(PYTHON) $(top_builddir)/test/util/test_runner.py
 endif
@@ -388,7 +388,7 @@ endif
 if TARGET_WINDOWS
 else
 if ENABLE_BENCH
-	@echo "Running bench/bench_bitcoin (one iteration sanity check, only high priority)..."
+	@echo "Running bench/bench_caps (one iteration sanity check, only high priority)..."
 	$(BENCH_BINARY) -sanity-check -priority-level=high
 endif
 endif

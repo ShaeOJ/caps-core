@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_RANDOM_H
-#define BITCOINSILVER_RANDOM_H
+#ifndef CAPS_RANDOM_H
+#define CAPS_RANDOM_H
 
 #include <crypto/chacha20.h>
 #include <crypto/common.h>
@@ -298,4 +298,4 @@ bool Random_SanityCheck();
  */
 void RandomInit();
 
-#endif // BITCOINSILVER_RANDOM_H
+#endif // CAPS_RANDOM_H

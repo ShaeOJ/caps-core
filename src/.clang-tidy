@@ -1,6 +1,6 @@
 Checks: '
 -*,
-bitcoinsilver-*,
+caps-*,
 bugprone-argument-comment,
 bugprone-use-after-move,
 misc-unused-using-decls,

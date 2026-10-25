@@ -1,6 +1,6 @@
 # assumeutxo
 
-Assumeutxo is a feature that allows fast bootstrapping of a validating bitcoinsilverd
+Assumeutxo is a feature that allows fast bootstrapping of a validating capsd
 instance.
 
 ## Loading a snapshot
@@ -46,8 +46,8 @@ The utility script
 ## General background
 
 - [assumeutxo proposal](https://github.com/jamesob/assumeutxo-docs/tree/2019-04-proposal/proposal)
-- [Github issue](https://github.com/MrVistos/bitcoinsilver/issues/15605)
-- [draft PR](https://github.com/MrVistos/bitcoinsilver/pull/15606)
+- [Github issue](https://github.com/MrVistos/caps/issues/15605)
+- [draft PR](https://github.com/MrVistos/caps/pull/15606)
 
 ## Design notes
 
@@ -86,7 +86,7 @@ data.
 
 `ChainstateManager` manages a single Chainstate object, for which
 `m_snapshot_blockhash` is null. This chainstate is (maybe obviously)
-considered active. This is the "traditional" mode of operation for bitcoinsilverd.
+considered active. This is the "traditional" mode of operation for capsd.
 
 |    |    |
 | ---------- | ----------- |

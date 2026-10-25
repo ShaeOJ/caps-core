@@ -5,8 +5,8 @@ connections, inter-process communication, and shared-memory,
 providing various message-oriented semantics such as publish/subscribe,
 request/reply, and push/pull.
 
-The BitcoinSilver daemon can be configured to act as a trusted "border
-router", implementing the bitcoinsilver wire protocol and relay, making
+The Caps daemon can be configured to act as a trusted "border
+router", implementing the caps wire protocol and relay, making
 consensus decisions, maintaining the local blockchain database,
 broadcasting locally generated transactions into the network, and
 providing a queryable RPC interface to interact on a polled basis for
@@ -33,7 +33,7 @@ buffering or reassembly.
 
 ## Prerequisites
 
-The ZeroMQ feature in BitcoinSilver requires the ZeroMQ API >= 4.0.0
+The ZeroMQ feature in Caps requires the ZeroMQ API >= 4.0.0
 [libzmq](https://github.com/zeromq/libzmq/releases).
 For version information, see [dependencies.md](dependencies.md).
 Typically, it is packaged by distributions as something like
@@ -48,7 +48,7 @@ operation.
 
 By default, the ZeroMQ feature is automatically compiled in if the
 necessary prerequisites are found.  To disable, use --disable-zmq
-during the *configure* step of building bitcoinsilverd:
+during the *configure* step of building capsd:
 
     $ ./configure --disable-zmq (other options)
 
@@ -82,16 +82,16 @@ The high water mark value must be an integer greater than or equal to 0.
 
 For instance:
 
-    $ bitcoinsilverd -zmqpubhashtx=tcp://127.0.0.1:28332 \
+    $ capsd -zmqpubhashtx=tcp://127.0.0.1:28332 \
                -zmqpubhashtx=tcp://192.168.1.2:28332 \
                -zmqpubhashblock="tcp://[::1]:28333" \
-               -zmqpubrawtx=ipc:///tmp/bitcoinsilverd.tx.raw \
+               -zmqpubrawtx=ipc:///tmp/capsd.tx.raw \
                -zmqpubhashtxhwm=10000
 
 Each PUB notification has a topic and body, where the header
 corresponds to the notification type. For instance, for the
 notification `-zmqpubhashtx` the topic is `hashtx` (no null
-terminator). These options can also be provided in bitcoinsilver.conf.
+terminator). These options can also be provided in caps.conf.
 
 The topics are:
 
@@ -150,9 +150,9 @@ hosts as well. If needed, this option has to be set on the client side too.
 
 ## Remarks
 
-From the perspective of bitcoinsilverd, the ZeroMQ socket is write-only; PUB
+From the perspective of capsd, the ZeroMQ socket is write-only; PUB
 sockets don't even have a read function. Thus, there is no state
-introduced into bitcoinsilverd directly. Furthermore, no information is
+introduced into capsd directly. Furthermore, no information is
 broadcast that wasn't already received from the public P2P network.
 
 No authentication or authorization is done on connecting clients; it

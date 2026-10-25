@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_TIME_H
-#define BITCOINSILVER_UTIL_TIME_H
+#ifndef CAPS_UTIL_TIME_H
+#define CAPS_UTIL_TIME_H
 
 #include <chrono> // IWYU pragma: export
 #include <cstdint>
@@ -119,4 +119,4 @@ struct timeval MillisToTimeval(std::chrono::milliseconds ms);
 /** Sanity check epoch match normal Unix epoch */
 bool ChronoSanityCheck();
 
-#endif // BITCOINSILVER_UTIL_TIME_H
+#endif // CAPS_UTIL_TIME_H

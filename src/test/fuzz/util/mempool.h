@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TEST_FUZZ_UTIL_MEMPOOL_H
-#define BITCOINSILVER_TEST_FUZZ_UTIL_MEMPOOL_H
+#ifndef CAPS_TEST_FUZZ_UTIL_MEMPOOL_H
+#define CAPS_TEST_FUZZ_UTIL_MEMPOOL_H
 
 #include <kernel/mempool_entry.h>
 #include <validation.h>
@@ -23,4 +23,4 @@ public:
 
 [[nodiscard]] CTxMemPoolEntry ConsumeTxMemPoolEntry(FuzzedDataProvider& fuzzed_data_provider, const CTransaction& tx) noexcept;
 
-#endif // BITCOINSILVER_TEST_FUZZ_UTIL_MEMPOOL_H
+#endif // CAPS_TEST_FUZZ_UTIL_MEMPOOL_H

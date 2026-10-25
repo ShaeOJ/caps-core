@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TEST_FUZZ_FUZZ_H
-#define BITCOINSILVER_TEST_FUZZ_FUZZ_H
+#ifndef CAPS_TEST_FUZZ_FUZZ_H
+#define CAPS_TEST_FUZZ_FUZZ_H
 
 #include <span.h>
 
@@ -44,4 +44,4 @@ void FuzzFrameworkRegisterTarget(std::string_view name, TypeTestOneInput target,
     } const static g_##name##_before_main;                                            \
     void name##_fuzz_target(FuzzBufferType buffer)
 
-#endif // BITCOINSILVER_TEST_FUZZ_FUZZ_H
+#endif // CAPS_TEST_FUZZ_FUZZ_H

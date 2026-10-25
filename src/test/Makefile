@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. bitcoinsilver_test
+	$(MAKE) -C .. caps_test
 clean:
-	$(MAKE) -C .. bitcoinsilver_test_clean
+	$(MAKE) -C .. caps_test_clean
 check:
-	$(MAKE) -C .. bitcoinsilver_test_check
+	$(MAKE) -C .. caps_test_check

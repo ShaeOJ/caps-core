@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_WALLETMODEL_H
-#define BITCOINSILVER_QT_WALLETMODEL_H
+#ifndef CAPS_QT_WALLETMODEL_H
+#define CAPS_QT_WALLETMODEL_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <key.h>
@@ -47,7 +47,7 @@ QT_BEGIN_NAMESPACE
 class QTimer;
 QT_END_NAMESPACE
 
-/** Interface to BitcoinSilver wallet from Qt view code. */
+/** Interface to Caps wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -242,4 +242,4 @@ public Q_SLOTS:
     void pollBalanceChanged();
 };
 
-#endif // BITCOINSILVER_QT_WALLETMODEL_H
+#endif // CAPS_QT_WALLETMODEL_H

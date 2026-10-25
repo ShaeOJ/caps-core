@@ -1,21 +1,21 @@
 Benchmarking
 ============
 
-BitcoinSilver has an internal benchmarking framework, with benchmarks
+Caps has an internal benchmarking framework, with benchmarks
 for cryptographic algorithms (e.g. SHA1, SHA256, SHA512, RIPEMD160, Poly1305, ChaCha20), rolling bloom filter, coins selection,
 thread queue, wallet balance.
 
 Running
 ---------------------
 
-For benchmarking, you only need to compile `bitcoinsilver_bench`.  The bench runner
+For benchmarking, you only need to compile `caps_bench`.  The bench runner
 warns if you configure with `--enable-debug`, but consider if building without
 it will impact the benchmark(s) you are interested in by unlatching log printers
 and lock analysis.
 
-    make -C src bitcoinsilver_bench
+    make -C src caps_bench
 
-After compiling bitcoinsilver-core, the benchmarks can be run with:
+After compiling caps-core, the benchmarks can be run with:
 
     src/bench/bench_bitcoin
 
@@ -56,6 +56,6 @@ More benchmarks are needed for, in no particular order:
 Going Further
 --------------------
 
-To monitor BitcoinSilver performance more in depth (like reindex or IBD): https://github.com/chaincodelabs/bitcoinperf
+To monitor Caps performance more in depth (like reindex or IBD): https://github.com/chaincodelabs/bitcoinperf
 
-To generate Flame Graphs for BitcoinSilver: https://github.com/eklitzke/bitcoinsilver/blob/flamegraphs/doc/flamegraphs.md
+To generate Flame Graphs for Caps: https://github.com/eklitzke/caps/blob/flamegraphs/doc/flamegraphs.md

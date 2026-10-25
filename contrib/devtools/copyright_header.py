@@ -273,7 +273,7 @@ Usage:
     $ ./copyright_header.py report <base_directory> [verbose]
 
 Arguments:
-    <base_directory> - The base directory of a bitcoinsilver source code repository.
+    <base_directory> - The base directory of a caps source code repository.
     [verbose] - Includes a list of every file of each subcategory in the report.
 """
 
@@ -424,7 +424,7 @@ Usage:
     $ ./copyright_header.py update <base_directory>
 
 Arguments:
-    <base_directory> - The base directory of a bitcoinsilver source code repository.
+    <base_directory> - The base directory of a caps source code repository.
 """
 
 def print_file_action_message(filename, action):
@@ -547,7 +547,7 @@ Usage:
     $ ./copyright_header.py insert <file>
 
 Arguments:
-    <file> - A source file in the bitcoinsilver repository.
+    <file> - A source file in the caps repository.
 """
 
 def insert_cmd(argv):
@@ -574,7 +574,7 @@ def insert_cmd(argv):
 ################################################################################
 
 USAGE = """
-copyright_header.py - utilities for managing copyright headers of 'The BitcoinSilver
+copyright_header.py - utilities for managing copyright headers of 'The Caps
 Core developers' in repository source files.
 
 Usage:

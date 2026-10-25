@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_PAYMENTSERVER_H
-#define BITCOINSILVER_QT_PAYMENTSERVER_H
+#ifndef CAPS_QT_PAYMENTSERVER_H
+#define CAPS_QT_PAYMENTSERVER_H
 
 // This class handles payment requests from clicking on
-// bitcoinsilver: URIs
+// caps: URIs
 //
 // This is somewhat tricky, because we have to deal with
 // the situation where the user clicks on a link during
@@ -33,7 +33,7 @@
 //
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <qt/sendcoinsrecipient.h>
@@ -106,4 +106,4 @@ private:
     OptionsModel* optionsModel{nullptr};
 };
 
-#endif // BITCOINSILVER_QT_PAYMENTSERVER_H
+#endif // CAPS_QT_PAYMENTSERVER_H

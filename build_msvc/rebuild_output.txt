@@ -1,0 +1,457 @@
+MSBuild version 17.14.19+164abd434 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  arith_uint256.cpp
+  merkle.cpp
+  tx_check.cpp
+  hash.cpp
+  block.cpp
+  transaction.cpp
+  pubkey.cpp
+  capsconsensus.cpp
+  interpreter.cpp
+  script.cpp
+  script_error.cpp
+  uint256.cpp
+  strencodings.cpp
+  Generating Code...
+  libcaps_consensus.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_consensus\libcaps_consensus.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  url.cpp
+  addresstype.cpp
+  base58.cpp
+  bech32.cpp
+  chainparams.cpp
+  coins.cpp
+  args.cpp
+  bloom.cpp
+  config.cpp
+  init.cpp
+  interfaces.cpp
+  run_command.cpp
+  settings.cpp
+  system.cpp
+  compressor.cpp
+  core_read.cpp
+  core_write.cpp
+  deploymentinfo.cpp
+  external_signer.cpp
+  common.cpp
+  chainparams.cpp
+  key.cpp
+  key_io.cpp
+  merkleblock.cpp
+  net_types.cpp
+  netaddress.cpp
+  netbase.cpp
+  net_permissions.cpp
+  outputtype.cpp
+  feerate.cpp
+  policy.cpp
+  protocol.cpp
+  psbt.cpp
+  external_signer.cpp
+  rawtransaction_util.cpp
+  request.cpp
+  util.cpp
+  scheduler.cpp
+  descriptor.cpp
+  miniscript.cpp
+  sign.cpp
+  signingprovider.cpp
+  solver.cpp
+  warnings.cpp
+  libcaps_common.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_common\libcaps_common.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  aes.cpp
+  chacha20.cpp
+  chacha20poly1305.cpp
+  hkdf_sha256_32.cpp
+  hmac_sha256.cpp
+  hmac_sha512.cpp
+  poly1305.cpp
+  muhash.cpp
+  ripemd160.cpp
+  sha1.cpp
+  sha256.cpp
+  sha3.cpp
+  sha512.cpp
+  siphash.cpp
+  libcaps_crypto.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_crypto\libcaps_crypto.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  addrdb.cpp
+  addrman.cpp
+  banman.cpp
+  bip324.cpp
+  blockencodings.cpp
+  blockfilter.cpp
+  chain.cpp
+  tx_verify.cpp
+  dbwrapper.cpp
+  deploymentstatus.cpp
+  flatfile.cpp
+  headerssync.cpp
+  httprpc.cpp
+  httpserver.cpp
+  i2p.cpp
+  base.cpp
+  blockfilterindex.cpp
+  coinstatsindex.cpp
+  txindex.cpp
+  init.cpp
+  chain.cpp
+  checks.cpp
+  coinstats.cpp
+  context.cpp
+  cs_main.cpp
+  mempool_persist.cpp
+  mempool_removal_reason.cpp
+  mapport.cpp
+  net.cpp
+  net_processing.cpp
+  netgroup.cpp
+  abort.cpp
+  blockmanager_args.cpp
+  blockstorage.cpp
+  caches.cpp
+  chainstate.cpp
+  chainstatemanager_args.cpp
+  coin.cpp
+  coins_view_args.cpp
+  connection_types.cpp
+  context.cpp
+  database_args.cpp
+  eviction.cpp
+  interface_ui.cpp
+  interfaces.cpp
+  kernel_notifications.cpp
+  mempool_args.cpp
+  mempool_persist_args.cpp
+  miner.cpp
+  mini_miner.cpp
+  minisketchwrapper.cpp
+  peerman_args.cpp
+  psbt.cpp
+  transaction.cpp
+  txreconciliation.cpp
+  utxo_snapshot.cpp
+  validation_cache_args.cpp
+  noui.cpp
+  fees.cpp
+  fees_args.cpp
+  packages.cpp
+  rbf.cpp
+  settings.cpp
+  pow.cpp
+  rest.cpp
+  blockchain.cpp
+  fees.cpp
+  mempool.cpp
+  mining.cpp
+  net.cpp
+  node.cpp
+  output_script.cpp
+  rawtransaction.cpp
+  server.cpp
+  server_util.cpp
+  signmessage.cpp
+  txoutproof.cpp
+  sigcache.cpp
+  shutdown.cpp
+  signet.cpp
+  timedata.cpp
+  torcontrol.cpp
+  txdb.cpp
+  txmempool.cpp
+  txorphanage.cpp
+  txrequest.cpp
+  validation.cpp
+  validationinterface.cpp
+  versionbits.cpp
+  init.cpp
+  libcaps_node.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_node\libcaps_node.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  lockedpool.cpp
+  chainparamsbase.cpp
+  clientversion.cpp
+  logging.cpp
+  random.cpp
+  randomenv.cpp
+  streams.cpp
+  cleanse.cpp
+  sync.cpp
+  asmap.cpp
+  batchpriority.cpp
+  bip32.cpp
+  bytevectorhash.cpp
+  chaintype.cpp
+  check.cpp
+  error.cpp
+  exception.cpp
+  fees.cpp
+  fs.cpp
+  fs_helpers.cpp
+  getuniquepath.cpp
+  hasher.cpp
+  sock.cpp
+  syserror.cpp
+  message.cpp
+  moneystr.cpp
+  rbf.cpp
+  readwritefile.cpp
+  signalinterrupt.cpp
+  thread.cpp
+  threadinterrupt.cpp
+  threadnames.cpp
+  serfloat.cpp
+  spanparsing.cpp
+  strencodings.cpp
+  string.cpp
+  time.cpp
+  tokenpipe.cpp
+  libcaps_util.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_util\libcaps_util.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  bdb.cpp
+  salvage.cpp
+  sqlite.cpp
+  Generating Code...
+  coincontrol.cpp
+  context.cpp
+  crypter.cpp
+  db.cpp
+  dump.cpp
+  external_signer_scriptpubkeyman.cpp
+  feebumper.cpp
+  fees.cpp
+  interfaces.cpp
+  load.cpp
+  receive.cpp
+  addresses.cpp
+  backup.cpp
+  coins.cpp
+  encrypt.cpp
+  spend.cpp
+  signmessage.cpp
+  transactions.cpp
+  util.cpp
+  wallet.cpp
+  scriptpubkeyman.cpp
+  spend.cpp
+  transaction.cpp
+  wallet.cpp
+  walletdb.cpp
+  walletutil.cpp
+  coinselection.cpp
+  libcaps_wallet.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_wallet\libcaps_wallet.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  zmqabstractnotifier.cpp
+  zmqnotificationinterface.cpp
+  zmqpublishnotifier.cpp
+  zmqrpc.cpp
+  zmqutil.cpp
+  Generating Code...
+  libcaps_zmq.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_zmq\libcaps_zmq.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  univalue.cpp
+  univalue_get.cpp
+  univalue_read.cpp
+  univalue_write.cpp
+  Generating Code...
+  libunivalue.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libunivalue\libunivalue.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  precomputed_ecmult.c
+  precomputed_ecmult_gen.c
+  secp256k1.c
+  Generating Code...
+  libsecp256k1.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libsecp256k1\libsecp256k1.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  builder.cc
+  c.cc
+  dbformat.cc
+  db_impl.cc
+  db_iter.cc
+  dumpfile.cc
+  filename.cc
+  log_reader.cc
+  log_writer.cc
+  memtable.cc
+  repair.cc
+  table_cache.cc
+  version_edit.cc
+  version_set.cc
+  write_batch.cc
+  memenv.cc
+  block.cc
+  block_builder.cc
+  filter_block.cc
+  format.cc
+  Generating Code...
+  Compiling...
+  iterator.cc
+  merger.cc
+  table.cc
+  table_builder.cc
+  two_level_iterator.cc
+  arena.cc
+  bloom.cc
+  cache.cc
+  coding.cc
+  comparator.cc
+  crc32c.cc
+  env.cc
+  env_windows.cc
+  filter_policy.cc
+  hash.cc
+  histogram.cc
+  logging.cc
+  options.cc
+  status.cc
+  Generating Code...
+  libleveldb.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libleveldb\libleveldb.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+     Creating library C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\capsd.lib and object C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\capsd.exp
+  capsd.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\capsd.exe
+  Access is denied.
+C:\Users\ShaeOJ\Documents\GitHub\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets(247,5): warning : [vcpkg] Failed to gather app local DLL dependencies, program may not run. Set VcpkgApplocalDeps to false in your project file to suppress this warning. PowerShell arguments: -ExecutionPolicy Bypass -noprofile -File "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\capsd.exe" "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\bin" "x64\Release\capsd\capsd.tlog\capsd.write.1u.tlog" "x64\Release\capsd\vcpkg.applocal.log" [C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\capsd\capsd.vcxproj]
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  stdin.cpp
+  client.cpp
+  libcaps_cli.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_cli\libcaps_cli.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+     Creating library C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-cli.lib and object C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-cli.exp
+  caps-cli.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-cli.exe
+  Access is denied.
+C:\Users\ShaeOJ\Documents\GitHub\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets(247,5): warning : [vcpkg] Failed to gather app local DLL dependencies, program may not run. Set VcpkgApplocalDeps to false in your project file to suppress this warning. PowerShell arguments: -ExecutionPolicy Bypass -noprofile -File "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-cli.exe" "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\bin" "x64\Release\caps-cli\caps-cli.tlog\caps-cli.write.1u.tlog" "x64\Release\caps-cli\vcpkg.applocal.log" [C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-cli\caps-cli.vcxproj]
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  addressbookpage.cpp
+  addresstablemodel.cpp
+  askpassphrasedialog.cpp
+  bantablemodel.cpp
+  caps.cpp
+  capsaddressvalidator.cpp
+  capsamountfield.cpp
+  capsgui.cpp
+  capsstrings.cpp
+  capsunits.cpp
+  clientmodel.cpp
+  coincontroldialog.cpp
+  coincontroltreewidget.cpp
+  createwalletdialog.cpp
+  csvmodelwriter.cpp
+  editaddressdialog.cpp
+  guiutil.cpp
+  initexecutor.cpp
+  intro.cpp
+  modaloverlay.cpp
+  Generating Code...
+  Compiling...
+  networkstyle.cpp
+  notificator.cpp
+  openuridialog.cpp
+  optionsdialog.cpp
+  optionsmodel.cpp
+  overviewpage.cpp
+  paymentserver.cpp
+  peertablemodel.cpp
+  peertablesortproxy.cpp
+  platformstyle.cpp
+  psbtoperationsdialog.cpp
+  qrimagewidget.cpp
+  qvalidatedlineedit.cpp
+  qvaluecombobox.cpp
+  receivecoinsdialog.cpp
+  receiverequestdialog.cpp
+  recentrequeststablemodel.cpp
+  rpcconsole.cpp
+  sendcoinsdialog.cpp
+  sendcoinsentry.cpp
+  Generating Code...
+  Compiling...
+  signverifymessagedialog.cpp
+  splashscreen.cpp
+  trafficgraphwidget.cpp
+  transactiondesc.cpp
+  transactiondescdialog.cpp
+  transactionfilterproxy.cpp
+  transactionoverviewwidget.cpp
+  transactionrecord.cpp
+  transactiontablemodel.cpp
+  transactionview.cpp
+  utilitydialog.cpp
+  walletcontroller.cpp
+  walletframe.cpp
+  walletmodel.cpp
+  walletmodeltransaction.cpp
+  walletview.cpp
+  winshutdownmonitor.cpp
+  moc_addressbookpage.cpp
+  moc_addresstablemodel.cpp
+  moc_askpassphrasedialog.cpp
+  Generating Code...
+  Compiling...
+  moc_bantablemodel.cpp
+  moc_caps.cpp
+  moc_capsaddressvalidator.cpp
+  moc_capsamountfield.cpp
+  moc_capsgui.cpp
+  moc_capsunits.cpp
+  moc_clientmodel.cpp
+  moc_coincontroldialog.cpp
+  moc_coincontroltreewidget.cpp
+  moc_createwalletdialog.cpp
+  moc_csvmodelwriter.cpp
+  moc_editaddressdialog.cpp
+  moc_guiutil.cpp
+  moc_initexecutor.cpp
+  moc_intro.cpp
+  moc_modaloverlay.cpp
+  moc_networkstyle.cpp
+  moc_notificator.cpp
+  moc_openuridialog.cpp
+  moc_optionsdialog.cpp
+  Generating Code...
+  Compiling...
+  moc_optionsmodel.cpp
+  moc_overviewpage.cpp
+  moc_paymentserver.cpp
+  moc_peertablemodel.cpp
+  moc_peertablesortproxy.cpp
+  moc_platformstyle.cpp
+  moc_psbtoperationsdialog.cpp
+  moc_qrimagewidget.cpp
+  moc_qvalidatedlineedit.cpp
+  moc_qvaluecombobox.cpp
+  moc_receivecoinsdialog.cpp
+  moc_receiverequestdialog.cpp
+  moc_recentrequeststablemodel.cpp
+  moc_rpcconsole.cpp
+  moc_sendcoinsdialog.cpp
+  moc_sendcoinsentry.cpp
+  moc_signverifymessagedialog.cpp
+  moc_splashscreen.cpp
+  moc_trafficgraphwidget.cpp
+  moc_transactiondesc.cpp
+  Generating Code...
+  Compiling...
+  moc_transactiondescdialog.cpp
+  moc_transactionfilterproxy.cpp
+  moc_transactionoverviewwidget.cpp
+  moc_transactionrecord.cpp
+  moc_transactiontablemodel.cpp
+  moc_transactionview.cpp
+  moc_utilitydialog.cpp
+  moc_walletcontroller.cpp
+  moc_walletframe.cpp
+  moc_walletmodel.cpp
+  moc_walletmodeltransaction.cpp
+  moc_walletview.cpp
+  moc_winshutdownmonitor.cpp
+  qrc_caps.cpp
+  qrc_caps_locale.cpp
+  Generating Code...
+  libcaps_qt.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_qt\libcaps_qt.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+     Creating library C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-qt.lib and object C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-qt.exp
+  caps-qt.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-qt.exe
+  Access is denied.
+C:\Users\ShaeOJ\Documents\GitHub\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets(247,5): warning : [vcpkg] Failed to gather app local DLL dependencies, program may not run. Set VcpkgApplocalDeps to false in your project file to suppress this warning. PowerShell arguments: -ExecutionPolicy Bypass -noprofile -File "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-qt.exe" "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\bin" "x64\Release\caps-qt\caps-qt.tlog\caps-qt.write.1u.tlog" "x64\Release\caps-qt\vcpkg.applocal.log" [C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj]

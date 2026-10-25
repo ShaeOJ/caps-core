@@ -40,16 +40,16 @@ def assert_approx(v, vexp, vspan=0.00001):
         raise AssertionError("%s > [%s..%s]" % (str(v), str(vexp - vspan), str(vexp + vspan)))
 
 
-def assert_fee_amount(fee, tx_size, feerate_BTCS_kvB):
+def assert_fee_amount(fee, tx_size, feerate_CAPS_kvB):
     """Assert the fee is in range."""
     assert isinstance(tx_size, int)
-    target_fee = get_fee(tx_size, feerate_BTCS_kvB)
+    target_fee = get_fee(tx_size, feerate_CAPS_kvB)
     if fee < target_fee:
-        raise AssertionError("Fee of %s BTCS too low! (Should be %s BTCS)" % (str(fee), str(target_fee)))
+        raise AssertionError("Fee of %s CAPS too low! (Should be %s CAPS)" % (str(fee), str(target_fee)))
     # allow the wallet's estimation to be at most 2 bytes off
-    high_fee = get_fee(tx_size + 2, feerate_BTCS_kvB)
+    high_fee = get_fee(tx_size + 2, feerate_CAPS_kvB)
     if fee > high_fee:
-        raise AssertionError("Fee of %s BTCS too high! (Should be %s BTCS)" % (str(fee), str(target_fee)))
+        raise AssertionError("Fee of %s CAPS too high! (Should be %s CAPS)" % (str(fee), str(target_fee)))
 
 
 def assert_equal(thing1, thing2, *args):
@@ -204,7 +204,7 @@ def assert_array_result(object_array, to_match, expected, should_not_find=False)
 
 
 def check_json_precision():
-    """Make sure json library being used does not lose precision converting BTCS values"""
+    """Make sure json library being used does not lose precision converting CAPS values"""
     n = Decimal("20000000.00000003")
     satoshis = int(json.loads(json.dumps(float(n))) * 1.0e8)
     if satoshis != 2000000000000003:
@@ -231,10 +231,10 @@ def ceildiv(a, b):
 
 
 def get_fee(tx_size, feerate_btc_kvb):
-    """Calculate the fee in BTCS given a feerate is BTCS/kvB. Reflects CFeeRate::GetFee"""
+    """Calculate the fee in CAPS given a feerate is CAPS/kvB. Reflects CFeeRate::GetFee"""
     feerate_sat_kvb = int(feerate_btc_kvb * Decimal(1e8)) # Fee in sat/kvb as an int to avoid float precision errors
     target_fee_sat = ceildiv(feerate_sat_kvb * tx_size, 1000) # Round calculated fee up to nearest sat
-    return target_fee_sat / Decimal(1e8) # Return result in  BTCS
+    return target_fee_sat / Decimal(1e8) # Return result in  CAPS
 
 
 def satoshi_round(amount):
@@ -364,7 +364,7 @@ def initialize_datadir(dirname, n, chain, disable_autoconnect=True):
     datadir = get_datadir_path(dirname, n)
     if not os.path.isdir(datadir):
         os.makedirs(datadir)
-    write_config(os.path.join(datadir, "bitcoinsilver.conf"), n=n, chain=chain, disable_autoconnect=disable_autoconnect)
+    write_config(os.path.join(datadir, "caps.conf"), n=n, chain=chain, disable_autoconnect=disable_autoconnect)
     os.makedirs(os.path.join(datadir, 'stderr'), exist_ok=True)
     os.makedirs(os.path.join(datadir, 'stdout'), exist_ok=True)
     return datadir
@@ -422,18 +422,18 @@ def get_temp_default_datadir(temp_dir: pathlib.Path) -> Tuple[dict, pathlib.Path
     temp_dir, as well as the complete path it would return."""
     if sys.platform == "win32":
         env = dict(APPDATA=str(temp_dir))
-        datadir = temp_dir / "BitcoinSilver"
+        datadir = temp_dir / "Caps"
     else:
         env = dict(HOME=str(temp_dir))
         if sys.platform == "darwin":
-            datadir = temp_dir / "Library/Application Support/BitcoinSilver"
+            datadir = temp_dir / "Library/Application Support/Caps"
         else:
-            datadir = temp_dir / ".bitcoinsilver"
+            datadir = temp_dir / ".caps"
     return env, datadir
 
 
 def append_config(datadir, options):
-    with open(os.path.join(datadir, "bitcoinsilver.conf"), 'a', encoding='utf8') as f:
+    with open(os.path.join(datadir, "caps.conf"), 'a', encoding='utf8') as f:
         for option in options:
             f.write(option + "\n")
 
@@ -441,8 +441,8 @@ def append_config(datadir, options):
 def get_auth_cookie(datadir, chain):
     user = None
     password = None
-    if os.path.isfile(os.path.join(datadir, "bitcoinsilver.conf")):
-        with open(os.path.join(datadir, "bitcoinsilver.conf"), 'r', encoding='utf8') as f:
+    if os.path.isfile(os.path.join(datadir, "caps.conf")):
+        with open(os.path.join(datadir, "caps.conf"), 'r', encoding='utf8') as f:
             for line in f:
                 if line.startswith("rpcuser="):
                     assert user is None  # Ensure that there is only one rpcuser line

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_COIN_H
-#define BITCOINSILVER_NODE_COIN_H
+#ifndef CAPS_NODE_COIN_H
+#define CAPS_NODE_COIN_H
 
 #include <map>
 
@@ -24,4 +24,4 @@ struct NodeContext;
 void FindCoins(const node::NodeContext& node, std::map<COutPoint, Coin>& coins);
 } // namespace node
 
-#endif // BITCOINSILVER_NODE_COIN_H
+#endif // CAPS_NODE_COIN_H

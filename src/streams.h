@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_STREAMS_H
-#define BITCOINSILVER_STREAMS_H
+#ifndef CAPS_STREAMS_H
+#define CAPS_STREAMS_H
 
 #include <serialize.h>
 #include <span.h>
@@ -709,4 +709,4 @@ public:
     }
 };
 
-#endif // BITCOINSILVER_STREAMS_H
+#endif // CAPS_STREAMS_H

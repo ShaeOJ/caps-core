@@ -11,6 +11,21 @@ src/bitcoinsilver-tx
 src/bitcoinsilver-util
 src/bitcoinsilver-chainstate
 src/bitcoinsilver-wallet
+src/caps
+src/capsd
+src/caps-cli
+src/caps-gui
+src/caps-node
+src/caps-tx
+src/caps-util
+src/caps-chainstate
+src/caps-wallet
+src/test/test_caps
+src/qt/caps-qt
+src/qt/test/test_caps-qt
+src/bench/bench_caps
+src/config/caps-config.h
+src/config/caps-config.h.in
 src/test/fuzz/fuzz
 src/test/test_bitcoinsilver
 src/qt/test/test_bitcoinsilver-qt
@@ -150,3 +165,15 @@ dist/
 /guix-build-*
 
 /ci/scratch/
+
+# build artifacts (do not commit)
+build_msvc/**/x64/
+build_msvc/vcpkg_installed/
+build_msvc/packages/
+*.exe
+*.pdb
+*.ilk
+*.obj
+
+# local Claude Code tool permissions (machine-specific, not project config)
+.claude/settings.local.json

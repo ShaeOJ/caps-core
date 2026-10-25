@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_VECTOR_H
-#define BITCOINSILVER_UTIL_VECTOR_H
+#ifndef CAPS_UTIL_VECTOR_H
+#define CAPS_UTIL_VECTOR_H
 
 #include <functional>
 #include <initializer_list>
@@ -80,4 +80,4 @@ inline std::optional<V> FindFirst(const std::vector<V>& vec, const L fnc)
     return std::nullopt;
 }
 
-#endif // BITCOINSILVER_UTIL_VECTOR_H
+#endif // CAPS_UTIL_VECTOR_H

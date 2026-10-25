@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_COINS_H
-#define BITCOINSILVER_COINS_H
+#ifndef CAPS_COINS_H
+#define CAPS_COINS_H
 
 #include <compressor.h>
 #include <core_memusage.h>
@@ -368,7 +368,7 @@ const Coin& AccessByTxid(const CCoinsViewCache& cache, const uint256& txid);
 /**
  * This is a minimally invasive approach to shutdown on LevelDB read errors from the
  * chainstate, while keeping user interface out of the common library, which is shared
- * between bitcoinsilverd, and bitcoinsilver-qt and non-server tools.
+ * between capsd, and caps-qt and non-server tools.
  *
  * Writes do not need similar protection, as failure to write is handled by the caller.
 */
@@ -390,4 +390,4 @@ private:
 
 };
 
-#endif // BITCOINSILVER_COINS_H
+#endif // CAPS_COINS_H

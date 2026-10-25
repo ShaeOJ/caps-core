@@ -4,7 +4,7 @@
 #include <util/tokenpipe.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #ifndef WIN32

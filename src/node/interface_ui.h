@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NODE_INTERFACE_UI_H
-#define BITCOINSILVER_NODE_INTERFACE_UI_H
+#ifndef CAPS_NODE_INTERFACE_UI_H
+#define CAPS_NODE_INTERFACE_UI_H
 
 #include <functional>
 #include <memory>
@@ -120,4 +120,4 @@ bool InitError(const bilingual_str& str, const std::vector<std::string>& details
 
 extern CClientUIInterface uiInterface;
 
-#endif // BITCOINSILVER_NODE_INTERFACE_UI_H
+#endif // CAPS_NODE_INTERFACE_UI_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_KERNEL_CHAINPARAMS_H
-#define BITCOINSILVER_KERNEL_CHAINPARAMS_H
+#ifndef CAPS_KERNEL_CHAINPARAMS_H
+#define CAPS_KERNEL_CHAINPARAMS_H
 
 #include <consensus/params.h>
 #include <kernel/messagestartchars.h>
@@ -75,7 +75,7 @@ struct ChainTxData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * BitcoinSilver system.
+ * Caps system.
  */
 class CChainParams
 {
@@ -183,4 +183,4 @@ protected:
     ChainTxData chainTxData;
 };
 
-#endif // BITCOINSILVER_KERNEL_CHAINPARAMS_H
+#endif // CAPS_KERNEL_CHAINPARAMS_H

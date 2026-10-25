@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_MACDOCKICONHANDLER_H
-#define BITCOINSILVER_QT_MACDOCKICONHANDLER_H
+#ifndef CAPS_QT_MACDOCKICONHANDLER_H
+#define CAPS_QT_MACDOCKICONHANDLER_H
 
 #include <QObject>
 
@@ -24,4 +24,4 @@ private:
     MacDockIconHandler();
 };
 
-#endif // BITCOINSILVER_QT_MACDOCKICONHANDLER_H
+#endif // CAPS_QT_MACDOCKICONHANDLER_H

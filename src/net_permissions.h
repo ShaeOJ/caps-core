@@ -8,8 +8,8 @@
 #include <type_traits>
 #include <vector>
 
-#ifndef BITCOINSILVER_NET_PERMISSIONS_H
-#define BITCOINSILVER_NET_PERMISSIONS_H
+#ifndef CAPS_NET_PERMISSIONS_H
+#define CAPS_NET_PERMISSIONS_H
 
 struct bilingual_str;
 
@@ -87,4 +87,4 @@ public:
     CSubNet m_subnet;
 };
 
-#endif // BITCOINSILVER_NET_PERMISSIONS_H
+#endif // CAPS_NET_PERMISSIONS_H

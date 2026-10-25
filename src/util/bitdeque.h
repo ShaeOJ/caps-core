@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_BITDEQUE_H
-#define BITCOINSILVER_UTIL_BITDEQUE_H
+#ifndef CAPS_UTIL_BITDEQUE_H
+#define CAPS_UTIL_BITDEQUE_H
 
 #include <bitset>
 #include <cstddef>
@@ -466,4 +466,4 @@ public:
     }
 };
 
-#endif // BITCOINSILVER_UTIL_BITDEQUE_H
+#endif // CAPS_UTIL_BITDEQUE_H

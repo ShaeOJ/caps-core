@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TEST_FUZZ_UTIL_H
-#define BITCOINSILVER_TEST_FUZZ_UTIL_H
+#ifndef CAPS_TEST_FUZZ_UTIL_H
+#define CAPS_TEST_FUZZ_UTIL_H
 
 #include <addresstype.h>
 #include <arith_uint256.h>
@@ -346,4 +346,4 @@ void ReadFromStream(FuzzedDataProvider& fuzzed_data_provider, Stream& stream) no
     }
 }
 
-#endif // BITCOINSILVER_TEST_FUZZ_UTIL_H
+#endif // CAPS_TEST_FUZZ_UTIL_H

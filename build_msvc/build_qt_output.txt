@@ -1,0 +1,1273 @@
+'vswhere.exe' is not recognized as an internal or external command,
+operable program or batch file.
+**********************************************************************
+** Visual Studio 2022 Developer Command Prompt v17.0
+** Copyright (c) 2025 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+MSBuild version 17.14.19+164abd434 for .NET Framework
+Build started 2026-02-02 6:22:44 PM.
+
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" on node 1 (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_consensus\libcaps_consensus.vcxproj" (2) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_consensus\libcaps_.2B384FA8.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_consensus\libcaps_.2B384FA8.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_consensus.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_consensus\x64\Release\libcaps_consensus\libcaps_consensus.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_consensus\libcaps_.2B384FA8.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_consensus\libcaps_.2B384FA8.tlog\libcaps_consensus.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_consensus\libcaps_consensus.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_cli\libcaps_cli.vcxproj" (3) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_cli\libcaps_cli.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_cli\libcaps_cli.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_cli.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_cli\x64\Release\libcaps_cli\libcaps_cli.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_cli\libcaps_cli.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_cli\libcaps_cli.tlog\libcaps_cli.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_cli\libcaps_cli.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_common\libcaps_common.vcxproj" (4) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_common\libcaps_common.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_common\libcaps_common.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_common.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_common\x64\Release\libcaps_common\libcaps_common.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_common\libcaps_common.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_common\libcaps_common.tlog\libcaps_common.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_common\libcaps_common.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_crypto\libcaps_crypto.vcxproj" (5) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_crypto\libcaps_crypto.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_crypto\libcaps_crypto.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_crypto.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_crypto\x64\Release\libcaps_crypto\libcaps_crypto.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_crypto\libcaps_crypto.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_crypto\libcaps_crypto.tlog\libcaps_crypto.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_crypto\libcaps_crypto.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj" (6) on node 1 (default targets).
+moccode:
+  Creating directory ".\QtGeneratedFiles\qt".
+  echo Performing libcaps_qt moc code include generation task, output path .\QtGeneratedFiles\qt.
+  Performing libcaps_qt moc code include generation task, output path .\QtGeneratedFiles\qt.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsamountfield.cpp" -o .\QtGeneratedFiles\qt\capsamountfield.moc.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsamountfield.cpp" -o .\QtGeneratedFiles\qt\capsamountfield.moc.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\intro.cpp" -o .\QtGeneratedFiles\qt\intro.moc.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\intro.cpp" -o .\QtGeneratedFiles\qt\intro.moc.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\overviewpage.cpp" -o .\QtGeneratedFiles\qt\overviewpage.moc.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\overviewpage.cpp" -o .\QtGeneratedFiles\qt\overviewpage.moc.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\rpcconsole.cpp" -o .\QtGeneratedFiles\qt\rpcconsole.moc.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\rpcconsole.cpp" -o .\QtGeneratedFiles\qt\rpcconsole.moc.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsamountfield.cpp" -o .\QtGeneratedFiles\qt\capsamountfield.moc
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\intro.cpp" -o .\QtGeneratedFiles\qt\intro.moc
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\overviewpage.cpp" -o .\QtGeneratedFiles\qt\overviewpage.moc
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\rpcconsole.cpp" -o .\QtGeneratedFiles\qt\rpcconsole.moc
+mocheader:
+  echo Performing libcaps_qt moc header generation task, output path .\QtGeneratedFiles\qt\moc.
+  Performing libcaps_qt moc header generation task, output path .\QtGeneratedFiles\qt\moc.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\addressbookpage.h" -o .\QtGeneratedFiles\qt\moc\moc_addressbookpage.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\addressbookpage.h" -o .\QtGeneratedFiles\qt\moc\moc_addressbookpage.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\addresstablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_addresstablemodel.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\addresstablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_addresstablemodel.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\askpassphrasedialog.h" -o .\QtGeneratedFiles\qt\moc\moc_askpassphrasedialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\askpassphrasedialog.h" -o .\QtGeneratedFiles\qt\moc\moc_askpassphrasedialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\bantablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_bantablemodel.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\bantablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_bantablemodel.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\caps.h" -o .\QtGeneratedFiles\qt\moc\moc_caps.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\caps.h" -o .\QtGeneratedFiles\qt\moc\moc_caps.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsaddressvalidator.h" -o .\QtGeneratedFiles\qt\moc\moc_capsaddressvalidator.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsaddressvalidator.h" -o .\QtGeneratedFiles\qt\moc\moc_capsaddressvalidator.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsamountfield.h" -o .\QtGeneratedFiles\qt\moc\moc_capsamountfield.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsamountfield.h" -o .\QtGeneratedFiles\qt\moc\moc_capsamountfield.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsgui.h" -o .\QtGeneratedFiles\qt\moc\moc_capsgui.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsgui.h" -o .\QtGeneratedFiles\qt\moc\moc_capsgui.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsunits.h" -o .\QtGeneratedFiles\qt\moc\moc_capsunits.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsunits.h" -o .\QtGeneratedFiles\qt\moc\moc_capsunits.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\clientmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_clientmodel.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\clientmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_clientmodel.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\coincontroldialog.h" -o .\QtGeneratedFiles\qt\moc\moc_coincontroldialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\coincontroldialog.h" -o .\QtGeneratedFiles\qt\moc\moc_coincontroldialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\coincontroltreewidget.h" -o .\QtGeneratedFiles\qt\moc\moc_coincontroltreewidget.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\coincontroltreewidget.h" -o .\QtGeneratedFiles\qt\moc\moc_coincontroltreewidget.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\createwalletdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_createwalletdialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\createwalletdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_createwalletdialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\csvmodelwriter.h" -o .\QtGeneratedFiles\qt\moc\moc_csvmodelwriter.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\csvmodelwriter.h" -o .\QtGeneratedFiles\qt\moc\moc_csvmodelwriter.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\editaddressdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_editaddressdialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\editaddressdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_editaddressdialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\guiconstants.h" -o .\QtGeneratedFiles\qt\moc\moc_guiconstants.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\guiconstants.h" -o .\QtGeneratedFiles\qt\moc\moc_guiconstants.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\guiutil.h" -o .\QtGeneratedFiles\qt\moc\moc_guiutil.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\guiutil.h" -o .\QtGeneratedFiles\qt\moc\moc_guiutil.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\initexecutor.h" -o .\QtGeneratedFiles\qt\moc\moc_initexecutor.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\initexecutor.h" -o .\QtGeneratedFiles\qt\moc\moc_initexecutor.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\intro.h" -o .\QtGeneratedFiles\qt\moc\moc_intro.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\intro.h" -o .\QtGeneratedFiles\qt\moc\moc_intro.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\macdockiconhandler.h" -o .\QtGeneratedFiles\qt\moc\moc_macdockiconhandler.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\macdockiconhandler.h" -o .\QtGeneratedFiles\qt\moc\moc_macdockiconhandler.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\macnotificationhandler.h" -o .\QtGeneratedFiles\qt\moc\moc_macnotificationhandler.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\macnotificationhandler.h" -o .\QtGeneratedFiles\qt\moc\moc_macnotificationhandler.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\macos_appnap.h" -o .\QtGeneratedFiles\qt\moc\moc_macos_appnap.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\macos_appnap.h" -o .\QtGeneratedFiles\qt\moc\moc_macos_appnap.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\modaloverlay.h" -o .\QtGeneratedFiles\qt\moc\moc_modaloverlay.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\modaloverlay.h" -o .\QtGeneratedFiles\qt\moc\moc_modaloverlay.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\networkstyle.h" -o .\QtGeneratedFiles\qt\moc\moc_networkstyle.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\networkstyle.h" -o .\QtGeneratedFiles\qt\moc\moc_networkstyle.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\notificator.h" -o .\QtGeneratedFiles\qt\moc\moc_notificator.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\notificator.h" -o .\QtGeneratedFiles\qt\moc\moc_notificator.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\openuridialog.h" -o .\QtGeneratedFiles\qt\moc\moc_openuridialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\openuridialog.h" -o .\QtGeneratedFiles\qt\moc\moc_openuridialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\optionsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_optionsdialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\optionsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_optionsdialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\optionsmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_optionsmodel.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\optionsmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_optionsmodel.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\overviewpage.h" -o .\QtGeneratedFiles\qt\moc\moc_overviewpage.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\overviewpage.h" -o .\QtGeneratedFiles\qt\moc\moc_overviewpage.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\paymentserver.h" -o .\QtGeneratedFiles\qt\moc\moc_paymentserver.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\paymentserver.h" -o .\QtGeneratedFiles\qt\moc\moc_paymentserver.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\peertablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_peertablemodel.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\peertablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_peertablemodel.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\peertablesortproxy.h" -o .\QtGeneratedFiles\qt\moc\moc_peertablesortproxy.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\peertablesortproxy.h" -o .\QtGeneratedFiles\qt\moc\moc_peertablesortproxy.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\platformstyle.h" -o .\QtGeneratedFiles\qt\moc\moc_platformstyle.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\platformstyle.h" -o .\QtGeneratedFiles\qt\moc\moc_platformstyle.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\psbtoperationsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_psbtoperationsdialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\psbtoperationsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_psbtoperationsdialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\qrimagewidget.h" -o .\QtGeneratedFiles\qt\moc\moc_qrimagewidget.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\qrimagewidget.h" -o .\QtGeneratedFiles\qt\moc\moc_qrimagewidget.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\qvalidatedlineedit.h" -o .\QtGeneratedFiles\qt\moc\moc_qvalidatedlineedit.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\qvalidatedlineedit.h" -o .\QtGeneratedFiles\qt\moc\moc_qvalidatedlineedit.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\qvaluecombobox.h" -o .\QtGeneratedFiles\qt\moc\moc_qvaluecombobox.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\qvaluecombobox.h" -o .\QtGeneratedFiles\qt\moc\moc_qvaluecombobox.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\receivecoinsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_receivecoinsdialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\receivecoinsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_receivecoinsdialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\receiverequestdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_receiverequestdialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\receiverequestdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_receiverequestdialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\recentrequeststablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_recentrequeststablemodel.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\recentrequeststablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_recentrequeststablemodel.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\rpcconsole.h" -o .\QtGeneratedFiles\qt\moc\moc_rpcconsole.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\rpcconsole.h" -o .\QtGeneratedFiles\qt\moc\moc_rpcconsole.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsdialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsdialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsentry.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsentry.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsentry.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsentry.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsrecipient.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsrecipient.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsrecipient.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsrecipient.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\signverifymessagedialog.h" -o .\QtGeneratedFiles\qt\moc\moc_signverifymessagedialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\signverifymessagedialog.h" -o .\QtGeneratedFiles\qt\moc\moc_signverifymessagedialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\splashscreen.h" -o .\QtGeneratedFiles\qt\moc\moc_splashscreen.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\splashscreen.h" -o .\QtGeneratedFiles\qt\moc\moc_splashscreen.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\trafficgraphwidget.h" -o .\QtGeneratedFiles\qt\moc\moc_trafficgraphwidget.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\trafficgraphwidget.h" -o .\QtGeneratedFiles\qt\moc\moc_trafficgraphwidget.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiondesc.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiondesc.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiondesc.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiondesc.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiondescdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiondescdialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiondescdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiondescdialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionfilterproxy.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionfilterproxy.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionfilterproxy.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionfilterproxy.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionoverviewwidget.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionoverviewwidget.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionoverviewwidget.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionoverviewwidget.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionrecord.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionrecord.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionrecord.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionrecord.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiontablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiontablemodel.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiontablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiontablemodel.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionview.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionview.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionview.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionview.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\utilitydialog.h" -o .\QtGeneratedFiles\qt\moc\moc_utilitydialog.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\utilitydialog.h" -o .\QtGeneratedFiles\qt\moc\moc_utilitydialog.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletcontroller.h" -o .\QtGeneratedFiles\qt\moc\moc_walletcontroller.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletcontroller.h" -o .\QtGeneratedFiles\qt\moc\moc_walletcontroller.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletframe.h" -o .\QtGeneratedFiles\qt\moc\moc_walletframe.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletframe.h" -o .\QtGeneratedFiles\qt\moc\moc_walletframe.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_walletmodel.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_walletmodel.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletmodeltransaction.h" -o .\QtGeneratedFiles\qt\moc\moc_walletmodeltransaction.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletmodeltransaction.h" -o .\QtGeneratedFiles\qt\moc\moc_walletmodeltransaction.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletview.h" -o .\QtGeneratedFiles\qt\moc\moc_walletview.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletview.h" -o .\QtGeneratedFiles\qt\moc\moc_walletview.cpp.
+  echo C:\Qt_static\bin\moc.exe  "..\..\src\qt\winshutdownmonitor.h" -o .\QtGeneratedFiles\qt\moc\moc_winshutdownmonitor.cpp.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\winshutdownmonitor.h" -o .\QtGeneratedFiles\qt\moc\moc_winshutdownmonitor.cpp.
+  Creating directory ".\QtGeneratedFiles\qt\moc\".
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\addressbookpage.h" -o .\QtGeneratedFiles\qt\moc\moc_addressbookpage.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\addresstablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_addresstablemodel.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\askpassphrasedialog.h" -o .\QtGeneratedFiles\qt\moc\moc_askpassphrasedialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\bantablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_bantablemodel.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\caps.h" -o .\QtGeneratedFiles\qt\moc\moc_caps.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsaddressvalidator.h" -o .\QtGeneratedFiles\qt\moc\moc_capsaddressvalidator.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsamountfield.h" -o .\QtGeneratedFiles\qt\moc\moc_capsamountfield.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsgui.h" -o .\QtGeneratedFiles\qt\moc\moc_capsgui.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\capsunits.h" -o .\QtGeneratedFiles\qt\moc\moc_capsunits.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\clientmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_clientmodel.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\coincontroldialog.h" -o .\QtGeneratedFiles\qt\moc\moc_coincontroldialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\coincontroltreewidget.h" -o .\QtGeneratedFiles\qt\moc\moc_coincontroltreewidget.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\createwalletdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_createwalletdialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\csvmodelwriter.h" -o .\QtGeneratedFiles\qt\moc\moc_csvmodelwriter.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\editaddressdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_editaddressdialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\guiconstants.h" -o .\QtGeneratedFiles\qt\moc\moc_guiconstants.cpp
+  ..\..\src\qt\guiconstants.h(0): Note: No relevant classes found. No output generated.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\guiutil.h" -o .\QtGeneratedFiles\qt\moc\moc_guiutil.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\initexecutor.h" -o .\QtGeneratedFiles\qt\moc\moc_initexecutor.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\intro.h" -o .\QtGeneratedFiles\qt\moc\moc_intro.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\macdockiconhandler.h" -o .\QtGeneratedFiles\qt\moc\moc_macdockiconhandler.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\macnotificationhandler.h" -o .\QtGeneratedFiles\qt\moc\moc_macnotificationhandler.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\macos_appnap.h" -o .\QtGeneratedFiles\qt\moc\moc_macos_appnap.cpp
+  ..\..\src\qt\macos_appnap.h(0): Note: No relevant classes found. No output generated.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\modaloverlay.h" -o .\QtGeneratedFiles\qt\moc\moc_modaloverlay.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\networkstyle.h" -o .\QtGeneratedFiles\qt\moc\moc_networkstyle.cpp
+  ..\..\src\qt\networkstyle.h(0): Note: No relevant classes found. No output generated.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\notificator.h" -o .\QtGeneratedFiles\qt\moc\moc_notificator.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\openuridialog.h" -o .\QtGeneratedFiles\qt\moc\moc_openuridialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\optionsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_optionsdialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\optionsmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_optionsmodel.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\overviewpage.h" -o .\QtGeneratedFiles\qt\moc\moc_overviewpage.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\paymentserver.h" -o .\QtGeneratedFiles\qt\moc\moc_paymentserver.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\peertablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_peertablemodel.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\peertablesortproxy.h" -o .\QtGeneratedFiles\qt\moc\moc_peertablesortproxy.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\platformstyle.h" -o .\QtGeneratedFiles\qt\moc\moc_platformstyle.cpp
+  ..\..\src\qt\platformstyle.h(0): Note: No relevant classes found. No output generated.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\psbtoperationsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_psbtoperationsdialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\qrimagewidget.h" -o .\QtGeneratedFiles\qt\moc\moc_qrimagewidget.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\qvalidatedlineedit.h" -o .\QtGeneratedFiles\qt\moc\moc_qvalidatedlineedit.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\qvaluecombobox.h" -o .\QtGeneratedFiles\qt\moc\moc_qvaluecombobox.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\receivecoinsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_receivecoinsdialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\receiverequestdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_receiverequestdialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\recentrequeststablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_recentrequeststablemodel.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\rpcconsole.h" -o .\QtGeneratedFiles\qt\moc\moc_rpcconsole.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsdialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsentry.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsentry.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\sendcoinsrecipient.h" -o .\QtGeneratedFiles\qt\moc\moc_sendcoinsrecipient.cpp
+  ..\..\src\qt\sendcoinsrecipient.h(0): Note: No relevant classes found. No output generated.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\signverifymessagedialog.h" -o .\QtGeneratedFiles\qt\moc\moc_signverifymessagedialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\splashscreen.h" -o .\QtGeneratedFiles\qt\moc\moc_splashscreen.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\trafficgraphwidget.h" -o .\QtGeneratedFiles\qt\moc\moc_trafficgraphwidget.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiondesc.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiondesc.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiondescdialog.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiondescdialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionfilterproxy.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionfilterproxy.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionoverviewwidget.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionoverviewwidget.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionrecord.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionrecord.cpp
+  ..\..\src\qt\transactionrecord.h(0): Note: No relevant classes found. No output generated.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactiontablemodel.h" -o .\QtGeneratedFiles\qt\moc\moc_transactiontablemodel.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\transactionview.h" -o .\QtGeneratedFiles\qt\moc\moc_transactionview.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\utilitydialog.h" -o .\QtGeneratedFiles\qt\moc\moc_utilitydialog.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletcontroller.h" -o .\QtGeneratedFiles\qt\moc\moc_walletcontroller.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletframe.h" -o .\QtGeneratedFiles\qt\moc\moc_walletframe.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletmodel.h" -o .\QtGeneratedFiles\qt\moc\moc_walletmodel.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletmodeltransaction.h" -o .\QtGeneratedFiles\qt\moc\moc_walletmodeltransaction.cpp
+  ..\..\src\qt\walletmodeltransaction.h(0): Note: No relevant classes found. No output generated.
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\walletview.h" -o .\QtGeneratedFiles\qt\moc\moc_walletview.cpp
+  C:\Qt_static\bin\moc.exe  "..\..\src\qt\winshutdownmonitor.h" -o .\QtGeneratedFiles\qt\moc\moc_winshutdownmonitor.cpp
+  ..\..\src\qt\winshutdownmonitor.h(0): Note: No relevant classes found. No output generated.
+forms:
+  echo Performing libcaps_qt forms header generation task, output path .\QtGeneratedFiles\qt\forms.
+  Performing libcaps_qt forms header generation task, output path .\QtGeneratedFiles\qt\forms.
+  Creating directory ".\QtGeneratedFiles\qt\forms\".
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\addressbookpage.ui" -o .\QtGeneratedFiles\qt\forms\ui_addressbookpage.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\askpassphrasedialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_askpassphrasedialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\coincontroldialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_coincontroldialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\createwalletdialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_createwalletdialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\debugwindow.ui" -o .\QtGeneratedFiles\qt\forms\ui_debugwindow.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\editaddressdialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_editaddressdialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\helpmessagedialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_helpmessagedialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\intro.ui" -o .\QtGeneratedFiles\qt\forms\ui_intro.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\modaloverlay.ui" -o .\QtGeneratedFiles\qt\forms\ui_modaloverlay.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\openuridialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_openuridialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\optionsdialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_optionsdialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\overviewpage.ui" -o .\QtGeneratedFiles\qt\forms\ui_overviewpage.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\psbtoperationsdialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_psbtoperationsdialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\receivecoinsdialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_receivecoinsdialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\receiverequestdialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_receiverequestdialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\sendcoinsdialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_sendcoinsdialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\sendcoinsentry.ui" -o .\QtGeneratedFiles\qt\forms\ui_sendcoinsentry.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\signverifymessagedialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_signverifymessagedialog.h
+  C:\Qt_static\bin\uic.exe "..\..\src\qt\forms\transactiondescdialog.ui" -o .\QtGeneratedFiles\qt\forms\ui_transactiondescdialog.h
+translation:
+Skipping target "translation" because all output files are up-to-date with respect to the input files.
+resource:
+  echo Performing libcaps_qt resource code generation task, output path .\QtGeneratedFiles\qt\rcc.
+  Performing libcaps_qt resource code generation task, output path .\QtGeneratedFiles\qt\rcc.
+  Creating directory ".\QtGeneratedFiles\qt\rcc\".
+  C:\Qt_static\bin\rcc.exe --verbose --name caps "..\..\src\qt\caps.qrc" -o .\QtGeneratedFiles\qt\rcc\qrc_caps.cpp
+  Qt resource compiler
+  
+  Processing 1 files [listMode=0]
+  
+  Interpreting ..\..\src\qt\caps.qrc
+  
+  Outputting code
+  
+  spinner-015: note: not compressed
+  
+  spinner-000: note: not compressed
+  
+  spinner-016: note: not compressed
+  
+  spinner-001: note: not compressed
+  
+  spinner-017: note: not compressed
+  
+  spinner-002: note: not compressed
+  
+  spinner-018: note: not compressed
+  
+  spinner-003: note: not compressed
+  
+  spinner-019: note: not compressed
+  
+  spinner-004: note: not compressed
+  
+  spinner-005: note: not compressed
+  
+  spinner-006: note: not compressed
+  
+  spinner-007: note: not compressed
+  
+  spinner-008: note: not compressed
+  
+  spinner-009: note: not compressed
+  
+  spinner-030: note: not compressed
+  
+  spinner-031: note: not compressed
+  
+  spinner-032: note: not compressed
+  
+  spinner-033: note: not compressed
+  
+  spinner-034: note: not compressed
+  
+  spinner-035: note: not compressed
+  
+  spinner-020: note: not compressed
+  
+  spinner-021: note: not compressed
+  
+  spinner-022: note: not compressed
+  
+  spinner-023: note: not compressed
+  
+  spinner-024: note: not compressed
+  
+  spinner-025: note: not compressed
+  
+  spinner-010: note: not compressed
+  
+  spinner-026: note: not compressed
+  
+  spinner-011: note: not compressed
+  
+  spinner-027: note: not compressed
+  
+  spinner-012: note: not compressed
+  
+  spinner-028: note: not compressed
+  
+  spinner-013: note: not compressed
+  
+  spinner-029: note: not compressed
+  
+  spinner-014: note: not compressed
+  
+  monospace: note: not compressed
+  
+  editcopy: note: not compressed
+  
+  add: note: not compressed
+  
+  fontbigger: note: not compressed
+  
+  transaction_confirmed: note: not compressed
+  
+  tx_inout: note: not compressed
+  
+  eye: note: not compressed
+  
+  transaction_abandoned: note: not compressed
+  
+  receiving_addresses: note: not compressed
+  
+  network_disabled: note: not compressed
+  
+  eye_plus: note: not compressed
+  
+  history: note: not compressed
+  
+  tx_output: note: not compressed
+  
+  connect_0: note: not compressed
+  
+  connect_1: note: not compressed
+  
+  connect_2: note: not compressed
+  
+  connect_3: note: not compressed
+  
+  connect_4: note: not compressed
+  
+  caps: note: not compressed
+  
+  remove: note: not compressed
+  
+  hd_enabled: note: not compressed
+  
+  edit: note: not compressed
+  
+  transaction_0: note: not compressed
+  
+  tx_input: note: not compressed
+  
+  transaction_1: note: not compressed
+  
+  lock_open: note: not compressed
+  
+  transaction_2: note: not compressed
+  
+  overview: note: not compressed
+  
+  transaction_3: note: not compressed
+  
+  tx_mined: note: not compressed
+  
+  transaction_4: note: not compressed
+  
+  address-book: note: not compressed
+  
+  transaction_5: note: not compressed
+  
+  eye_minus: note: not compressed
+  
+  fontsmaller: note: not compressed
+  
+  hd_disabled: note: not compressed
+  
+  synced: note: not compressed
+  
+  prompticon: note: not compressed
+  
+EXEC : warning : note: not compressed [C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj]
+  
+  transaction_conflicted: note: not compressed
+  
+  export: note: not compressed
+  
+  send: note: not compressed
+  
+  proxy: note: not compressed
+  
+  editpaste: note: not compressed
+  
+  lock_closed: note: not compressed
+  
+  C:\Qt_static\bin\rcc.exe --verbose --name caps_locale "..\..\src\qt\caps_locale.qrc" -o .\QtGeneratedFiles\qt\rcc\qrc_caps_locale.cpp
+  Qt resource compiler
+  
+  Processing 1 files [listMode=0]
+  
+  Interpreting ..\..\src\qt\caps_locale.qrc
+  
+  Outputting code
+  
+  fr: note: compressed using zlib (215200 -> 58836)
+  
+  si: note: not compressed
+  
+  sr@ijekavianlatin: note: not compressed
+  
+  bn: note: not compressed
+  
+  sk: note: not compressed
+  
+  sl: note: compressed using zlib (180110 -> 52117)
+  
+  sn: note: not compressed
+  
+  br: note: not compressed
+  
+  ka: note: compressed using zlib (81640 -> 24073)
+  
+  so: note: not compressed
+  
+  bs: note: not compressed
+  
+  sq: note: not compressed
+  
+  sr: note: not compressed
+  
+  yue: note: not compressed
+  
+  ga: note: compressed using zlib (125038 -> 36414)
+  
+  sv: note: compressed using zlib (142153 -> 41456)
+  
+  sw: note: not compressed
+  
+  kk: note: not compressed
+  
+  gd: note: not compressed
+  
+  kl: note: not compressed
+  
+  km: note: not compressed
+  
+  kn: note: not compressed
+  
+  ko: note: not compressed
+  
+  ca: note: compressed using zlib (175027 -> 49515)
+  
+  pt_BR: note: compressed using zlib (183266 -> 52367)
+  
+  ta: note: compressed using zlib (105203 -> 30490)
+  
+  gl: note: compressed using zlib (61354 -> 17648)
+  
+  ku: note: not compressed
+  
+  te: note: compressed using zlib (82401 -> 24391)
+  
+  zh_CN: note: not compressed
+  
+  ky: note: not compressed
+  
+  pa: note: not compressed
+  
+  th: note: not compressed
+  
+  es_SV: note: compressed using zlib (211020 -> 57098)
+  
+  gu: note: not compressed
+  
+  tk: note: compressed using zlib (86269 -> 25507)
+  
+  tl: note: compressed using zlib (44289 -> 12578)
+  
+  la: note: not compressed
+  
+  lb: note: not compressed
+  
+  cs: note: not compressed
+  
+  zh_TW: note: not compressed
+  
+  szl: note: not compressed
+  
+  tr: note: not compressed
+  
+  pl: note: compressed using zlib (181035 -> 53694)
+  
+  ku_IQ: note: not compressed
+  
+  ha: note: not compressed
+  
+  cy: note: not compressed
+  
+  he: note: not compressed
+  
+  zh_HK: note: not compressed
+  
+  es_CL: note: compressed using zlib (200683 -> 55717)
+  
+  pt: note: compressed using zlib (206862 -> 57848)
+  
+  da: note: compressed using zlib (164701 -> 48244)
+  
+  pam: note: compressed using zlib (30888 -> 8890)
+  
+  es_CO: note: compressed using zlib (211020 -> 57098)
+  
+  hi: note: not compressed
+  
+  de_AT: note: compressed using zlib (206192 -> 57694)
+  
+  de: note: compressed using zlib (211798 -> 59202)
+  
+  lt: note: not compressed
+  
+  lv: note: not compressed
+  
+  ug: note: not compressed
+  
+  hr: note: compressed using zlib (163869 -> 48323)
+  
+  yo: note: not compressed
+  
+  hu: note: compressed using zlib (199679 -> 58737)
+  
+  uk: note: compressed using zlib (202440 -> 59131)
+  
+  ur: note: compressed using zlib (68253 -> 20207)
+  
+  mg: note: compressed using zlib (6023 -> 1764)
+  
+  gl_ES: note: compressed using zlib (33236 -> 9442)
+  
+  mi: note: compressed using zlib (27926 -> 7835)
+  
+  sr@latin: note: not compressed
+  
+  id: note: compressed using zlib (76808 -> 21710)
+  
+  mk: note: not compressed
+  
+  ml: note: compressed using zlib (41415 -> 12099)
+  
+  uz: note: not compressed
+  
+  mn: note: not compressed
+  
+  mr_IN: note: not compressed
+  
+  es_DO: note: compressed using zlib (211020 -> 57098)
+  
+  mr: note: not compressed
+  
+  zh: note: not compressed
+  
+  ms: note: not compressed
+  
+  mt: note: compressed using zlib (30229 -> 8914)
+  
+  uz@Cyrl: note: not compressed
+  
+  hak: note: not compressed
+  
+  my: note: not compressed
+  
+  is: note: not compressed
+  
+  el: note: compressed using zlib (181264 -> 53330)
+  
+  vi: note: not compressed
+  
+  it: note: compressed using zlib (209464 -> 58202)
+  
+  af: note: not compressed
+  
+  en: note: not compressed
+  
+  eo: note: not compressed
+  
+  kk@latin: note: not compressed
+  
+  fr_CM: note: compressed using zlib (214911 -> 58771)
+  
+  zu: note: not compressed
+  
+  az@latin: note: compressed using zlib (44455 -> 13292)
+  
+  es: note: compressed using zlib (210328 -> 57370)
+  
+  nb: note: compressed using zlib (142449 -> 42085)
+  
+  et: note: not compressed
+  
+  am: note: not compressed
+  
+  eu: note: compressed using zlib (51187 -> 14951)
+  
+  ne: note: not compressed
+  
+  de_CH: note: compressed using zlib (206302 -> 57699)
+  
+  ja: note: not compressed
+  
+  ar: note: not compressed
+  
+  ro: note: not compressed
+  
+  es_VE: note: compressed using zlib (211020 -> 57098)
+  
+  uz@Latn: note: not compressed
+  
+  zh-Hans: note: not compressed
+  
+  zh-Hant: note: not compressed
+  
+  es_MX: note: not compressed
+  
+  nl: note: compressed using zlib (201733 -> 57386)
+  
+  ru: note: compressed using zlib (202918 -> 59486)
+  
+  fa: note: not compressed
+  
+  no: note: not compressed
+  
+  cmn: note: not compressed
+  
+  az: note: compressed using zlib (44457 -> 13280)
+  
+  ga_IE: note: compressed using zlib (125041 -> 36416)
+  
+  fil: note: compressed using zlib (112250 -> 31733)
+  
+  fi: note: compressed using zlib (165388 -> 48675)
+  
+  fr_LU: note: compressed using zlib (214913 -> 58767)
+  
+  be: note: not compressed
+  
+  sc: note: not compressed
+  
+  bg: note: not compressed
+  
+  sd: note: not compressed
+  
+  fo: note: not compressed
+  
+PrepareForBuild:
+  Creating directory "x64\Release\libcaps_qt\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "x64\Release\libcaps_qt\libcaps_qt.tlog\".
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_qt\libcaps_qt.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_qt\libcaps_qt.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /IC:\Qt_static\include /IC:\Qt_static\include\QtNetwork /IC:\Qt_static\include\QtCore /IC:\Qt_static\include\QtWidgets /IC:\Qt_static\include\QtGui /I.\QtGeneratedFiles\qt\.. /I..\..\src /I..\..\src\minisketch\include /I..\..\src\univalue\include /I..\..\src\secp256k1\include /I..\..\src\leveldb\include /I..\..\src\leveldb\helpers\memenv /I"C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\include" /nologo /W3 /WX /diagnostics:column /sdl /Od /Oi /D _AMD64_ /D _UNICODE /D UNICODE /D _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING /D SECP256K1_STATIC /D ZMQ_STATIC /D NOMINMAX /D WIN32 /D HAVE_CONFIG_H /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _CONSOLE /D _WIN32_WINNT=0x0601 /D _WIN32_IE=0x0501 /D WIN32_LEAN_AND_MEAN /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\libcaps_qt\\" /Fd"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\x64\Release\libcaps_qt\libcaps_qt.pdb" /external:W3 /Gd /TP /wd4018 /wd4244 /wd4267 /wd4715 /wd4805 /FC /errorReport:queue /utf-8 /Zc:__cplusplus /std:c++20 ..\..\src\qt\addressbookpage.cpp ..\..\src\qt\addresstablemodel.cpp ..\..\src\qt\askpassphrasedialog.cpp ..\..\src\qt\bantablemodel.cpp ..\..\src\qt\caps.cpp ..\..\src\qt\capsaddressvalidator.cpp ..\..\src\qt\capsamountfield.cpp ..\..\src\qt\capsgui.cpp ..\..\src\qt\bitcoinstrings.cpp ..\..\src\qt\capsunits.cpp ..\..\src\qt\clientmodel.cpp ..\..\src\qt\coincontroldialog.cpp ..\..\src\qt\coincontroltreewidget.cpp ..\..\src\qt\createwalletdialog.cpp ..\..\src\qt\csvmodelwriter.cpp ..\..\src\qt\editaddressdialog.cpp ..\..\src\qt\guiutil.cpp ..\..\src\qt\initexecutor.cpp ..\..\src\qt\intro.cpp ..\..\src\qt\modaloverlay.cpp ..\..\src\qt\networkstyle.cpp ..\..\src\qt\notificator.cpp ..\..\src\qt\openuridialog.cpp ..\..\src\qt\optionsdialog.cpp ..\..\src\qt\optionsmodel.cpp ..\..\src\qt\overviewpage.cpp ..\..\src\qt\paymentserver.cpp ..\..\src\qt\peertablemodel.cpp ..\..\src\qt\peertablesortproxy.cpp ..\..\src\qt\platformstyle.cpp ..\..\src\qt\psbtoperationsdialog.cpp ..\..\src\qt\qrimagewidget.cpp ..\..\src\qt\qvalidatedlineedit.cpp ..\..\src\qt\qvaluecombobox.cpp ..\..\src\qt\receivecoinsdialog.cpp ..\..\src\qt\receiverequestdialog.cpp ..\..\src\qt\recentrequeststablemodel.cpp ..\..\src\qt\rpcconsole.cpp ..\..\src\qt\sendcoinsdialog.cpp ..\..\src\qt\sendcoinsentry.cpp ..\..\src\qt\signverifymessagedialog.cpp ..\..\src\qt\splashscreen.cpp ..\..\src\qt\trafficgraphwidget.cpp ..\..\src\qt\transactiondesc.cpp ..\..\src\qt\transactiondescdialog.cpp ..\..\src\qt\transactionfilterproxy.cpp ..\..\src\qt\transactionoverviewwidget.cpp ..\..\src\qt\transactionrecord.cpp ..\..\src\qt\transactiontablemodel.cpp ..\..\src\qt\transactionview.cpp ..\..\src\qt\utilitydialog.cpp ..\..\src\qt\walletcontroller.cpp ..\..\src\qt\walletframe.cpp ..\..\src\qt\walletmodel.cpp ..\..\src\qt\walletmodeltransaction.cpp ..\..\src\qt\walletview.cpp ..\..\src\qt\winshutdownmonitor.cpp .\QtGeneratedFiles\qt\moc\moc_addressbookpage.cpp .\QtGeneratedFiles\qt\moc\moc_addresstablemodel.cpp .\QtGeneratedFiles\qt\moc\moc_askpassphrasedialog.cpp .\QtGeneratedFiles\qt\moc\moc_bantablemodel.cpp .\QtGeneratedFiles\qt\moc\moc_caps.cpp .\QtGeneratedFiles\qt\moc\moc_capsaddressvalidator.cpp .\QtGeneratedFiles\qt\moc\moc_capsamountfield.cpp .\QtGeneratedFiles\qt\moc\moc_capsgui.cpp .\QtGeneratedFiles\qt\moc\moc_capsunits.cpp .\QtGeneratedFiles\qt\moc\moc_clientmodel.cpp .\QtGeneratedFiles\qt\moc\moc_coincontroldialog.cpp .\QtGeneratedFiles\qt\moc\moc_coincontroltreewidget.cpp .\QtGeneratedFiles\qt\moc\moc_createwalletdialog.cpp .\QtGeneratedFiles\qt\moc\moc_csvmodelwriter.cpp .\QtGeneratedFiles\qt\moc\moc_editaddressdialog.cpp .\QtGeneratedFiles\qt\moc\moc_guiutil.cpp .\QtGeneratedFiles\qt\moc\moc_initexecutor.cpp .\QtGeneratedFiles\qt\moc\moc_intro.cpp .\QtGeneratedFiles\qt\moc\moc_modaloverlay.cpp .\QtGeneratedFiles\qt\moc\moc_networkstyle.cpp .\QtGeneratedFiles\qt\moc\moc_notificator.cpp .\QtGeneratedFiles\qt\moc\moc_openuridialog.cpp .\QtGeneratedFiles\qt\moc\moc_optionsdialog.cpp .\QtGeneratedFiles\qt\moc\moc_optionsmodel.cpp .\QtGeneratedFiles\qt\moc\moc_overviewpage.cpp .\QtGeneratedFiles\qt\moc\moc_paymentserver.cpp .\QtGeneratedFiles\qt\moc\moc_peertablemodel.cpp .\QtGeneratedFiles\qt\moc\moc_peertablesortproxy.cpp .\QtGeneratedFiles\qt\moc\moc_platformstyle.cpp .\QtGeneratedFiles\qt\moc\moc_psbtoperationsdialog.cpp .\QtGeneratedFiles\qt\moc\moc_qrimagewidget.cpp .\QtGeneratedFiles\qt\moc\moc_qvalidatedlineedit.cpp .\QtGeneratedFiles\qt\moc\moc_qvaluecombobox.cpp .\QtGeneratedFiles\qt\moc\moc_receivecoinsdialog.cpp .\QtGeneratedFiles\qt\moc\moc_receiverequestdialog.cpp .\QtGeneratedFiles\qt\moc\moc_recentrequeststablemodel.cpp .\QtGeneratedFiles\qt\moc\moc_rpcconsole.cpp .\QtGeneratedFiles\qt\moc\moc_sendcoinsdialog.cpp .\QtGeneratedFiles\qt\moc\moc_sendcoinsentry.cpp .\QtGeneratedFiles\qt\moc\moc_signverifymessagedialog.cpp .\QtGeneratedFiles\qt\moc\moc_splashscreen.cpp .\QtGeneratedFiles\qt\moc\moc_trafficgraphwidget.cpp .\QtGeneratedFiles\qt\moc\moc_transactiondesc.cpp .\QtGeneratedFiles\qt\moc\moc_transactiondescdialog.cpp .\QtGeneratedFiles\qt\moc\moc_transactionfilterproxy.cpp .\QtGeneratedFiles\qt\moc\moc_transactionoverviewwidget.cpp .\QtGeneratedFiles\qt\moc\moc_transactionrecord.cpp .\QtGeneratedFiles\qt\moc\moc_transactiontablemodel.cpp .\QtGeneratedFiles\qt\moc\moc_transactionview.cpp .\QtGeneratedFiles\qt\moc\moc_utilitydialog.cpp .\QtGeneratedFiles\qt\moc\moc_walletcontroller.cpp .\QtGeneratedFiles\qt\moc\moc_walletframe.cpp .\QtGeneratedFiles\qt\moc\moc_walletmodel.cpp .\QtGeneratedFiles\qt\moc\moc_walletmodeltransaction.cpp .\QtGeneratedFiles\qt\moc\moc_walletview.cpp .\QtGeneratedFiles\qt\moc\moc_winshutdownmonitor.cpp .\QtGeneratedFiles\qt\rcc\qrc_caps.cpp .\QtGeneratedFiles\qt\rcc\qrc_caps_locale.cpp
+  addressbookpage.cpp
+  addresstablemodel.cpp
+  askpassphrasedialog.cpp
+  bantablemodel.cpp
+  caps.cpp
+  capsaddressvalidator.cpp
+  capsamountfield.cpp
+  capsgui.cpp
+  bitcoinstrings.cpp
+  capsunits.cpp
+\src\qt\bitcoinstrings.cpp(1,1): error C1083: Cannot open source file: '..\..\src\qt\bitcoinstrings.cpp': No such file or directory [C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj]
+  (compiling source file '/src/qt/bitcoinstrings.cpp')
+  
+  clientmodel.cpp
+  coincontroldialog.cpp
+  coincontroltreewidget.cpp
+  createwalletdialog.cpp
+  csvmodelwriter.cpp
+  editaddressdialog.cpp
+  guiutil.cpp
+  initexecutor.cpp
+  intro.cpp
+  modaloverlay.cpp
+  Generating Code...
+  Compiling...
+  networkstyle.cpp
+  notificator.cpp
+  openuridialog.cpp
+  optionsdialog.cpp
+  optionsmodel.cpp
+  overviewpage.cpp
+  paymentserver.cpp
+  peertablemodel.cpp
+  peertablesortproxy.cpp
+  platformstyle.cpp
+  psbtoperationsdialog.cpp
+  qrimagewidget.cpp
+  qvalidatedlineedit.cpp
+  qvaluecombobox.cpp
+  receivecoinsdialog.cpp
+  receiverequestdialog.cpp
+  recentrequeststablemodel.cpp
+  rpcconsole.cpp
+  sendcoinsdialog.cpp
+  sendcoinsentry.cpp
+  Generating Code...
+  Compiling...
+  signverifymessagedialog.cpp
+  splashscreen.cpp
+  trafficgraphwidget.cpp
+  transactiondesc.cpp
+  transactiondescdialog.cpp
+  transactionfilterproxy.cpp
+  transactionoverviewwidget.cpp
+  transactionrecord.cpp
+  transactiontablemodel.cpp
+  transactionview.cpp
+  utilitydialog.cpp
+  walletcontroller.cpp
+  walletframe.cpp
+  walletmodel.cpp
+  walletmodeltransaction.cpp
+  walletview.cpp
+  winshutdownmonitor.cpp
+  moc_addressbookpage.cpp
+  moc_addresstablemodel.cpp
+  moc_askpassphrasedialog.cpp
+  Generating Code...
+  Compiling...
+  moc_bantablemodel.cpp
+  moc_caps.cpp
+  moc_capsaddressvalidator.cpp
+  moc_capsamountfield.cpp
+  moc_capsgui.cpp
+  moc_capsunits.cpp
+  moc_clientmodel.cpp
+  moc_coincontroldialog.cpp
+  moc_coincontroltreewidget.cpp
+  moc_createwalletdialog.cpp
+  moc_csvmodelwriter.cpp
+  moc_editaddressdialog.cpp
+  moc_guiutil.cpp
+  moc_initexecutor.cpp
+  moc_intro.cpp
+  moc_modaloverlay.cpp
+  moc_networkstyle.cpp
+  moc_notificator.cpp
+  moc_openuridialog.cpp
+  moc_optionsdialog.cpp
+  Generating Code...
+  Compiling...
+  moc_optionsmodel.cpp
+  moc_overviewpage.cpp
+  moc_paymentserver.cpp
+  moc_peertablemodel.cpp
+  moc_peertablesortproxy.cpp
+  moc_platformstyle.cpp
+  moc_psbtoperationsdialog.cpp
+  moc_qrimagewidget.cpp
+  moc_qvalidatedlineedit.cpp
+  moc_qvaluecombobox.cpp
+  moc_receivecoinsdialog.cpp
+  moc_receiverequestdialog.cpp
+  moc_recentrequeststablemodel.cpp
+  moc_rpcconsole.cpp
+  moc_sendcoinsdialog.cpp
+  moc_sendcoinsentry.cpp
+  moc_signverifymessagedialog.cpp
+  moc_splashscreen.cpp
+  moc_trafficgraphwidget.cpp
+  moc_transactiondesc.cpp
+  Generating Code...
+  Compiling...
+  moc_transactiondescdialog.cpp
+  moc_transactionfilterproxy.cpp
+  moc_transactionoverviewwidget.cpp
+  moc_transactionrecord.cpp
+  moc_transactiontablemodel.cpp
+  moc_transactionview.cpp
+  moc_utilitydialog.cpp
+  moc_walletcontroller.cpp
+  moc_walletframe.cpp
+  moc_walletmodel.cpp
+  moc_walletmodeltransaction.cpp
+  moc_walletview.cpp
+  moc_winshutdownmonitor.cpp
+  qrc_caps.cpp
+  qrc_caps_locale.cpp
+  Generating Code...
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_node\libcaps_node.vcxproj" (7) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_node\libcaps_node.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_node\libcaps_node.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_node.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_node\x64\Release\libcaps_node\libcaps_node.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_node\libcaps_node.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_node\libcaps_node.tlog\libcaps_node.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_node\libcaps_node.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_util\libcaps_util.vcxproj" (8) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_util\libcaps_util.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_util\libcaps_util.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_util.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_util\x64\Release\libcaps_util\libcaps_util.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_util\libcaps_util.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_util\libcaps_util.tlog\libcaps_util.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_util\libcaps_util.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_wallet\libcaps_wallet.vcxproj" (9) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_wallet\libcaps_wallet.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_wallet\libcaps_wallet.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_wallet.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_wallet\x64\Release\libcaps_wallet\libcaps_wallet.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_wallet\libcaps_wallet.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_wallet\libcaps_wallet.tlog\libcaps_wallet.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_wallet\libcaps_wallet.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_zmq\libcaps_zmq.vcxproj" (10) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libcaps_zmq\libcaps_zmq.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libcaps_zmq\libcaps_zmq.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libcaps_zmq.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_zmq\x64\Release\libcaps_zmq\libcaps_zmq.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libcaps_zmq\libcaps_zmq.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libcaps_zmq\libcaps_zmq.tlog\libcaps_zmq.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_zmq\libcaps_zmq.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libleveldb\libleveldb.vcxproj" (11) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libleveldb\libleveldb.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libleveldb\libleveldb.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libleveldb.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libleveldb\x64\Release\libleveldb\libleveldb.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libleveldb\libleveldb.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libleveldb\libleveldb.tlog\libleveldb.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libleveldb\libleveldb.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libsecp256k1\libsecp256k1.vcxproj" (12) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libsecp256k1\libsecp256k1.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libsecp256k1\libsecp256k1.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libsecp256k1.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libsecp256k1\x64\Release\libsecp256k1\libsecp256k1.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libsecp256k1\libsecp256k1.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libsecp256k1\libsecp256k1.tlog\libsecp256k1.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libsecp256k1\libsecp256k1.vcxproj" (default targets).
+Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (1) is building "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libunivalue\libunivalue.vcxproj" (13) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\libunivalue\libunivalue.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\libunivalue\libunivalue.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\ShaeOJ\Documents\GitHub\vcpkg\installed\x64-windows-static\"
+  Using normalized configuration "Release"
+VcpkgCheckManifestRoot:
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  libunivalue.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libunivalue\x64\Release\libunivalue\libunivalue.lib
+FinalizeBuildStatus:
+  Deleting file "x64\Release\libunivalue\libunivalue.tlog\unsuccessfulbuild".
+  Touching "x64\Release\libunivalue\libunivalue.tlog\libunivalue.lastbuildstate".
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libunivalue\libunivalue.vcxproj" (default targets).
+Done Building Project "C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (default target) (1) ->
+"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj" (default target) (6) ->
+(resource target) -> 
+  EXEC : warning : note: not compressed [C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj]
+
+
+"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\caps-qt\caps-qt.vcxproj" (default target) (1) ->
+"C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj" (default target) (6) ->
+(ClCompile target) -> 
+  \src\qt\bitcoinstrings.cpp(1,1): error C1083: Cannot open source file: '..\..\src\qt\bitcoinstrings.cpp': No such file or directory [C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\libcaps_qt\libcaps_qt.vcxproj]
+
+    1 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:05:57.52

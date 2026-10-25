@@ -1,17 +1,17 @@
-# Multiprocess BitcoinSilver
+# Multiprocess Caps
 
-On unix systems, the `--enable-multiprocess` build option can be passed to `./configure` to build new `bitcoinsilver-node`, `bitcoinsilver-wallet`, and `bitcoinsilver-gui` executables alongside existing `bitcoinsilverd` and `bitcoinsilver-qt` executables.
+On unix systems, the `--enable-multiprocess` build option can be passed to `./configure` to build new `caps-node`, `caps-wallet`, and `caps-gui` executables alongside existing `capsd` and `caps-qt` executables.
 
-`bitcoinsilver-node` is a drop-in replacement for `bitcoinsilverd`, and `bitcoinsilver-gui` is a drop-in replacement for `bitcoinsilver-qt`, and there are no differences in use or external behavior between the new and old executables. But internally (after [#10102](https://github.com/MrVistos/bitcoinsilver/pull/10102)), `bitcoinsilver-gui` will spawn a `bitcoinsilver-node` process to run P2P and RPC code, communicating with it across a socket pair, and `bitcoinsilver-node` will spawn `bitcoinsilver-wallet` to run wallet code, also communicating over a socket pair. This will let node, wallet, and GUI code run in separate address spaces for better isolation, and allow future improvements like being able to start and stop components independently on different machines and environments.
+`caps-node` is a drop-in replacement for `capsd`, and `caps-gui` is a drop-in replacement for `caps-qt`, and there are no differences in use or external behavior between the new and old executables. But internally (after [#10102](https://github.com/MrVistos/caps/pull/10102)), `caps-gui` will spawn a `caps-node` process to run P2P and RPC code, communicating with it across a socket pair, and `caps-node` will spawn `caps-wallet` to run wallet code, also communicating over a socket pair. This will let node, wallet, and GUI code run in separate address spaces for better isolation, and allow future improvements like being able to start and stop components independently on different machines and environments.
 
 ## Next steps
 
-Specific next steps after [#10102](https://github.com/MrVistos/bitcoinsilver/pull/10102) will be:
+Specific next steps after [#10102](https://github.com/MrVistos/caps/pull/10102) will be:
 
-- [ ] Adding `-ipcbind` and `-ipcconnect` options to `bitcoinsilver-node`, `bitcoinsilver-wallet`, and `bitcoinsilver-gui` executables so they can listen and connect to TCP ports and unix socket paths. This will allow separate processes to be started and stopped any time and connect to each other.
-- [ ] Adding `-server` and `-rpcbind` options to the `bitcoinsilver-wallet` executable so wallet processes can handle RPC requests directly without going through the node.
+- [ ] Adding `-ipcbind` and `-ipcconnect` options to `caps-node`, `caps-wallet`, and `caps-gui` executables so they can listen and connect to TCP ports and unix socket paths. This will allow separate processes to be started and stopped any time and connect to each other.
+- [ ] Adding `-server` and `-rpcbind` options to the `caps-wallet` executable so wallet processes can handle RPC requests directly without going through the node.
 - [ ] Supporting windows, not just unix systems. The existing socket code is already cross-platform, so the only windows-specific code that needs to be written is code spawning a process and passing a socket descriptor. This can be implemented with `CreateProcess` and `WSADuplicateSocket`. Example: https://memset.wordpress.com/2010/10/13/win32-api-passing-socket-with-ipc-method/.
-- [ ] Adding sandbox features, restricting subprocess access to resources and data. See [https://eklitzke.org/multiprocess-bitcoinsilver](https://eklitzke.org/multiprocess-bitcoinsilver).
+- [ ] Adding sandbox features, restricting subprocess access to resources and data. See [https://eklitzke.org/multiprocess-caps](https://eklitzke.org/multiprocess-caps).
 
 ## Debugging
 
@@ -22,12 +22,12 @@ The `-debug=ipc` command line option can be used to see requests and responses b
 The multiprocess feature requires [Cap'n Proto](https://capnproto.org/) and [libmultiprocess](https://github.com/chaincodelabs/libmultiprocess) as dependencies. A simple way to get starting using it without installing these dependencies manually is to use the [depends system](../depends) with the `MULTIPROCESS=1` [dependency option](../depends#dependency-options) passed to make:
 
 ```
-cd <BITCOINSILVER_SOURCE_DIRECTORY>
+cd <CAPS_SOURCE_DIRECTORY>
 make -C depends NO_QT=1 MULTIPROCESS=1
 CONFIG_SITE=$PWD/depends/x86_64-pc-linux-gnu/share/config.site ./configure
 make
-src/bitcoinsilver-node -regtest -printtoconsole -debug=ipc
-BITCOINSILVERD=bitcoinsilver-node test/functional/test_runner.py
+src/caps-node -regtest -printtoconsole -debug=ipc
+CAPSD=caps-node test/functional/test_runner.py
 ```
 
 The configure script will pick up settings and library locations from the depends directory, so there is no need to pass `--enable-multiprocess` as a separate flag when using the depends system (it's controlled by the `MULTIPROCESS=1` option).

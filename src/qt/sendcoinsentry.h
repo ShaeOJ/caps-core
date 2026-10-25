@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_SENDCOINSENTRY_H
-#define BITCOINSILVER_QT_SENDCOINSENTRY_H
+#ifndef CAPS_QT_SENDCOINSENTRY_H
+#define CAPS_QT_SENDCOINSENTRY_H
 
 #include <qt/sendcoinsrecipient.h>
 
@@ -79,4 +79,4 @@ private:
     bool updateLabel(const QString &address);
 };
 
-#endif // BITCOINSILVER_QT_SENDCOINSENTRY_H
+#endif // CAPS_QT_SENDCOINSENTRY_H

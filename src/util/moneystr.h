@@ -6,8 +6,8 @@
 /**
  * Money parsing/formatting utilities.
  */
-#ifndef BITCOINSILVER_UTIL_MONEYSTR_H
-#define BITCOINSILVER_UTIL_MONEYSTR_H
+#ifndef CAPS_UTIL_MONEYSTR_H
+#define CAPS_UTIL_MONEYSTR_H
 
 #include <consensus/amount.h>
 
@@ -21,4 +21,4 @@ std::string FormatMoney(const CAmount n);
 /** Parse an amount denoted in full coins. E.g. "0.0034" supplied on the command line. **/
 std::optional<CAmount> ParseMoney(const std::string& str);
 
-#endif // BITCOINSILVER_UTIL_MONEYSTR_H
+#endif // CAPS_UTIL_MONEYSTR_H

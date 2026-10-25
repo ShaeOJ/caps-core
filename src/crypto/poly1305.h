@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CRYPTO_POLY1305_H
-#define BITCOINSILVER_CRYPTO_POLY1305_H
+#ifndef CAPS_CRYPTO_POLY1305_H
+#define CAPS_CRYPTO_POLY1305_H
 
 #include <span.h>
 
@@ -67,4 +67,4 @@ public:
     }
 };
 
-#endif // BITCOINSILVER_CRYPTO_POLY1305_H
+#endif // CAPS_CRYPTO_POLY1305_H

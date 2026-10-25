@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_INTERFACES_HANDLER_H
-#define BITCOINSILVER_INTERFACES_HANDLER_H
+#ifndef CAPS_INTERFACES_HANDLER_H
+#define CAPS_INTERFACES_HANDLER_H
 
 #include <functional>
 #include <memory>
@@ -36,4 +36,4 @@ std::unique_ptr<Handler> MakeCleanupHandler(std::function<void()> cleanup);
 
 } // namespace interfaces
 
-#endif // BITCOINSILVER_INTERFACES_HANDLER_H
+#endif // CAPS_INTERFACES_HANDLER_H

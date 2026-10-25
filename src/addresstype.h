@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_ADDRESSTYPE_H
-#define BITCOINSILVER_ADDRESSTYPE_H
+#ifndef CAPS_ADDRESSTYPE_H
+#define CAPS_ADDRESSTYPE_H
 
 #include <pubkey.h>
 #include <script/script.h>
@@ -124,7 +124,7 @@ public:
  *  * WitnessV0KeyHash: TxoutType::WITNESS_V0_KEYHASH destination (P2WPKH address)
  *  * WitnessV1Taproot: TxoutType::WITNESS_V1_TAPROOT destination (P2TR address)
  *  * WitnessUnknown: TxoutType::WITNESS_UNKNOWN destination (P2W??? address)
- *  A CTxDestination is the internal data type encoded in a bitcoinsilver address
+ *  A CTxDestination is the internal data type encoded in a caps address
  */
 using CTxDestination = std::variant<CNoDestination, PubKeyDestination, PKHash, ScriptHash, WitnessV0ScriptHash, WitnessV0KeyHash, WitnessV1Taproot, WitnessUnknown>;
 
@@ -144,10 +144,10 @@ bool IsValidDestination(const CTxDestination& dest);
 bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet);
 
 /**
- * Generate a BitcoinSilver scriptPubKey for the given CTxDestination. Returns a P2PKH
+ * Generate a Caps scriptPubKey for the given CTxDestination. Returns a P2PKH
  * script for a CKeyID destination, a P2SH script for a CScriptID, and an empty
  * script for CNoDestination.
  */
 CScript GetScriptForDestination(const CTxDestination& dest);
 
-#endif // BITCOINSILVER_ADDRESSTYPE_H
+#endif // CAPS_ADDRESSTYPE_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_COMPRESSOR_H
-#define BITCOINSILVER_COMPRESSOR_H
+#ifndef CAPS_COMPRESSOR_H
+#define CAPS_COMPRESSOR_H
 
 #include <prevector.h>
 #include <primitives/transaction.h>
@@ -115,4 +115,4 @@ struct TxOutCompression
     FORMATTER_METHODS(CTxOut, obj) { READWRITE(Using<AmountCompression>(obj.nValue), Using<ScriptCompression>(obj.scriptPubKey)); }
 };
 
-#endif // BITCOINSILVER_COMPRESSOR_H
+#endif // CAPS_COMPRESSOR_H

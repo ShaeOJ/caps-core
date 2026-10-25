@@ -13,10 +13,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both bitcoinsilverd and bitcoinsilver-qt, to make it harder for attackers to
+ * for both capsd and caps-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("BitcoinSilver");
+const std::string CLIENT_NAME("Caps");
 
 
 #ifdef HAVE_BUILD_INFO
@@ -59,7 +59,7 @@ std::string FormatFullVersion()
 }
 
 /**
- * Format the subversion field according to BIP 14 spec (https://github.com/bitcoinsilver/bips/blob/master/bip-0014.mediawiki)
+ * Format the subversion field according to BIP 14 spec (https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki)
  */
 std::string FormatSubVersion(const std::string& name, int nClientVersion, const std::vector<std::string>& comments)
 {
@@ -92,13 +92,13 @@ std::string CopyrightHolders(const std::string& strPrefix)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/MrVistos/bitcoinsilver>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/AquaCaps/caps>";
 
     //return CopyrightHolders(strprintf(_("Copyright (C) %i-%i").translated, 2009, COPYRIGHT_YEAR) + " ") + "\n" +
     return "\n" +
            (strprintf(_("Copyright (C) %i").translated, COPYRIGHT_YEAR) + " The Bitcoin Core Developers") + "\n" +
            +"\n" +
-           (strprintf(_("Copyright (C) %i").translated, COPYRIGHT_YEAR) + " The BitcoinSilver Community") + "\n" +
+           (strprintf(_("Copyright (C) %i").translated, COPYRIGHT_YEAR) + " The Caps Community") + "\n" +
            +"\n" +
            strprintf(_("Please contribute if you find %s useful. "
                        "Visit %s for further information about the software.").translated, PACKAGE_NAME, "<" PACKAGE_URL ">") +

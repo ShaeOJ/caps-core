@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_THREADNAMES_H
-#define BITCOINSILVER_UTIL_THREADNAMES_H
+#ifndef CAPS_UTIL_THREADNAMES_H
+#define CAPS_UTIL_THREADNAMES_H
 
 #include <string>
 
@@ -23,4 +23,4 @@ const std::string& ThreadGetInternalName();
 
 } // namespace util
 
-#endif // BITCOINSILVER_UTIL_THREADNAMES_H
+#endif // CAPS_UTIL_THREADNAMES_H

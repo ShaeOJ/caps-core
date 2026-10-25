@@ -2,8 +2,8 @@
 // Copyright (c) 2009-2020 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOINSILVER_UTIL_FEES_H
-#define BITCOINSILVER_UTIL_FEES_H
+#ifndef CAPS_UTIL_FEES_H
+#define CAPS_UTIL_FEES_H
 
 #include <string>
 
@@ -15,4 +15,4 @@ std::string StringForFeeReason(FeeReason reason);
 std::string FeeModes(const std::string& delimiter);
 std::string InvalidEstimateModeErrorMessage();
 
-#endif // BITCOINSILVER_UTIL_FEES_H
+#endif // CAPS_UTIL_FEES_H

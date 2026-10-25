@@ -1,0 +1,36 @@
+MSBuild version 17.14.19+164abd434 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libcaps_consensus.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_consensus\libcaps_consensus.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  chainparams.cpp
+  libcaps_common.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_common\libcaps_common.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libcaps_crypto.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_crypto\libcaps_crypto.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libcaps_node.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_node\libcaps_node.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libcaps_util.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_util\libcaps_util.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libcaps_wallet.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_wallet\libcaps_wallet.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libcaps_zmq.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_zmq\libcaps_zmq.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libunivalue.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libunivalue\libunivalue.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libsecp256k1.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libsecp256k1\libsecp256k1.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libleveldb.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libleveldb\libleveldb.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+     Creating library C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\capsd.lib and object C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\capsd.exp
+  capsd.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\capsd.exe
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libcaps_cli.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_cli\libcaps_cli.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+     Creating library C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-cli.lib and object C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-cli.exp
+  caps-cli.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-cli.exe
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  libcaps_qt.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\libcaps_qt\libcaps_qt.lib
+  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+     Creating library C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-qt.lib and object C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-qt.exp
+  caps-qt.vcxproj -> C:\Users\ShaeOJ\Documents\GitHub\Caps-new\build_msvc\x64\Release\caps-qt.exe

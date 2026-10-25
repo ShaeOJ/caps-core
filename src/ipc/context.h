@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_IPC_CONTEXT_H
-#define BITCOINSILVER_IPC_CONTEXT_H
+#ifndef CAPS_IPC_CONTEXT_H
+#define CAPS_IPC_CONTEXT_H
 
 namespace ipc {
 //! Context struct used to give IPC protocol implementations or implementation
@@ -16,4 +16,4 @@ struct Context
 };
 } // namespace ipc
 
-#endif // BITCOINSILVER_IPC_CONTEXT_H
+#endif // CAPS_IPC_CONTEXT_H

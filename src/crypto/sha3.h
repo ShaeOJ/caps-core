@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CRYPTO_SHA3_H
-#define BITCOINSILVER_CRYPTO_SHA3_H
+#ifndef CAPS_CRYPTO_SHA3_H
+#define CAPS_CRYPTO_SHA3_H
 
 #include <span.h>
 
@@ -38,4 +38,4 @@ public:
     SHA3_256& Reset();
 };
 
-#endif // BITCOINSILVER_CRYPTO_SHA3_H
+#endif // CAPS_CRYPTO_SHA3_H

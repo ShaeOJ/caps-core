@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WARNINGS_H
-#define BITCOINSILVER_WARNINGS_H
+#ifndef CAPS_WARNINGS_H
+#define CAPS_WARNINGS_H
 
 #include <string>
 
@@ -20,4 +20,4 @@ void SetfLargeWorkInvalidChainFound(bool flag);
  */
 bilingual_str GetWarnings(bool verbose);
 
-#endif // BITCOINSILVER_WARNINGS_H
+#endif // CAPS_WARNINGS_H

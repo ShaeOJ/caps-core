@@ -14,10 +14,10 @@ from subprocess import check_output
 from typing import List
 
 
-HEADER_ID_PREFIX = 'BITCOINSILVER_'
+HEADER_ID_PREFIX = 'CAPS_'
 HEADER_ID_SUFFIX = '_H'
 
-EXCLUDE_FILES_WITH_PREFIX = ['contrib/devtools/bitcoinsilver-tidy',
+EXCLUDE_FILES_WITH_PREFIX = ['contrib/devtools/caps-tidy',
                              'src/crypto/ctaes',
                              'src/leveldb',
                              'src/crc32c',
@@ -47,7 +47,7 @@ def _get_header_id(header_file: str) -> str:
     """ Helper function to get the header id from a header file
         string.
 
-        eg: 'src/wallet/walletdb.h' -> 'BITCOINSILVER_WALLET_WALLETDB_H'
+        eg: 'src/wallet/walletdb.h' -> 'CAPS_WALLET_WALLETDB_H'
 
     Args:
         header_file: Filepath to header file.

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_TRANSLATION_H
-#define BITCOINSILVER_UTIL_TRANSLATION_H
+#ifndef CAPS_UTIL_TRANSLATION_H
+#define CAPS_UTIL_TRANSLATION_H
 
 #include <tinyformat.h>
 
@@ -76,4 +76,4 @@ inline bilingual_str _(const char* psz)
     return bilingual_str{psz, G_TRANSLATION_FUN ? (G_TRANSLATION_FUN)(psz) : psz};
 }
 
-#endif // BITCOINSILVER_UTIL_TRANSLATION_H
+#endif // CAPS_UTIL_TRANSLATION_H

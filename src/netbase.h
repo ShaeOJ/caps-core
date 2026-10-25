@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_NETBASE_H
-#define BITCOINSILVER_NETBASE_H
+#ifndef CAPS_NETBASE_H
+#define CAPS_NETBASE_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <compat/compat.h>
@@ -316,4 +316,4 @@ bool IsBadPort(uint16_t port);
  */
 CService MaybeFlipIPv6toCJDNS(const CService& service);
 
-#endif // BITCOINSILVER_NETBASE_H
+#endif // CAPS_NETBASE_H

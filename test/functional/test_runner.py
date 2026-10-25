@@ -179,8 +179,8 @@ BASE_SCRIPTS = [
     'interface_zmq.py',
     'rpc_invalid_address_message.py',
     'rpc_validateaddress.py',
-    'interface_bitcoinsilver_cli.py --legacy-wallet',
-    'interface_bitcoinsilver_cli.py --descriptors',
+    'interface_caps_cli.py --legacy-wallet',
+    'interface_caps_cli.py --descriptors',
     'feature_bind_extra.py',
     'mempool_resurrect.py',
     'wallet_txn_doublespend.py --mineblock',
@@ -453,9 +453,9 @@ def main():
 
     logging.debug("Temporary test directory at %s" % tmpdir)
 
-    enable_bitcoinsilverd = config["components"].getboolean("ENABLE_BITCOINSILVERD")
+    enable_capsd = config["components"].getboolean("ENABLE_CAPSD")
 
-    if not enable_bitcoinsilverd:
+    if not enable_capsd:
         print("No functional tests to run.")
         print("Rerun ./configure with --with-daemon and then make")
         sys.exit(0)
@@ -537,11 +537,11 @@ def main():
 def run_tests(*, test_list, src_dir, build_dir, tmpdir, jobs=1, enable_coverage=False, args=None, combined_logs_len=0, failfast=False, use_term_control):
     args = args or []
 
-    # Warn if bitcoinsilverd is already running
+    # Warn if capsd is already running
     try:
         # pgrep exits with code zero when one or more matching processes found
-        if subprocess.run(["pgrep", "-x", "bitcoinsilverd"], stdout=subprocess.DEVNULL).returncode == 0:
-            print("%sWARNING!%s There is already a bitcoinsilverd process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
+        if subprocess.run(["pgrep", "-x", "capsd"], stdout=subprocess.DEVNULL).returncode == 0:
+            print("%sWARNING!%s There is already a capsd process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
     except OSError:
         # pgrep not supported
         pass
@@ -556,7 +556,7 @@ def run_tests(*, test_list, src_dir, build_dir, tmpdir, jobs=1, enable_coverage=
 
     tests_dir = src_dir + '/test/functional/'
     # This allows `test_runner.py` to work from an out-of-source build directory using a symlink,
-    # a hard link or a copy on any platform. See https://github.com/MrVistos/bitcoinsilver/pull/27561.
+    # a hard link or a copy on any platform. See https://github.com/MrVistos/caps/pull/27561.
     sys.path.append(tests_dir)
 
     test_framework_tests = unittest.TestSuite()
@@ -823,7 +823,7 @@ class RPCCoverage():
     Coverage calculation works by having each test script subprocess write
     coverage files into a particular directory. These files contain the RPC
     commands invoked during testing, as well as a complete listing of RPC
-    commands per `bitcoinsilver-cli help` (`rpc_interface.txt`).
+    commands per `caps-cli help` (`rpc_interface.txt`).
 
     After all tests complete, the commands run are combined and diff'd against
     the complete list to calculate uncovered RPC commands.

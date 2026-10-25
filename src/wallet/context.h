@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_CONTEXT_H
-#define BITCOINSILVER_WALLET_CONTEXT_H
+#ifndef CAPS_WALLET_CONTEXT_H
+#define CAPS_WALLET_CONTEXT_H
 
 #include <sync.h>
 
@@ -49,4 +49,4 @@ struct WalletContext {
 };
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_CONTEXT_H
+#endif // CAPS_WALLET_CONTEXT_H

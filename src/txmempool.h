@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_TXMEMPOOL_H
-#define BITCOINSILVER_TXMEMPOOL_H
+#ifndef CAPS_TXMEMPOOL_H
+#define CAPS_TXMEMPOOL_H
 
 #include <coins.h>
 #include <consensus/amount.h>
@@ -849,4 +849,4 @@ public:
     /** Clear m_temp_added and m_non_base_coins. */
     void Reset();
 };
-#endif // BITCOINSILVER_TXMEMPOOL_H
+#endif // CAPS_TXMEMPOOL_H

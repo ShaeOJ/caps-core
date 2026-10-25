@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_LOGGING_H
-#define BITCOINSILVER_LOGGING_H
+#ifndef CAPS_LOGGING_H
+#define CAPS_LOGGING_H
 
 #include <threadsafety.h>
 #include <tinyformat.h>
@@ -265,4 +265,4 @@ bool error(const char* fmt, const Args&... args)
     return false;
 }
 
-#endif // BITCOINSILVER_LOGGING_H
+#endif // CAPS_LOGGING_H

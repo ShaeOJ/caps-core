@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CHECKQUEUE_H
-#define BITCOINSILVER_CHECKQUEUE_H
+#ifndef CAPS_CHECKQUEUE_H
+#define CAPS_CHECKQUEUE_H
 
 #include <sync.h>
 #include <tinyformat.h>
@@ -248,4 +248,4 @@ public:
     }
 };
 
-#endif // BITCOINSILVER_CHECKQUEUE_H
+#endif // CAPS_CHECKQUEUE_H

@@ -1,0 +1,17 @@
+# Caps Configuration File
+# Place this file in %APPDATA%\Caps\caps.conf
+
+# Network
+# Add seed nodes to connect to
+#addnode=192.168.1.100
+
+# RPC Settings (for caps-cli access)
+#rpcuser=capsuser
+#rpcpassword=changeme
+#rpcallowip=127.0.0.1
+
+# Mining
+#gen=1
+
+# Logging
+#debug=1

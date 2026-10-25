@@ -11,8 +11,8 @@
 //
 // For more information, see BIP 173 and BIP 350.
 
-#ifndef BITCOINSILVER_BECH32_H
-#define BITCOINSILVER_BECH32_H
+#ifndef CAPS_BECH32_H
+#define CAPS_BECH32_H
 
 #include <stdint.h>
 #include <string>
@@ -50,4 +50,4 @@ std::pair<std::string, std::vector<int>> LocateErrors(const std::string& str);
 
 } // namespace bech32
 
-#endif // BITCOINSILVER_BECH32_H
+#endif // CAPS_BECH32_H

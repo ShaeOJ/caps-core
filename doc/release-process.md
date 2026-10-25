@@ -5,10 +5,10 @@ Release Process
 
 ### Before every release candidate
 
-* Update translations see [translation_process.md](https://github.com/MrVistos/bitcoinsilver/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations see [translation_process.md](https://github.com/MrVistos/caps/blob/master/doc/translation_process.md#synchronising-translations).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`).
-* Update manpages (after rebuilding the binaries), see [gen-manpages.py](https://github.com/MrVistos/bitcoinsilver/blob/master/contrib/devtools/README.md#gen-manpagespy).
-* Update bitcoinsilver.conf and commit, see [gen-bitcoinsilver-conf.sh](https://github.com/MrVistos/bitcoinsilver/blob/master/contrib/devtools/README.md#gen-bitcoinsilver-confsh).
+* Update manpages (after rebuilding the binaries), see [gen-manpages.py](https://github.com/MrVistos/caps/blob/master/contrib/devtools/README.md#gen-manpagespy).
+* Update caps.conf and commit, see [gen-caps-conf.sh](https://github.com/MrVistos/caps/blob/master/contrib/devtools/README.md#gen-caps-confsh).
 
 ### Before every major and minor release
 
@@ -21,14 +21,14 @@ Release Process
 
 * On both the master branch and the new release branch:
   - update `CLIENT_VERSION_MAJOR` in [`configure.ac`](../configure.ac)
-* On the new release branch in [`configure.ac`](../configure.ac)(see [this commit](https://github.com/MrVistos/bitcoinsilver/commit/742f7dd)):
+* On the new release branch in [`configure.ac`](../configure.ac)(see [this commit](https://github.com/MrVistos/caps/commit/742f7dd)):
   - set `CLIENT_VERSION_MINOR` to `0`
   - set `CLIENT_VERSION_BUILD` to `0`
   - set `CLIENT_VERSION_IS_RELEASE` to `true`
 
 #### Before branch-off
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/MrVistos/bitcoinsilver/pull/27488) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/MrVistos/caps/pull/27488) for an example.
 * Update the following variables in [`src/kernel/chainparams.cpp`](/src/kernel/chainparams.cpp) for mainnet, testnet, and signet:
   - `m_assumed_blockchain_size` and `m_assumed_chain_state_size` with the current size plus some overhead (see
     [this](#how-to-calculate-assumed-blockchain-and-chain-state-size) for information on how to calculate them).
@@ -36,7 +36,7 @@ Release Process
     that causes rejection of blocks in the past history.
   - `chainTxData` with statistics about the transaction count and rate. Use the output of the `getchaintxstats` RPC with an
     `nBlocks` of 4096 (28 days) and a `bestblockhash` of RPC `getbestblockhash`; see
-    [this pull request](https://github.com/MrVistos/bitcoinsilver/pull/28591) for an example. Reviewers can verify the results by running
+    [this pull request](https://github.com/MrVistos/caps/pull/28591) for an example. Reviewers can verify the results by running
     `getchaintxstats <window_block_count> <window_final_block_hash>` with the `window_block_count` and `window_final_block_hash` from your output.
   - `defaultAssumeValid` with the output of RPC `getblockhash` using the `height` of `window_final_block_height` above
     (and update the block height comment with that height), taking into account the following:
@@ -54,33 +54,33 @@ Release Process
 - Clear the release notes and move them to the wiki (see "Write the release notes" below).
 - Translations on Transifex:
     - Pull translations from Transifex into the master branch.
-    - Create [a new resource](https://www.transifex.com/bitcoinsilver/bitcoinsilver/content/) named after the major version with the slug `qt-translation-<RRR>x`, where `RRR` is the major branch number padded with zeros. Use `src/qt/locale/bitcoinsilver_en.xlf` to create it.
+    - Create [a new resource](https://www.transifex.com/caps/caps/content/) named after the major version with the slug `qt-translation-<RRR>x`, where `RRR` is the major branch number padded with zeros. Use `src/qt/locale/caps_en.xlf` to create it.
     - In the project workflow settings, ensure that [Translation Memory Fill-up](https://help.transifex.com/en/articles/6224817-setting-up-translation-memory-fill-up) is enabled and that [Translation Memory Context Matching](https://help.transifex.com/en/articles/6224753-translation-memory-with-context) is disabled.
     - Update the Transifex slug in [`.tx/config`](/.tx/config) to the slug of the resource created in the first step. This identifies which resource the translations will be synchronized from.
-    - Make an announcement that translators can start translating for the new version. You can use one of the [previous announcements](https://www.transifex.com/bitcoinsilver/communication/) as a template.
-    - Change the auto-update URL for the resource to `master`, e.g. `https://raw.githubusercontent.com/bitcoinsilver/bitcoinsilver/master/src/qt/locale/bitcoinsilver_en.xlf`. (Do this only after the previous steps, to prevent an auto-update from interfering.)
+    - Make an announcement that translators can start translating for the new version. You can use one of the [previous announcements](https://www.transifex.com/caps/communication/) as a template.
+    - Change the auto-update URL for the resource to `master`, e.g. `https://raw.githubusercontent.com/caps/caps/master/src/qt/locale/caps_en.xlf`. (Do this only after the previous steps, to prevent an auto-update from interfering.)
 
 #### After branch-off (on the major release branch)
 
 - Update the versions.
-- Create the draft, named "*version* Release Notes Draft", as a [collaborative wiki](https://github.com/bitcoinsilver-core/bitcoinsilver-devwiki/wiki/_new).
+- Create the draft, named "*version* Release Notes Draft", as a [collaborative wiki](https://github.com/caps-core/caps-devwiki/wiki/_new).
 - Clear the release notes: `cp doc/release-notes-empty-template.md doc/release-notes.md`
-- Create a pinned meta-issue for testing the release candidate (see [this issue](https://github.com/MrVistos/bitcoinsilver/issues/27621) for an example) and provide a link to it in the release announcements where useful.
+- Create a pinned meta-issue for testing the release candidate (see [this issue](https://github.com/MrVistos/caps/issues/27621) for an example) and provide a link to it in the release announcements where useful.
 - Translations on Transifex
-    - Change the auto-update URL for the new major version's resource away from `master` and to the branch, e.g. `https://raw.githubusercontent.com/bitcoinsilver/bitcoinsilver/<branch>/src/qt/locale/bitcoinsilver_en.xlf`. Do not forget this or it will keep tracking the translations on master instead, drifting away from the specific major release.
+    - Change the auto-update URL for the new major version's resource away from `master` and to the branch, e.g. `https://raw.githubusercontent.com/caps/caps/<branch>/src/qt/locale/caps_en.xlf`. Do not forget this or it will keep tracking the translations on master instead, drifting away from the specific major release.
 - Prune inputs from the qa-assets repo (See [pruning
-  inputs](https://github.com/bitcoinsilver-core/qa-assets#pruning-inputs)).
+  inputs](https://github.com/caps-core/qa-assets#pruning-inputs)).
 
 #### Before final release
 
-- Merge the release notes from [the wiki](https://github.com/bitcoinsilver-core/bitcoinsilver-devwiki/wiki/) into the branch.
+- Merge the release notes from [the wiki](https://github.com/caps-core/caps-devwiki/wiki/) into the branch.
 - Ensure the "Needs release note" label is removed from all relevant pull requests and issues.
 
 #### Tagging a release (candidate)
 
-To tag the version (or release candidate) in git, use the `make-tag.py` script from [bitcoinsilver-maintainer-tools](https://github.com/bitcoinsilver-core/bitcoinsilver-maintainer-tools). From the root of the repository run:
+To tag the version (or release candidate) in git, use the `make-tag.py` script from [caps-maintainer-tools](https://github.com/caps-core/caps-maintainer-tools). From the root of the repository run:
 
-    ../bitcoinsilver-maintainer-tools/make-tag.py v(new version, e.g. 25.0)
+    ../caps-maintainer-tools/make-tag.py v(new version, e.g. 25.0)
 
 This will perform a few last-minute consistency checks in the build system files, and if they pass, create a signed tag.
 
@@ -94,13 +94,13 @@ Install Guix using one of the installation methods detailed in
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/bitcoinsilver-core/guix.sigs.git
-    git clone https://github.com/bitcoinsilver-core/bitcoinsilver-detached-sigs.git
-    git clone https://github.com/MrVistos/bitcoinsilver.git
+    git clone https://github.com/caps-core/guix.sigs.git
+    git clone https://github.com/caps-core/caps-detached-sigs.git
+    git clone https://github.com/MrVistos/caps.git
 
 ### Write the release notes
 
-Open a draft of the release notes for collaborative editing at https://github.com/bitcoinsilver-core/bitcoinsilver-devwiki/wiki.
+Open a draft of the release notes for collaborative editing at https://github.com/caps-core/caps-devwiki/wiki.
 
 For the period during which the notes are being edited on the wiki, the version on the branch should be wiped and replaced with a link to the wiki which should be used for all announcements until `-final`.
 
@@ -110,10 +110,10 @@ Generate list of authors:
 
 ### Setup and perform Guix builds
 
-Checkout the BitcoinSilver version you'd like to build:
+Checkout the Caps version you'd like to build:
 
 ```sh
-pushd ./bitcoinsilver
+pushd ./caps
 SIGNER='(your builder key, ie bluematt, sipa, etc)'
 VERSION='(new version without v-prefix, e.g. 25.0)'
 git fetch origin "v${VERSION}"
@@ -153,32 +153,32 @@ git commit -m "Add attestations by ${SIGNER} for ${VERSION} non-codesigned"
 popd
 ```
 
-Then open a Pull Request to the [guix.sigs repository](https://github.com/bitcoinsilver-core/guix.sigs).
+Then open a Pull Request to the [guix.sigs repository](https://github.com/caps-core/guix.sigs).
 
 ## Codesigning
 
 ### macOS codesigner only: Create detached macOS signatures (assuming [signapple](https://github.com/achow101/signapple/) is installed and up to date with master branch)
 
-    tar xf bitcoinsilver-osx-unsigned.tar.gz
+    tar xf caps-osx-unsigned.tar.gz
     ./detached-sig-create.sh /path/to/codesign.p12
     Enter the keychain password and authorize the signature
     signature-osx.tar.gz will be created
 
 ### Windows codesigner only: Create detached Windows signatures
 
-    tar xf bitcoinsilver-win-unsigned.tar.gz
+    tar xf caps-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 ### Windows and macOS codesigners only: test code signatures
 It is advised to test that the code signature attaches properly prior to tagging by performing the `guix-codesign` step.
-However if this is done, once the release has been tagged in the bitcoinsilver-detached-sigs repo, the `guix-codesign` step must be performed again in order for the guix attestation to be valid when compared against the attestations of non-codesigner builds.
+However if this is done, once the release has been tagged in the caps-detached-sigs repo, the `guix-codesign` step must be performed again in order for the guix attestation to be valid when compared against the attestations of non-codesigner builds.
 
 ### Windows and macOS codesigners only: Commit the detached codesign payloads
 
 ```sh
-pushd ./bitcoinsilver-detached-sigs
+pushd ./caps-detached-sigs
 # checkout the appropriate branch for this release series
 rm -rf ./*
 tar xf signature-osx.tar.gz
@@ -193,7 +193,7 @@ popd
 ### Non-codesigners: wait for Windows and macOS detached signatures
 
 - Once the Windows and macOS builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [bitcoinsilver-detached-sigs](https://github.com/bitcoinsilver-core/bitcoinsilver-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [caps-detached-sigs](https://github.com/caps-core/caps-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 ### Create the codesigned build outputs
 
@@ -212,7 +212,7 @@ git commit -m "Add attestations by ${SIGNER} for ${VERSION} codesigned"
 popd
 ```
 
-Then open a Pull Request to the [guix.sigs repository](https://github.com/bitcoinsilver-core/guix.sigs).
+Then open a Pull Request to the [guix.sigs repository](https://github.com/caps-core/guix.sigs).
 
 ## After 3 or more people have guix-built and their results match
 
@@ -223,8 +223,8 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 ```
 
 
-- Upload to the mrvistos.github.io/bitcoinsilver/ server (`/var/www/bin/bitcoinsilver-core-${VERSION}/`):
-    1. The contents of each `./bitcoinsilver/guix-build-${VERSION}/output/${HOST}/` directory, except for
+- Upload to the mrvistos.github.io/caps/ server (`/var/www/bin/caps-core-${VERSION}/`):
+    1. The contents of each `./caps/guix-build-${VERSION}/output/${HOST}/` directory, except for
        `*-debug*` files.
 
        Guix will output all of the results into host subdirectories, but the SHA256SUMS
@@ -236,21 +236,21 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
        for troubleshooting by developers. It is assumed that anyone that is
        interested in debugging can run guix to generate the files for
        themselves. To avoid end-user confusion about which file to pick, as well
-       as save storage space *do not upload these to the mrvistos.github.io/bitcoinsilver/ server,
+       as save storage space *do not upload these to the mrvistos.github.io/caps/ server,
        nor put them in the torrent*.
 
        ```sh
-       find guix-build-${VERSION}/output/ -maxdepth 2 -type f -not -name "SHA256SUMS.part" -and -not -name "*debug*" -exec scp {} user@mrvistos.github.io/bitcoinsilver/:/var/www/bin/bitcoinsilver-core-${VERSION} \;
+       find guix-build-${VERSION}/output/ -maxdepth 2 -type f -not -name "SHA256SUMS.part" -and -not -name "*debug*" -exec scp {} user@mrvistos.github.io/caps/:/var/www/bin/caps-core-${VERSION} \;
        ```
 
     2. The `SHA256SUMS` file
 
     3. The `SHA256SUMS.asc` combined signature file you just created
 
-- Create a torrent of the `/var/www/bin/bitcoinsilver-core-${VERSION}` directory such
-  that at the top level there is only one file: the `bitcoinsilver-core-${VERSION}`
+- Create a torrent of the `/var/www/bin/caps-core-${VERSION}` directory such
+  that at the top level there is only one file: the `caps-core-${VERSION}`
   directory containing everything else. Name the torrent
-  `bitcoinsilver-${VERSION}.torrent` (note that there is no `-core-` in this name).
+  `caps-${VERSION}.torrent` (note that there is no `-core-` in this name).
 
   Optionally help seed this torrent. To get the `magnet:` URI use:
 
@@ -259,44 +259,44 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
   ```
 
   Insert the magnet URI into the announcement sent to mailing lists. This permits
-  people without access to `mrvistos.github.io/bitcoinsilver/` to download the binary distribution.
+  people without access to `mrvistos.github.io/caps/` to download the binary distribution.
   Also put it into the `optional_magnetlink:` slot in the YAML file for
-  mrvistos.github.io/bitcoinsilver/.
+  mrvistos.github.io/caps/.
 
 - Update other repositories and websites for new version
 
-  - mrvistos.github.io/bitcoinsilver/ blog post
+  - mrvistos.github.io/caps/ blog post
 
-  - mrvistos.github.io/bitcoinsilver/ maintained versions update:
-    [table](https://github.com/bitcoinsilver-core/mrvistos.github.io/bitcoinsilver//commits/master/_includes/posts/maintenance-table.md)
+  - mrvistos.github.io/caps/ maintained versions update:
+    [table](https://github.com/caps-core/mrvistos.github.io/caps//commits/master/_includes/posts/maintenance-table.md)
 
-  - Delete post-EOL [release branches](https://github.com/MrVistos/bitcoinsilver/branches/all) and create a tag `v${branch_name}-final`.
+  - Delete post-EOL [release branches](https://github.com/MrVistos/caps/branches/all) and create a tag `v${branch_name}-final`.
 
-  - Delete ["Needs backport" labels](https://github.com/MrVistos/bitcoinsilver/labels?q=backport) for non-existing branches.
+  - Delete ["Needs backport" labels](https://github.com/MrVistos/caps/labels?q=backport) for non-existing branches.
 
-  - mrvistos.github.io/bitcoinsilver/ RPC documentation update
+  - mrvistos.github.io/caps/ RPC documentation update
 
-      - See https://github.com/bitcoinsilver-core/mrvistos.github.io/bitcoinsilver//blob/master/contrib/doc-gen/
+      - See https://github.com/caps-core/mrvistos.github.io/caps//blob/master/contrib/doc-gen/
 
   - Update packaging repo
 
-      - Push the flatpak to flathub, e.g. https://github.com/flathub/org.bitcoincore.bitcoinsilver-qt/pull/2
+      - Push the flatpak to flathub, e.g. https://github.com/flathub/org.bitcoincore.caps-qt/pull/2
 
-      - Push the snap, see https://github.com/bitcoinsilver-core/packaging/blob/main/snap/local/build.md
+      - Push the snap, see https://github.com/caps-core/packaging/blob/main/snap/local/build.md
 
   - This repo
 
       - Archive the release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-      - Create a [new GitHub release](https://github.com/MrVistos/bitcoinsilver/releases/new) with a link to the archived release notes
+      - Create a [new GitHub release](https://github.com/MrVistos/caps/releases/new) with a link to the archived release notes
 
 - Announce the release:
 
-  - bitcoinsilver-dev and bitcoinsilver-core-dev mailing list
+  - caps-dev and caps-core-dev mailing list
 
-  - BitcoinSilver announcements list https://mrvistos.github.io/bitcoinsilver//en/list/announcements/join/
+  - Caps announcements list https://mrvistos.github.io/caps//en/list/announcements/join/
 
-  - BitcoinSilver Twitter https://twitter.com/bitcoincoreorg
+  - Caps Twitter https://twitter.com/bitcoincoreorg
 
   - Celebrate
 

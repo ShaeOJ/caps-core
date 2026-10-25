@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CHAINPARAMSBASE_H
-#define BITCOINSILVER_CHAINPARAMSBASE_H
+#ifndef CAPS_CHAINPARAMSBASE_H
+#define CAPS_CHAINPARAMSBASE_H
 
 #include <util/chaintype.h>
 
@@ -13,8 +13,8 @@
 class ArgsManager;
 
 /**
- * CBaseChainParams defines the base parameters (shared between bitcoinsilver-cli and bitcoinsilverd)
- * of a given instance of the BitcoinSilver system.
+ * CBaseChainParams defines the base parameters (shared between caps-cli and capsd)
+ * of a given instance of the Caps system.
  */
 class CBaseChainParams
 {
@@ -52,4 +52,4 @@ const CBaseChainParams& BaseParams();
 /** Sets the params returned by Params() to those for the given chain. */
 void SelectBaseParams(const ChainType chain);
 
-#endif // BITCOINSILVER_CHAINPARAMSBASE_H
+#endif // CAPS_CHAINPARAMSBASE_H

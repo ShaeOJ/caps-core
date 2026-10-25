@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CRYPTO_MUHASH_H
-#define BITCOINSILVER_CRYPTO_MUHASH_H
+#ifndef CAPS_CRYPTO_MUHASH_H
+#define CAPS_CRYPTO_MUHASH_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoinsilver-config.h>
+#include <config/caps-config.h>
 #endif
 
 #include <serialize.h>
@@ -89,7 +89,7 @@ public:
  * is intended to represent a set of elements.
  *
  * See also https://cseweb.ucsd.edu/~mihir/papers/inchash.pdf and
- * https://lists.linuxfoundation.org/pipermail/bitcoinsilver-dev/2017-May/014337.html.
+ * https://lists.linuxfoundation.org/pipermail/caps-dev/2017-May/014337.html.
  */
 class MuHash3072
 {
@@ -128,4 +128,4 @@ public:
     }
 };
 
-#endif // BITCOINSILVER_CRYPTO_MUHASH_H
+#endif // CAPS_CRYPTO_MUHASH_H

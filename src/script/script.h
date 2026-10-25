@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_SCRIPT_SCRIPT_H
-#define BITCOINSILVER_SCRIPT_SCRIPT_H
+#ifndef CAPS_SCRIPT_SCRIPT_H
+#define CAPS_SCRIPT_SCRIPT_H
 
 #include <attributes.h>
 #include <crypto/common.h>
@@ -518,7 +518,7 @@ public:
     }
 
     /**
-     * Pre-version-0.6, BitcoinSilver always counted CHECKMULTISIGs
+     * Pre-version-0.6, Caps always counted CHECKMULTISIGs
      * as 20 sigops. With pay-to-script-hash, that changed:
      * CHECKMULTISIGs serialized in scriptSigs are
      * counted more accurately, assuming they are of the form
@@ -616,4 +616,4 @@ CScript BuildScript(Ts&&... inputs)
     return ret;
 }
 
-#endif // BITCOINSILVER_SCRIPT_SCRIPT_H
+#endif // CAPS_SCRIPT_SCRIPT_H

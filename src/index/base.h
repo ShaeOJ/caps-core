@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_INDEX_BASE_H
-#define BITCOINSILVER_INDEX_BASE_H
+#ifndef CAPS_INDEX_BASE_H
+#define CAPS_INDEX_BASE_H
 
 #include <dbwrapper.h>
 #include <interfaces/chain.h>
@@ -162,4 +162,4 @@ public:
     IndexSummary GetSummary() const;
 };
 
-#endif // BITCOINSILVER_INDEX_BASE_H
+#endif // CAPS_INDEX_BASE_H

@@ -335,7 +335,7 @@ QModelIndex AddressTableModel::index(int row, int column, const QModelIndex &par
 void AddressTableModel::updateEntry(const QString &address,
         const QString &label, bool isMine, wallet::AddressPurpose purpose, int status)
 {
-    // Update address book model from BitcoinSilver
+    // Update address book model from Caps
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 

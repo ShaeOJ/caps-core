@@ -1,40 +1,40 @@
 26.2 Release Notes
 ==================
 
-BitcoinSilver version 26.2 is now available from:
+Caps version 26.2 is now available from:
 
-  <https://mrvistos.github.io/bitcoinsilver//bin/bitcoinsilver-core-26.2/>
+  <https://mrvistos.github.io/caps//bin/caps-core-26.2/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/MrVistos/bitcoinsilver/issues>
+  <https://github.com/MrVistos/caps/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://mrvistos.github.io/bitcoinsilver//en/list/announcements/join/>
+  <https://mrvistos.github.io/caps//en/list/announcements/join/>
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
-installer (on Windows) or just copy over `/Applications/BitcoinSilver-Qt` (on macOS)
-or `bitcoinsilverd`/`bitcoinsilver-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Caps-Qt` (on macOS)
+or `capsd`/`caps-qt` (on Linux).
 
-Upgrading directly from a version of BitcoinSilver that has reached its EOL is
+Upgrading directly from a version of Caps that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of BitcoinSilver are generally supported.
+wallet versions of Caps are generally supported.
 
 Compatibility
 ==============
 
-BitcoinSilver is supported and extensively tested on operating systems
-using the Linux kernel, macOS 11.0+, and Windows 7 and newer.  BitcoinSilver
+Caps is supported and extensively tested on operating systems
+using the Linux kernel, macOS 11.0+, and Windows 7 and newer.  Caps
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use BitcoinSilver on
+frequently tested on them.  It is not recommended to use Caps on
 unsupported systems.
 
 Notable changes
@@ -91,4 +91,4 @@ Thanks to everyone who directly contributed to this release:
 - willcl-ark
 
 As well as to everyone that helped with translations on
-[Transifex](https://www.transifex.com/bitcoinsilver/bitcoinsilver/).
+[Transifex](https://www.transifex.com/caps/caps/).

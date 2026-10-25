@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_RPC_CLIENT_H
-#define BITCOINSILVER_RPC_CLIENT_H
+#ifndef CAPS_RPC_CLIENT_H
+#define CAPS_RPC_CLIENT_H
 
 #include <string>
 #include <string_view>
@@ -17,4 +17,4 @@ UniValue RPCConvertValues(const std::string& strMethod, const std::vector<std::s
 /** Convert named arguments to command-specific RPC representation */
 UniValue RPCConvertNamedValues(const std::string& strMethod, const std::vector<std::string>& strParams);
 
-#endif // BITCOINSILVER_RPC_CLIENT_H
+#endif // CAPS_RPC_CLIENT_H

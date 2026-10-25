@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_SIGNALINTERRUPT_H
-#define BITCOINSILVER_UTIL_SIGNALINTERRUPT_H
+#ifndef CAPS_UTIL_SIGNALINTERRUPT_H
+#define CAPS_UTIL_SIGNALINTERRUPT_H
 
 #ifdef WIN32
 #include <condition_variable>
@@ -49,4 +49,4 @@ private:
 };
 } // namespace util
 
-#endif // BITCOINSILVER_UTIL_SIGNALINTERRUPT_H
+#endif // CAPS_UTIL_SIGNALINTERRUPT_H

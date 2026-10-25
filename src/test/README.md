@@ -1,7 +1,7 @@
 # Unit tests
 
 The sources in this directory are unit test cases. Boost includes a
-unit testing framework, and since BitcoinSilver already uses Boost, it makes
+unit testing framework, and since Caps already uses Boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
@@ -17,7 +17,7 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the unit tests manually, launch `src/test/test_bitcoinsilver`. To recompile
+To run the unit tests manually, launch `src/test/test_caps`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
 to run the unit tests.
@@ -26,7 +26,7 @@ To add more unit tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new `BOOST_AUTO_TEST_SUITE` sections.
 
-To run the GUI unit tests manually, launch `src/qt/test/test_bitcoinsilver-qt`
+To run the GUI unit tests manually, launch `src/qt/test/test_caps-qt`
 
 To add more GUI unit tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.
@@ -42,7 +42,7 @@ test_bitcoin --log_level=all --run_test=getarg_tests
 
 `log_level` controls the verbosity of the test framework, which logs when a
 test case is entered, for example. `test_bitcoin` also accepts the command
-line arguments accepted by `bitcoinsilverd`. Use `--` to separate both types of
+line arguments accepted by `capsd`. Use `--` to separate both types of
 arguments:
 
 ```bash
@@ -84,13 +84,13 @@ For debugging you can launch the `test_bitcoin` executable with `gdb` or `lldb` 
 start debugging, just like you would with any other program:
 
 ```bash
-gdb src/test/test_bitcoinsilver
+gdb src/test/test_caps
 ```
 
 #### Segmentation faults
 
 If you hit a segmentation fault during a test run, you can diagnose where the fault
-is happening by running `gdb ./src/test/test_bitcoinsilver` and then using the `bt` command
+is happening by running `gdb ./src/test/test_caps` and then using the `bt` command
 within gdb.
 
 Another tool that can be used to resolve segmentation faults is
@@ -108,7 +108,7 @@ Running the tests and hitting a segmentation fault should now produce a file cal
 
 You can then explore the core dump using
 ```bash
-gdb src/test/test_bitcoinsilver
+gdb src/test/test_caps
 
 (gbd) bt  # produce a backtrace for where a segfault occurred
 ```

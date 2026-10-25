@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_WALLETCONTROLLER_H
-#define BITCOINSILVER_QT_WALLETCONTROLLER_H
+#ifndef CAPS_QT_WALLETCONTROLLER_H
+#define CAPS_QT_WALLETCONTROLLER_H
 
 #include <qt/sendcoinsrecipient.h>
 #include <support/allocators/secure.h>
@@ -197,4 +197,4 @@ private:
     void finish();
 };
 
-#endif // BITCOINSILVER_QT_WALLETCONTROLLER_H
+#endif // CAPS_QT_WALLETCONTROLLER_H

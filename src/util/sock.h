@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_SOCK_H
-#define BITCOINSILVER_UTIL_SOCK_H
+#ifndef CAPS_UTIL_SOCK_H
+#define CAPS_UTIL_SOCK_H
 
 #include <compat/compat.h>
 #include <util/threadinterrupt.h>
@@ -277,4 +277,4 @@ private:
 /** Return readable error string for a network error code */
 std::string NetworkErrorString(int err);
 
-#endif // BITCOINSILVER_UTIL_SOCK_H
+#endif // CAPS_UTIL_SOCK_H

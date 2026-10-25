@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_I2P_H
-#define BITCOINSILVER_I2P_H
+#ifndef CAPS_I2P_H
+#define CAPS_I2P_H
 
 #include <compat/compat.h>
 #include <netaddress.h>
@@ -287,4 +287,4 @@ private:
 } // namespace sam
 } // namespace i2p
 
-#endif // BITCOINSILVER_I2P_H
+#endif // CAPS_I2P_H

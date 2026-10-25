@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_EXTERNAL_SIGNER_SCRIPTPUBKEYMAN_H
-#define BITCOINSILVER_WALLET_EXTERNAL_SIGNER_SCRIPTPUBKEYMAN_H
+#ifndef CAPS_WALLET_EXTERNAL_SIGNER_SCRIPTPUBKEYMAN_H
+#define CAPS_WALLET_EXTERNAL_SIGNER_SCRIPTPUBKEYMAN_H
 
 #include <wallet/scriptpubkeyman.h>
 
@@ -32,4 +32,4 @@ class ExternalSignerScriptPubKeyMan : public DescriptorScriptPubKeyMan
   TransactionError FillPSBT(PartiallySignedTransaction& psbt, const PrecomputedTransactionData& txdata, int sighash_type = 1 /* SIGHASH_ALL */, bool sign = true, bool bip32derivs = false, int* n_signed = nullptr, bool finalize = true) const override;
 };
 } // namespace wallet
-#endif // BITCOINSILVER_WALLET_EXTERNAL_SIGNER_SCRIPTPUBKEYMAN_H
+#endif // CAPS_WALLET_EXTERNAL_SIGNER_SCRIPTPUBKEYMAN_H

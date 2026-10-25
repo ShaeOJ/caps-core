@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_UTIL_GETUNIQUEPATH_H
-#define BITCOINSILVER_UTIL_GETUNIQUEPATH_H
+#ifndef CAPS_UTIL_GETUNIQUEPATH_H
+#define CAPS_UTIL_GETUNIQUEPATH_H
 
 #include <util/fs.h>
 
@@ -16,4 +16,4 @@
  */
 fs::path GetUniquePath(const fs::path& base);
 
-#endif // BITCOINSILVER_UTIL_GETUNIQUEPATH_H
+#endif // CAPS_UTIL_GETUNIQUEPATH_H

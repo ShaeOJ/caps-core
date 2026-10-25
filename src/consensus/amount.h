@@ -3,21 +3,21 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_CONSENSUS_AMOUNT_H
-#define BITCOINSILVER_CONSENSUS_AMOUNT_H
+#ifndef CAPS_CONSENSUS_AMOUNT_H
+#define CAPS_CONSENSUS_AMOUNT_H
 
 #include <cstdint>
 
 /** Amount in satoshis (Can be negative) */
 typedef int64_t CAmount;
 
-/** The amount of satoshis in one BTCS. */
+/** The amount of satoshis in one CAPS. */
 static constexpr CAmount COIN = 100000000;
 
 /** No amount larger than this (in satoshi) is valid.
  *
- * Note that this constant is *not* the total money supply, which in BitcoinSilver
- * currently happens to be less than 21,000,000 BTCS for various reasons, but
+ * Note that this constant is *not* the total money supply, which in Caps
+ * currently happens to be less than 21,000,000 CAPS for various reasons, but
  * rather a sanity check. As this sanity check is used by consensus-critical
  * validation code, the exact value of the MAX_MONEY constant is consensus
  * critical; in unusual circumstances like a(nother) overflow bug that allowed
@@ -26,4 +26,4 @@ static constexpr CAmount COIN = 100000000;
 static constexpr CAmount MAX_MONEY = 2470000 * COIN;
 inline bool MoneyRange(const CAmount& nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
-#endif // BITCOINSILVER_CONSENSUS_AMOUNT_H
+#endif // CAPS_CONSENSUS_AMOUNT_H

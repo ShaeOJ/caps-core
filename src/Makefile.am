@@ -24,49 +24,49 @@ check_PROGRAMS =
 TESTS =
 BENCHMARKS =
 
-BITCOINSILVER_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(srcdir)/secp256k1/include -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT)
+CAPS_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(srcdir)/secp256k1/include -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT)
 
-LIBBITCOINSILVER_NODE=libbitcoinsilver_node.a
-LIBBITCOINSILVER_COMMON=libbitcoinsilver_common.a
-LIBBITCOINSILVER_CONSENSUS=libbitcoinsilver_consensus.a
-LIBBITCOINSILVER_CLI=libbitcoinsilver_cli.a
-LIBBITCOINSILVER_UTIL=libbitcoinsilver_util.a
-LIBBITCOINSILVER_CRYPTO_BASE=crypto/libbitcoinsilver_crypto_base.la
-LIBBITCOINSILVERQT=qt/libbitcoinsilverqt.a
+LIBCAPS_NODE=libcaps_node.a
+LIBCAPS_COMMON=libcaps_common.a
+LIBCAPS_CONSENSUS=libcaps_consensus.a
+LIBCAPS_CLI=libcaps_cli.a
+LIBCAPS_UTIL=libcaps_util.a
+LIBCAPS_CRYPTO_BASE=crypto/libcaps_crypto_base.la
+LIBCAPSQT=qt/libcapsqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOINSILVER_ZMQ=libbitcoinsilver_zmq.a
+LIBCAPS_ZMQ=libcaps_zmq.a
 endif
-if BUILD_BITCOINSILVER_LIBS
-LIBBITCOINSILVERCONSENSUS=libbitcoinsilverconsensus.la
+if BUILD_CAPS_LIBS
+LIBCAPSCONSENSUS=libcapsconsensus.la
 endif
-if BUILD_BITCOINSILVER_KERNEL_LIB
-LIBBITCOINSILVERKERNEL=libbitcoinsilverkernel.la
+if BUILD_CAPS_KERNEL_LIB
+LIBCAPSKERNEL=libcapskernel.la
 endif
 if ENABLE_WALLET
-LIBBITCOINSILVER_WALLET=libbitcoinsilver_wallet.a
-LIBBITCOINSILVER_WALLET_TOOL=libbitcoinsilver_wallet_tool.a
+LIBCAPS_WALLET=libcaps_wallet.a
+LIBCAPS_WALLET_TOOL=libcaps_wallet_tool.a
 endif
 
-LIBBITCOINSILVER_CRYPTO = $(LIBBITCOINSILVER_CRYPTO_BASE)
+LIBCAPS_CRYPTO = $(LIBCAPS_CRYPTO_BASE)
 if ENABLE_SSE41
-LIBBITCOINSILVER_CRYPTO_SSE41 = crypto/libbitcoinsilver_crypto_sse41.la
-LIBBITCOINSILVER_CRYPTO += $(LIBBITCOINSILVER_CRYPTO_SSE41)
+LIBCAPS_CRYPTO_SSE41 = crypto/libcaps_crypto_sse41.la
+LIBCAPS_CRYPTO += $(LIBCAPS_CRYPTO_SSE41)
 endif
 if ENABLE_AVX2
-LIBBITCOINSILVER_CRYPTO_AVX2 = crypto/libbitcoinsilver_crypto_avx2.la
-LIBBITCOINSILVER_CRYPTO += $(LIBBITCOINSILVER_CRYPTO_AVX2)
+LIBCAPS_CRYPTO_AVX2 = crypto/libcaps_crypto_avx2.la
+LIBCAPS_CRYPTO += $(LIBCAPS_CRYPTO_AVX2)
 endif
 if ENABLE_X86_SHANI
-LIBBITCOINSILVER_CRYPTO_X86_SHANI = crypto/libbitcoinsilver_crypto_x86_shani.la
-LIBBITCOINSILVER_CRYPTO += $(LIBBITCOINSILVER_CRYPTO_X86_SHANI)
+LIBCAPS_CRYPTO_X86_SHANI = crypto/libcaps_crypto_x86_shani.la
+LIBCAPS_CRYPTO += $(LIBCAPS_CRYPTO_X86_SHANI)
 endif
 if ENABLE_ARM_SHANI
-LIBBITCOINSILVER_CRYPTO_ARM_SHANI = crypto/libbitcoinsilver_crypto_arm_shani.la
-LIBBITCOINSILVER_CRYPTO += $(LIBBITCOINSILVER_CRYPTO_ARM_SHANI)
+LIBCAPS_CRYPTO_ARM_SHANI = crypto/libcaps_crypto_arm_shani.la
+LIBCAPS_CRYPTO += $(LIBCAPS_CRYPTO_ARM_SHANI)
 endif
-noinst_LTLIBRARIES += $(LIBBITCOINSILVER_CRYPTO)
+noinst_LTLIBRARIES += $(LIBCAPS_CRYPTO)
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(wildcard secp256k1/include/*)
 	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C $(@D) $(@F)
@@ -74,49 +74,49 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(w
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBBITCOINSILVER_UTIL) \
-  $(LIBBITCOINSILVER_COMMON) \
-  $(LIBBITCOINSILVER_CONSENSUS) \
-  $(LIBBITCOINSILVER_NODE) \
-  $(LIBBITCOINSILVER_CLI) \
-  $(LIBBITCOINSILVER_IPC) \
-  $(LIBBITCOINSILVER_WALLET) \
-  $(LIBBITCOINSILVER_WALLET_TOOL) \
-  $(LIBBITCOINSILVER_ZMQ)
+  $(LIBCAPS_UTIL) \
+  $(LIBCAPS_COMMON) \
+  $(LIBCAPS_CONSENSUS) \
+  $(LIBCAPS_NODE) \
+  $(LIBCAPS_CLI) \
+  $(LIBCAPS_IPC) \
+  $(LIBCAPS_WALLET) \
+  $(LIBCAPS_WALLET_TOOL) \
+  $(LIBCAPS_ZMQ)
 
-if BUILD_BITCOINSILVERD
-  bin_PROGRAMS += bitcoinsilverd
+if BUILD_CAPSD
+  bin_PROGRAMS += capsd
 endif
 
-if BUILD_BITCOINSILVER_NODE
-  bin_PROGRAMS += bitcoinsilver-node
+if BUILD_CAPS_NODE
+  bin_PROGRAMS += caps-node
 endif
 
-if BUILD_BITCOINSILVER_CLI
-  bin_PROGRAMS += bitcoinsilver-cli
+if BUILD_CAPS_CLI
+  bin_PROGRAMS += caps-cli
 endif
 
-if BUILD_BITCOINSILVER_TX
-  bin_PROGRAMS += bitcoinsilver-tx
+if BUILD_CAPS_TX
+  bin_PROGRAMS += caps-tx
 endif
 
 if ENABLE_WALLET
-if BUILD_BITCOINSILVER_WALLET
-  bin_PROGRAMS += bitcoinsilver-wallet
+if BUILD_CAPS_WALLET
+  bin_PROGRAMS += caps-wallet
 endif
 endif
 
-if BUILD_BITCOINSILVER_UTIL
-  bin_PROGRAMS += bitcoinsilver-util
+if BUILD_CAPS_UTIL
+  bin_PROGRAMS += caps-util
 endif
 
-if BUILD_BITCOINSILVER_CHAINSTATE
-  bin_PROGRAMS += bitcoinsilver-chainstate
+if BUILD_CAPS_CHAINSTATE
+  bin_PROGRAMS += caps-chainstate
 endif
 
 .PHONY: FORCE check-symbols check-security
-# bitcoinsilver #
-BITCOINSILVER_CORE_H = \
+# caps #
+CAPS_CORE_H = \
   addresstype.h \
   addrdb.h \
   addrman.h \
@@ -372,12 +372,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	$(AM_V_GEN) $(top_srcdir)/share/genbuild.sh "$(abs_top_builddir)/src/obj/build.h" \
 	  "$(abs_top_srcdir)"
-libbitcoinsilver_util_a-clientversion.$(OBJEXT): obj/build.h
+libcaps_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # node #
-libbitcoinsilver_node_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(LEVELDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libbitcoinsilver_node_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoinsilver_node_a_SOURCES = \
+libcaps_node_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(LEVELDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libcaps_node_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcaps_node_a_SOURCES = \
   addrdb.cpp \
   addrman.cpp \
   banman.cpp \
@@ -467,22 +467,22 @@ libbitcoinsilver_node_a_SOURCES = \
   validation.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  $(BITCOINSILVER_CORE_H)
+  $(CAPS_CORE_H)
 
 if ENABLE_WALLET
-libbitcoinsilver_node_a_SOURCES += wallet/init.cpp
-libbitcoinsilver_node_a_CPPFLAGS += $(BDB_CPPFLAGS)
+libcaps_node_a_SOURCES += wallet/init.cpp
+libcaps_node_a_CPPFLAGS += $(BDB_CPPFLAGS)
 endif
 if !ENABLE_WALLET
-libbitcoinsilver_node_a_SOURCES += dummywallet.cpp
+libcaps_node_a_SOURCES += dummywallet.cpp
 endif
 #
 
 # zmq #
 if ENABLE_ZMQ
-libbitcoinsilver_zmq_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(ZMQ_CFLAGS)
-libbitcoinsilver_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoinsilver_zmq_a_SOURCES = \
+libcaps_zmq_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(ZMQ_CFLAGS)
+libcaps_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcaps_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp \
@@ -492,9 +492,9 @@ endif
 #
 
 # wallet #
-libbitcoinsilver_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(BOOST_CPPFLAGS) $(BDB_CPPFLAGS) $(SQLITE_CFLAGS)
-libbitcoinsilver_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoinsilver_wallet_a_SOURCES = \
+libcaps_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(BOOST_CPPFLAGS) $(BDB_CPPFLAGS) $(SQLITE_CFLAGS)
+libcaps_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcaps_wallet_a_SOURCES = \
   wallet/coincontrol.cpp \
   wallet/context.cpp \
   wallet/crypter.cpp \
@@ -522,35 +522,35 @@ libbitcoinsilver_wallet_a_SOURCES = \
   wallet/walletdb.cpp \
   wallet/walletutil.cpp \
   wallet/coinselection.cpp \
-  $(BITCOINSILVER_CORE_H)
+  $(CAPS_CORE_H)
 
 if USE_SQLITE
-libbitcoinsilver_wallet_a_SOURCES += wallet/sqlite.cpp
+libcaps_wallet_a_SOURCES += wallet/sqlite.cpp
 endif
 if USE_BDB
-libbitcoinsilver_wallet_a_SOURCES += wallet/bdb.cpp wallet/salvage.cpp
+libcaps_wallet_a_SOURCES += wallet/bdb.cpp wallet/salvage.cpp
 endif
 #
 
 # wallet tool #
-libbitcoinsilver_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(BOOST_CPPFLAGS)
-libbitcoinsilver_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoinsilver_wallet_tool_a_SOURCES = \
+libcaps_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(BOOST_CPPFLAGS)
+libcaps_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcaps_wallet_tool_a_SOURCES = \
   wallet/wallettool.cpp \
-  $(BITCOINSILVER_CORE_H)
+  $(CAPS_CORE_H)
 #
 
 # crypto #
-crypto_libbitcoinsilver_crypto_base_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libcaps_crypto_base_la_CPPFLAGS = $(AM_CPPFLAGS)
 
 # Specify -static in both CXXFLAGS and LDFLAGS so libtool will only build a
 # static version of this library. We don't need a dynamic version, and a dynamic
 # version can't be used on windows anyway because the library doesn't currently
 # export DLL symbols.
-crypto_libbitcoinsilver_crypto_base_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libbitcoinsilver_crypto_base_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libcaps_crypto_base_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libcaps_crypto_base_la_LDFLAGS = $(AM_LDFLAGS) -static
 
-crypto_libbitcoinsilver_crypto_base_la_SOURCES = \
+crypto_libcaps_crypto_base_la_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/chacha20.h \
@@ -582,50 +582,50 @@ crypto_libbitcoinsilver_crypto_base_la_SOURCES = \
   crypto/siphash.h
 
 if USE_ASM
-crypto_libbitcoinsilver_crypto_base_la_SOURCES += crypto/sha256_sse4.cpp
+crypto_libcaps_crypto_base_la_SOURCES += crypto/sha256_sse4.cpp
 endif
 
-# See explanation for -static in crypto_libbitcoinsilver_crypto_base_la's LDFLAGS and
+# See explanation for -static in crypto_libcaps_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
-crypto_libbitcoinsilver_crypto_sse41_la_LDFLAGS = $(AM_LDFLAGS) -static
-crypto_libbitcoinsilver_crypto_sse41_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libbitcoinsilver_crypto_sse41_la_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libbitcoinsilver_crypto_sse41_la_CXXFLAGS += $(SSE41_CXXFLAGS)
-crypto_libbitcoinsilver_crypto_sse41_la_CPPFLAGS += -DENABLE_SSE41
-crypto_libbitcoinsilver_crypto_sse41_la_SOURCES = crypto/sha256_sse41.cpp
+crypto_libcaps_crypto_sse41_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libcaps_crypto_sse41_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libcaps_crypto_sse41_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libcaps_crypto_sse41_la_CXXFLAGS += $(SSE41_CXXFLAGS)
+crypto_libcaps_crypto_sse41_la_CPPFLAGS += -DENABLE_SSE41
+crypto_libcaps_crypto_sse41_la_SOURCES = crypto/sha256_sse41.cpp
 
-# See explanation for -static in crypto_libbitcoinsilver_crypto_base_la's LDFLAGS and
+# See explanation for -static in crypto_libcaps_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
-crypto_libbitcoinsilver_crypto_avx2_la_LDFLAGS = $(AM_LDFLAGS) -static
-crypto_libbitcoinsilver_crypto_avx2_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libbitcoinsilver_crypto_avx2_la_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libbitcoinsilver_crypto_avx2_la_CXXFLAGS += $(AVX2_CXXFLAGS)
-crypto_libbitcoinsilver_crypto_avx2_la_CPPFLAGS += -DENABLE_AVX2
-crypto_libbitcoinsilver_crypto_avx2_la_SOURCES = crypto/sha256_avx2.cpp
+crypto_libcaps_crypto_avx2_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libcaps_crypto_avx2_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libcaps_crypto_avx2_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libcaps_crypto_avx2_la_CXXFLAGS += $(AVX2_CXXFLAGS)
+crypto_libcaps_crypto_avx2_la_CPPFLAGS += -DENABLE_AVX2
+crypto_libcaps_crypto_avx2_la_SOURCES = crypto/sha256_avx2.cpp
 
-# See explanation for -static in crypto_libbitcoinsilver_crypto_base_la's LDFLAGS and
+# See explanation for -static in crypto_libcaps_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
-crypto_libbitcoinsilver_crypto_x86_shani_la_LDFLAGS = $(AM_LDFLAGS) -static
-crypto_libbitcoinsilver_crypto_x86_shani_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libbitcoinsilver_crypto_x86_shani_la_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libbitcoinsilver_crypto_x86_shani_la_CXXFLAGS += $(X86_SHANI_CXXFLAGS)
-crypto_libbitcoinsilver_crypto_x86_shani_la_CPPFLAGS += -DENABLE_X86_SHANI
-crypto_libbitcoinsilver_crypto_x86_shani_la_SOURCES = crypto/sha256_x86_shani.cpp
+crypto_libcaps_crypto_x86_shani_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libcaps_crypto_x86_shani_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libcaps_crypto_x86_shani_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libcaps_crypto_x86_shani_la_CXXFLAGS += $(X86_SHANI_CXXFLAGS)
+crypto_libcaps_crypto_x86_shani_la_CPPFLAGS += -DENABLE_X86_SHANI
+crypto_libcaps_crypto_x86_shani_la_SOURCES = crypto/sha256_x86_shani.cpp
 
-# See explanation for -static in crypto_libbitcoinsilver_crypto_base_la's LDFLAGS and
+# See explanation for -static in crypto_libcaps_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
-crypto_libbitcoinsilver_crypto_arm_shani_la_LDFLAGS = $(AM_LDFLAGS) -static
-crypto_libbitcoinsilver_crypto_arm_shani_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libbitcoinsilver_crypto_arm_shani_la_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libbitcoinsilver_crypto_arm_shani_la_CXXFLAGS += $(ARM_SHANI_CXXFLAGS)
-crypto_libbitcoinsilver_crypto_arm_shani_la_CPPFLAGS += -DENABLE_ARM_SHANI
-crypto_libbitcoinsilver_crypto_arm_shani_la_SOURCES = crypto/sha256_arm_shani.cpp
+crypto_libcaps_crypto_arm_shani_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libcaps_crypto_arm_shani_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libcaps_crypto_arm_shani_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libcaps_crypto_arm_shani_la_CXXFLAGS += $(ARM_SHANI_CXXFLAGS)
+crypto_libcaps_crypto_arm_shani_la_CPPFLAGS += -DENABLE_ARM_SHANI
+crypto_libcaps_crypto_arm_shani_la_SOURCES = crypto/sha256_arm_shani.cpp
 #
 
 # consensus #
-libbitcoinsilver_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES)
-libbitcoinsilver_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoinsilver_consensus_a_SOURCES = \
+libcaps_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES)
+libcaps_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcaps_consensus_a_SOURCES = \
   arith_uint256.cpp \
   arith_uint256.h \
   consensus/amount.h \
@@ -643,7 +643,7 @@ libbitcoinsilver_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  script/bitcoinsilverconsensus.cpp \
+  script/capsconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
   script/script.cpp \
@@ -661,9 +661,9 @@ libbitcoinsilver_consensus_a_SOURCES = \
 #
 
 # common #
-libbitcoinsilver_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(BOOST_CPPFLAGS)
-libbitcoinsilver_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoinsilver_common_a_SOURCES = \
+libcaps_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(BOOST_CPPFLAGS)
+libcaps_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcaps_common_a_SOURCES = \
   addresstype.cpp \
   base58.cpp \
   bech32.cpp \
@@ -707,18 +707,18 @@ libbitcoinsilver_common_a_SOURCES = \
   script/signingprovider.cpp \
   script/solver.cpp \
   warnings.cpp \
-  $(BITCOINSILVER_CORE_H)
+  $(CAPS_CORE_H)
 
 if USE_LIBEVENT
-libbitcoinsilver_common_a_CPPFLAGS += $(EVENT_CFLAGS)
-libbitcoinsilver_common_a_SOURCES += common/url.cpp
+libcaps_common_a_CPPFLAGS += $(EVENT_CFLAGS)
+libcaps_common_a_SOURCES += common/url.cpp
 endif
 #
 
 # util #
-libbitcoinsilver_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES)
-libbitcoinsilver_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoinsilver_util_a_SOURCES = \
+libcaps_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES)
+libcaps_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcaps_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -757,172 +757,172 @@ libbitcoinsilver_util_a_SOURCES = \
   util/string.cpp \
   util/time.cpp \
   util/tokenpipe.cpp \
-  $(BITCOINSILVER_CORE_H)
+  $(CAPS_CORE_H)
 #
 
 # cli #
-libbitcoinsilver_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES)
-libbitcoinsilver_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoinsilver_cli_a_SOURCES = \
+libcaps_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES)
+libcaps_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcaps_cli_a_SOURCES = \
   compat/stdin.h \
   compat/stdin.cpp \
   rpc/client.cpp \
-  $(BITCOINSILVER_CORE_H)
+  $(CAPS_CORE_H)
 
-nodist_libbitcoinsilver_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libcaps_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# bitcoinsilverd & bitcoinsilver-node binaries #
-bitcoinsilver_daemon_sources = bitcoinsilverd.cpp
-bitcoinsilver_bin_cppflags = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES)
-bitcoinsilver_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoinsilver_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# capsd & caps-node binaries #
+caps_daemon_sources = capsd.cpp
+caps_bin_cppflags = $(AM_CPPFLAGS) $(CAPS_INCLUDES)
+caps_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
+caps_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoinsilver_daemon_sources += bitcoinsilverd-res.rc
+caps_daemon_sources += capsd-res.rc
 endif
 
-bitcoinsilver_bin_ldadd = \
-  $(LIBBITCOINSILVER_WALLET) \
-  $(LIBBITCOINSILVER_COMMON) \
-  $(LIBBITCOINSILVER_UTIL) \
+caps_bin_ldadd = \
+  $(LIBCAPS_WALLET) \
+  $(LIBCAPS_COMMON) \
+  $(LIBCAPS_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOINSILVER_ZMQ) \
-  $(LIBBITCOINSILVER_CONSENSUS) \
-  $(LIBBITCOINSILVER_CRYPTO) \
+  $(LIBCAPS_ZMQ) \
+  $(LIBCAPS_CONSENSUS) \
+  $(LIBCAPS_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-bitcoinsilver_bin_ldadd += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS)
+caps_bin_ldadd += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS)
 
-bitcoinsilverd_SOURCES = $(bitcoinsilver_daemon_sources) init/bitcoinsilverd.cpp
-bitcoinsilverd_CPPFLAGS = $(bitcoinsilver_bin_cppflags)
-bitcoinsilverd_CXXFLAGS = $(bitcoinsilver_bin_cxxflags)
-bitcoinsilverd_LDFLAGS = $(bitcoinsilver_bin_ldflags)
-bitcoinsilverd_LDADD = $(LIBBITCOINSILVER_NODE) $(bitcoinsilver_bin_ldadd)
+capsd_SOURCES = $(caps_daemon_sources) init/capsd.cpp
+capsd_CPPFLAGS = $(caps_bin_cppflags)
+capsd_CXXFLAGS = $(caps_bin_cxxflags)
+capsd_LDFLAGS = $(caps_bin_ldflags)
+capsd_LDADD = $(LIBCAPS_NODE) $(caps_bin_ldadd)
 
-bitcoinsilver_node_SOURCES = $(bitcoinsilver_daemon_sources) init/bitcoinsilver-node.cpp
-bitcoinsilver_node_CPPFLAGS = $(bitcoinsilver_bin_cppflags)
-bitcoinsilver_node_CXXFLAGS = $(bitcoinsilver_bin_cxxflags)
-bitcoinsilver_node_LDFLAGS = $(bitcoinsilver_bin_ldflags)
-bitcoinsilver_node_LDADD = $(LIBBITCOINSILVER_NODE) $(bitcoinsilver_bin_ldadd) $(LIBBITCOINSILVER_IPC) $(LIBMULTIPROCESS_LIBS)
+caps_node_SOURCES = $(caps_daemon_sources) init/caps-node.cpp
+caps_node_CPPFLAGS = $(caps_bin_cppflags)
+caps_node_CXXFLAGS = $(caps_bin_cxxflags)
+caps_node_LDFLAGS = $(caps_bin_ldflags)
+caps_node_LDADD = $(LIBCAPS_NODE) $(caps_bin_ldadd) $(LIBCAPS_IPC) $(LIBMULTIPROCESS_LIBS)
 
-# bitcoinsilver-cli binary #
-bitcoinsilver_cli_SOURCES = bitcoinsilver-cli.cpp
-bitcoinsilver_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(EVENT_CFLAGS)
-bitcoinsilver_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoinsilver_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# caps-cli binary #
+caps_cli_SOURCES = caps-cli.cpp
+caps_cli_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(EVENT_CFLAGS)
+caps_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+caps_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoinsilver_cli_SOURCES += bitcoinsilver-cli-res.rc
+caps_cli_SOURCES += caps-cli-res.rc
 endif
 
-bitcoinsilver_cli_LDADD = \
-  $(LIBBITCOINSILVER_CLI) \
+caps_cli_LDADD = \
+  $(LIBCAPS_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOINSILVER_COMMON) \
-  $(LIBBITCOINSILVER_UTIL) \
-  $(LIBBITCOINSILVER_CRYPTO)
+  $(LIBCAPS_COMMON) \
+  $(LIBCAPS_UTIL) \
+  $(LIBCAPS_CRYPTO)
 
-bitcoinsilver_cli_LDADD += $(EVENT_LIBS)
+caps_cli_LDADD += $(EVENT_LIBS)
 #
 
-# bitcoinsilver-tx binary #
-bitcoinsilver_tx_SOURCES = bitcoinsilver-tx.cpp
-bitcoinsilver_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES)
-bitcoinsilver_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoinsilver_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# caps-tx binary #
+caps_tx_SOURCES = caps-tx.cpp
+caps_tx_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES)
+caps_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+caps_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoinsilver_tx_SOURCES += bitcoinsilver-tx-res.rc
+caps_tx_SOURCES += caps-tx-res.rc
 endif
 
-bitcoinsilver_tx_LDADD = \
+caps_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBBITCOINSILVER_COMMON) \
-  $(LIBBITCOINSILVER_UTIL) \
-  $(LIBBITCOINSILVER_CONSENSUS) \
-  $(LIBBITCOINSILVER_CRYPTO) \
+  $(LIBCAPS_COMMON) \
+  $(LIBCAPS_UTIL) \
+  $(LIBCAPS_CONSENSUS) \
+  $(LIBCAPS_CRYPTO) \
   $(LIBSECP256K1)
 #
 
-# bitcoinsilver-wallet binary #
-bitcoinsilver_wallet_SOURCES = bitcoinsilver-wallet.cpp
-bitcoinsilver_wallet_SOURCES += init/bitcoinsilver-wallet.cpp
-bitcoinsilver_wallet_CPPFLAGS = $(bitcoinsilver_bin_cppflags)
-bitcoinsilver_wallet_CXXFLAGS = $(bitcoinsilver_bin_cxxflags)
-bitcoinsilver_wallet_LDFLAGS = $(bitcoinsilver_bin_ldflags)
-bitcoinsilver_wallet_LDADD = \
-  $(LIBBITCOINSILVER_WALLET_TOOL) \
-  $(LIBBITCOINSILVER_WALLET) \
-  $(LIBBITCOINSILVER_COMMON) \
-  $(LIBBITCOINSILVER_UTIL) \
+# caps-wallet binary #
+caps_wallet_SOURCES = caps-wallet.cpp
+caps_wallet_SOURCES += init/caps-wallet.cpp
+caps_wallet_CPPFLAGS = $(caps_bin_cppflags)
+caps_wallet_CXXFLAGS = $(caps_bin_cxxflags)
+caps_wallet_LDFLAGS = $(caps_bin_ldflags)
+caps_wallet_LDADD = \
+  $(LIBCAPS_WALLET_TOOL) \
+  $(LIBCAPS_WALLET) \
+  $(LIBCAPS_COMMON) \
+  $(LIBCAPS_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOINSILVER_CONSENSUS) \
-  $(LIBBITCOINSILVER_CRYPTO) \
+  $(LIBCAPS_CONSENSUS) \
+  $(LIBCAPS_CRYPTO) \
   $(LIBSECP256K1) \
   $(BDB_LIBS) \
   $(SQLITE_LIBS)
 
 if TARGET_WINDOWS
-bitcoinsilver_wallet_SOURCES += bitcoinsilver-wallet-res.rc
+caps_wallet_SOURCES += caps-wallet-res.rc
 endif
 #
 
-# bitcoinsilver-util binary #
-bitcoinsilver_util_SOURCES = bitcoinsilver-util.cpp
-bitcoinsilver_util_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES)
-bitcoinsilver_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoinsilver_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# caps-util binary #
+caps_util_SOURCES = caps-util.cpp
+caps_util_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES)
+caps_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+caps_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoinsilver_util_SOURCES += bitcoinsilver-util-res.rc
+caps_util_SOURCES += caps-util-res.rc
 endif
 
-bitcoinsilver_util_LDADD = \
-  $(LIBBITCOINSILVER_COMMON) \
-  $(LIBBITCOINSILVER_UTIL) \
+caps_util_LDADD = \
+  $(LIBCAPS_COMMON) \
+  $(LIBCAPS_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOINSILVER_CONSENSUS) \
-  $(LIBBITCOINSILVER_CRYPTO) \
+  $(LIBCAPS_CONSENSUS) \
+  $(LIBCAPS_CRYPTO) \
   $(LIBSECP256K1)
 #
 
-# bitcoinsilver-chainstate binary #
-bitcoinsilver_chainstate_SOURCES = bitcoinsilver-chainstate.cpp
-bitcoinsilver_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES) $(BOOST_CPPFLAGS)
-bitcoinsilver_chainstate_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+# caps-chainstate binary #
+caps_chainstate_SOURCES = caps-chainstate.cpp
+caps_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES) $(BOOST_CPPFLAGS)
+caps_chainstate_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
-bitcoinsilver_chainstate_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(PTHREAD_FLAGS) $(LIBTOOL_APP_LDFLAGS) -static
-bitcoinsilver_chainstate_LDADD = $(LIBBITCOINSILVERKERNEL)
+caps_chainstate_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(PTHREAD_FLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+caps_chainstate_LDADD = $(LIBCAPSKERNEL)
 
 # libtool is unable to calculate this indirect dependency, presumably because it's a subproject.
-# libsecp256k1 only needs to be linked in when libbitcoinsilverkernel is static.
-bitcoinsilver_chainstate_LDADD += $(LIBSECP256K1)
+# libsecp256k1 only needs to be linked in when libcapskernel is static.
+caps_chainstate_LDADD += $(LIBSECP256K1)
 #
 
-# bitcoinkernel library #
-if BUILD_BITCOINSILVER_KERNEL_LIB
-lib_LTLIBRARIES += $(LIBBITCOINSILVERKERNEL)
+# capskernel library #
+if BUILD_CAPS_KERNEL_LIB
+lib_LTLIBRARIES += $(LIBCAPSKERNEL)
 
-libbitcoinsilverkernel_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(PTHREAD_FLAGS)
-libbitcoinsilverkernel_la_LIBADD = $(LIBBITCOINSILVER_CRYPTO) $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1)
-libbitcoinsilverkernel_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOINSILVER_INTERNAL $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS)
+libcapskernel_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(PTHREAD_FLAGS)
+libcapskernel_la_LIBADD = $(LIBCAPS_CRYPTO) $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1)
+libcapskernel_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_CAPS_INTERNAL $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS)
 
-# libbitcoinsilverkernel requires default symbol visibility, explicitly specify that
+# libcapskernel requires default symbol visibility, explicitly specify that
 # here so that things still work even when user configures with
 #   --enable-reduce-exports
 #
 # Note this is a quick hack that will be removed as we incrementally define what
 # to export from the library.
-libbitcoinsilverkernel_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -fvisibility=default
+libcapskernel_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -fvisibility=default
 
-# TODO: libbitcoinsilverkernel is a work in progress consensus engine library, as more
+# TODO: libcapskernel is a work in progress consensus engine library, as more
 #       and more modules are decoupled from the consensus engine, this list will
 #       shrink to only those which are absolutely necessary.
-libbitcoinsilverkernel_la_SOURCES = \
-  kernel/bitcoinkernel.cpp \
+libcapskernel_la_SOURCES = \
+  kernel/capskernel.cpp \
   arith_uint256.cpp \
   chain.cpp \
   clientversion.cpp \
@@ -1002,21 +1002,21 @@ libbitcoinsilverkernel_la_SOURCES = \
 
 # Required for obj/build.h to be generated first.
 # More details: https://www.gnu.org/software/automake/manual/html_node/Built-Sources-Example.html
-libbitcoinsilverkernel_la-clientversion.l$(OBJEXT): obj/build.h
-endif # BUILD_BITCOINSILVER_KERNEL_LIB
+libcapskernel_la-clientversion.l$(OBJEXT): obj/build.h
+endif # BUILD_CAPS_KERNEL_LIB
 #
 
-# bitcoinsilverconsensus library #
-if BUILD_BITCOINSILVER_LIBS
-lib_LTLIBRARIES += $(LIBBITCOINSILVERCONSENSUS)
+# capsconsensus library #
+if BUILD_CAPS_LIBS
+lib_LTLIBRARIES += $(LIBCAPSCONSENSUS)
 
-include_HEADERS = script/bitcoinsilverconsensus.h
-libbitcoinsilverconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libbitcoinsilver_crypto_base_la_SOURCES) $(libbitcoinsilver_consensus_a_SOURCES)
+include_HEADERS = script/capsconsensus.h
+libcapsconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libcaps_crypto_base_la_SOURCES) $(libcaps_consensus_a_SOURCES)
 
-libbitcoinsilverconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libbitcoinsilverconsensus_la_LIBADD = $(LIBSECP256K1)
-libbitcoinsilverconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOINSILVER_INTERNAL
-libbitcoinsilverconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcapsconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libcapsconsensus_la_LIBADD = $(LIBSECP256K1)
+libcapsconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_CAPS_INTERNAL
+libcapsconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #
@@ -1052,12 +1052,12 @@ CLEANFILES += obj/build.h
 EXTRA_DIST = $(CTAES_DIST)
 
 
-config/bitcoinsilver-config.h: config/stamp-h1
+config/caps-config.h: config/stamp-h1
 	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-config/stamp-h1: $(top_srcdir)/$(subdir)/config/bitcoinsilver-config.h.in $(top_builddir)/config.status
+config/stamp-h1: $(top_srcdir)/$(subdir)/config/caps-config.h.in $(top_builddir)/config.status
 	$(AM_V_at)$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-$(top_srcdir)/$(subdir)/config/bitcoinsilver-config.h.in:  $(am__configure_deps)
-	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/bitcoinsilver-config.h.in
+$(top_srcdir)/$(subdir)/config/caps-config.h.in:  $(am__configure_deps)
+	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/caps-config.h.in
 
 clean-local:
 	-$(MAKE) -C secp256k1 clean
@@ -1080,19 +1080,19 @@ if HARDEN
 	$(AM_V_at) $(PYTHON) $(top_srcdir)/contrib/devtools/security-check.py $(bin_PROGRAMS)
 endif
 
-libbitcoinsilver_ipc_mpgen_input = \
+libcaps_ipc_mpgen_input = \
   ipc/capnp/echo.capnp \
   ipc/capnp/init.capnp
-EXTRA_DIST += $(libbitcoinsilver_ipc_mpgen_input)
+EXTRA_DIST += $(libcaps_ipc_mpgen_input)
 %.capnp:
 
 # Explicitly list dependencies on generated headers as described in
 # https://www.gnu.org/software/automake/manual/html_node/Built-Sources-Example.html#Recording-Dependencies-manually
-ipc/capnp/libbitcoinsilver_ipc_a-protocol.$(OBJEXT): $(libbitcoinsilver_ipc_mpgen_input:=.h)
+ipc/capnp/libcaps_ipc_a-protocol.$(OBJEXT): $(libcaps_ipc_mpgen_input:=.h)
 
 if BUILD_MULTIPROCESS
-LIBBITCOINSILVER_IPC=libbitcoinsilver_ipc.a
-libbitcoinsilver_ipc_a_SOURCES = \
+LIBCAPS_IPC=libcaps_ipc.a
+libcaps_ipc_a_SOURCES = \
   ipc/capnp/context.h \
   ipc/capnp/init-types.h \
   ipc/capnp/protocol.cpp \
@@ -1103,20 +1103,20 @@ libbitcoinsilver_ipc_a_SOURCES = \
   ipc/process.cpp \
   ipc/process.h \
   ipc/protocol.h
-libbitcoinsilver_ipc_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOINSILVER_INCLUDES)
-libbitcoinsilver_ipc_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(LIBMULTIPROCESS_CFLAGS)
+libcaps_ipc_a_CPPFLAGS = $(AM_CPPFLAGS) $(CAPS_INCLUDES)
+libcaps_ipc_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(LIBMULTIPROCESS_CFLAGS)
 
 include $(MPGEN_PREFIX)/include/mpgen.mk
-libbitcoinsilver_ipc_mpgen_output = \
-  $(libbitcoinsilver_ipc_mpgen_input:=.c++) \
-  $(libbitcoinsilver_ipc_mpgen_input:=.h) \
-  $(libbitcoinsilver_ipc_mpgen_input:=.proxy-client.c++) \
-  $(libbitcoinsilver_ipc_mpgen_input:=.proxy-server.c++) \
-  $(libbitcoinsilver_ipc_mpgen_input:=.proxy-types.c++) \
-  $(libbitcoinsilver_ipc_mpgen_input:=.proxy-types.h) \
-  $(libbitcoinsilver_ipc_mpgen_input:=.proxy.h)
-nodist_libbitcoinsilver_ipc_a_SOURCES = $(libbitcoinsilver_ipc_mpgen_output)
-CLEANFILES += $(libbitcoinsilver_ipc_mpgen_output)
+libcaps_ipc_mpgen_output = \
+  $(libcaps_ipc_mpgen_input:=.c++) \
+  $(libcaps_ipc_mpgen_input:=.h) \
+  $(libcaps_ipc_mpgen_input:=.proxy-client.c++) \
+  $(libcaps_ipc_mpgen_input:=.proxy-server.c++) \
+  $(libcaps_ipc_mpgen_input:=.proxy-types.c++) \
+  $(libcaps_ipc_mpgen_input:=.proxy-types.h) \
+  $(libcaps_ipc_mpgen_input:=.proxy.h)
+nodist_libcaps_ipc_a_SOURCES = $(libcaps_ipc_mpgen_output)
+CLEANFILES += $(libcaps_ipc_mpgen_output)
 endif
 
 %.raw.h: %.raw

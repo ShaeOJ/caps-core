@@ -1,8 +1,8 @@
 // Copyright (c) 2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOINSILVER_KERNEL_MEMPOOL_LIMITS_H
-#define BITCOINSILVER_KERNEL_MEMPOOL_LIMITS_H
+#ifndef CAPS_KERNEL_MEMPOOL_LIMITS_H
+#define CAPS_KERNEL_MEMPOOL_LIMITS_H
 
 #include <policy/policy.h>
 
@@ -36,4 +36,4 @@ struct MemPoolLimits {
 };
 } // namespace kernel
 
-#endif // BITCOINSILVER_KERNEL_MEMPOOL_LIMITS_H
+#endif // CAPS_KERNEL_MEMPOOL_LIMITS_H

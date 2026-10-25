@@ -8,12 +8,12 @@ import sys
 import tempfile
 
 BINARIES = [
-'src/bitcoinsilverd',
-'src/bitcoinsilver-cli',
-'src/bitcoinsilver-tx',
-'src/bitcoinsilver-wallet',
-'src/bitcoinsilver-util',
-'src/qt/bitcoinsilver-qt',
+'src/capsd',
+'src/caps-cli',
+'src/caps-tx',
+'src/caps-wallet',
+'src/caps-util',
+'src/qt/caps-qt',
 ]
 
 # Paths to external utilities.

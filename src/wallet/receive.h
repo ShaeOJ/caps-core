@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_RECEIVE_H
-#define BITCOINSILVER_WALLET_RECEIVE_H
+#ifndef CAPS_WALLET_RECEIVE_H
+#define CAPS_WALLET_RECEIVE_H
 
 #include <consensus/amount.h>
 #include <wallet/transaction.h>
@@ -62,4 +62,4 @@ std::map<CTxDestination, CAmount> GetAddressBalances(const CWallet& wallet);
 std::set<std::set<CTxDestination>> GetAddressGroupings(const CWallet& wallet) EXCLUSIVE_LOCKS_REQUIRED(wallet.cs_wallet);
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_RECEIVE_H
+#endif // CAPS_WALLET_RECEIVE_H

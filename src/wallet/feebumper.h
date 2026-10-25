@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_WALLET_FEEBUMPER_H
-#define BITCOINSILVER_WALLET_FEEBUMPER_H
+#ifndef CAPS_WALLET_FEEBUMPER_H
+#define CAPS_WALLET_FEEBUMPER_H
 
 #include <consensus/consensus.h>
 #include <script/interpreter.h>
@@ -124,4 +124,4 @@ public:
 } // namespace feebumper
 } // namespace wallet
 
-#endif // BITCOINSILVER_WALLET_FEEBUMPER_H
+#endif // CAPS_WALLET_FEEBUMPER_H

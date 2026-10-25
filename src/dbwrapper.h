@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_DBWRAPPER_H
-#define BITCOINSILVER_DBWRAPPER_H
+#ifndef CAPS_DBWRAPPER_H
+#define CAPS_DBWRAPPER_H
 
 #include <attributes.h>
 #include <serialize.h>
@@ -294,4 +294,4 @@ public:
     }
 };
 
-#endif // BITCOINSILVER_DBWRAPPER_H
+#endif // CAPS_DBWRAPPER_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_HTTPRPC_H
-#define BITCOINSILVER_HTTPRPC_H
+#ifndef CAPS_HTTPRPC_H
+#define CAPS_HTTPRPC_H
 
 #include <any>
 
@@ -31,4 +31,4 @@ void InterruptREST();
  */
 void StopREST();
 
-#endif // BITCOINSILVER_HTTPRPC_H
+#endif // CAPS_HTTPRPC_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_RPC_SERVER_H
-#define BITCOINSILVER_RPC_SERVER_H
+#ifndef CAPS_RPC_SERVER_H
+#define CAPS_RPC_SERVER_H
 
 #include <rpc/request.h>
 #include <rpc/util.h>
@@ -186,4 +186,4 @@ std::string JSONRPCExecBatch(const JSONRPCRequest& jreq, const UniValue& vReq);
 // Retrieves any serialization flags requested in command line argument
 int RPCSerializationFlags();
 
-#endif // BITCOINSILVER_RPC_SERVER_H
+#endif // CAPS_RPC_SERVER_H

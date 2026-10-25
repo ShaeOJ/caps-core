@@ -4,8 +4,8 @@
 
 #include <qt/guiutil.h>
 
-#include <qt/bitcoinsilveraddressvalidator.h>
-#include <qt/bitcoinsilverunits.h>
+#include <qt/capsaddressvalidator.h>
+#include <qt/capsunits.h>
 #include <qt/platformstyle.h>
 #include <qt/qvalidatedlineedit.h>
 #include <qt/sendcoinsrecipient.h>
@@ -130,7 +130,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a BitcoinSilver address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a Caps address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -143,8 +143,8 @@ void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no bitcoinsilver: URI
-    if(!uri.isValid() || uri.scheme() != QString("bitcoinsilver"))
+    // return if URI is not valid or is no caps: URI
+    if(!uri.isValid() || uri.scheme() != QString("caps"))
         return false;
 
     SendCoinsRecipient rv;
@@ -180,7 +180,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if (!BitcoinUnits::parse(BitcoinUnit::BTCS, i->second, &rv.amount)) {
+                if (!BitcoinUnits::parse(BitcoinUnit::CAPS, i->second, &rv.amount)) {
                     return false;
                 }
             }
@@ -207,12 +207,12 @@ QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
 
-    QString ret = QString("bitcoinsilver:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+    QString ret = QString("caps:%1").arg(bech_32 ? info.address.toUpper() : info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnit::BTCS, info.amount, false, BitcoinUnits::SeparatorStyle::NEVER));
+        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnit::CAPS, info.amount, false, BitcoinUnits::SeparatorStyle::NEVER));
         paramCount++;
     }
 
@@ -442,7 +442,7 @@ bool openBitcoinConf()
 
     configFile.close();
 
-    /* Open bitcoinsilver.conf with the associated application */
+    /* Open caps.conf with the associated application */
     bool res = QDesktopServices::openUrl(QUrl::fromLocalFile(PathToQString(pathConfig)));
 #ifdef Q_OS_MACOS
     // Workaround for macOS-specific behavior; see #15409.
@@ -506,15 +506,15 @@ fs::path static StartupShortcutPath()
 {
     ChainType chain = gArgs.GetChainType();
     if (chain == ChainType::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitcoinSilver.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Caps.lnk";
     if (chain == ChainType::TESTNET) // Remove this special case when testnet CBaseChainParams::DataDir() is incremented to "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitcoinSilver (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / fs::u8path(strprintf("BitcoinSilver (%s).lnk", ChainTypeToString(chain)));
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Caps (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / fs::u8path(strprintf("Caps (%s).lnk", ChainTypeToString(chain)));
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for BitcoinSilver*.lnk
+    // check for Caps*.lnk
     return fs::exists(StartupShortcutPath());
 }
 
@@ -589,8 +589,8 @@ fs::path static GetAutostartFilePath()
 {
     ChainType chain = gArgs.GetChainType();
     if (chain == ChainType::MAIN)
-        return GetAutostartDir() / "bitcoinsilver.desktop";
-    return GetAutostartDir() / fs::u8path(strprintf("bitcoinsilver-%s.desktop", ChainTypeToString(chain)));
+        return GetAutostartDir() / "caps.desktop";
+    return GetAutostartDir() / fs::u8path(strprintf("caps-%s.desktop", ChainTypeToString(chain)));
 }
 
 bool GetStartOnSystemStartup()
@@ -631,13 +631,13 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         ChainType chain = gArgs.GetChainType();
-        // Write a bitcoinsilver.desktop file to the autostart directory:
+        // Write a caps.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == ChainType::MAIN)
-            optionFile << "Name=BitcoinSilver\n";
+            optionFile << "Name=Caps\n";
         else
-            optionFile << strprintf("Name=BitcoinSilver (%s)\n", ChainTypeToString(chain));
+            optionFile << strprintf("Name=Caps (%s)\n", ChainTypeToString(chain));
         optionFile << "Exec=" << pszExePath << strprintf(" -min -chain=%s\n", ChainTypeToString(chain));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

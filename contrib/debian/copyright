@@ -1,8 +1,8 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: BitcoinSilver
+Upstream-Name: Caps
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
- irc://#bitcoinsilver-core-dev@libera.chat
-Source: https://github.com/MrVistos/bitcoinsilver
+ irc://#caps-core-dev@libera.chat
+Source: https://github.com/MrVistos/caps
 
 Files: *
 Copyright: 2009-2023, Bitcoin Core Developers
@@ -67,9 +67,9 @@ Copyright: Stephen Hutchings, Jonas Schnelli
 License: Expat
 Comment: Modifications of Stephen Hutchings' Typicons
 
-Files: src/qt/res/icons/bitcoinsilver.*
-       share/pixmaps/bitcoinsilver*
-       src/qt/res/src/bitcoinsilver.svg
+Files: src/qt/res/icons/caps.*
+       share/pixmaps/caps*
+       src/qt/res/src/caps.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
 Comment: Site: https://bitcointalk.org/?topic=1756.0

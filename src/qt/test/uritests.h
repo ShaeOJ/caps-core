@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINSILVER_QT_TEST_URITESTS_H
-#define BITCOINSILVER_QT_TEST_URITESTS_H
+#ifndef CAPS_QT_TEST_URITESTS_H
+#define CAPS_QT_TEST_URITESTS_H
 
 #include <QObject>
 #include <QTest>
@@ -16,4 +16,4 @@ private Q_SLOTS:
     void uriTests();
 };
 
-#endif // BITCOINSILVER_QT_TEST_URITESTS_H
+#endif // CAPS_QT_TEST_URITESTS_H
