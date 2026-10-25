@@ -88,10 +88,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # macos-14 runners are Apple Silicon; macos-13 are Intel. Building
-          # natively on each avoids cross-compiling and the Xcode SDK problem.
+          # Build natively on each architecture — that avoids cross-compiling
+          # and the Xcode SDK that cross-compiling from Linux would require.
+          # macos-14 is Apple Silicon. For Intel use macos-15-intel: the old
+          # macos-13 label has been retired, so jobs targeting it sit queued
+          # forever rather than failing (two runs waited ~2h before I cancelled
+          # them).
           - { runner: macos-14, arch: arm64 }
-          - { runner: macos-13, arch: x86_64 }
+          - { runner: macos-15-intel, arch: x86_64 }
     runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
