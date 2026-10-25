@@ -37,10 +37,23 @@ int64_t UpdateTime(CBlockHeader* pblock, const Consensus::Params& consensusParam
         pblock->nTime = nNewTime;
     }
 
-    // Updating time can change work required on testnet:
-    if (consensusParams.fPowAllowMinDifficultyBlocks) {
-        pblock->nBits = GetNextWorkRequired(pindexPrev, pblock, consensusParams);
-    }
+    // Required work can depend on the block's own timestamp — testnet's
+    // min-difficulty rule, and on Caps the emergency difficulty reset that
+    // drops to the PoW limit once no block has been found for 12x the target
+    // spacing. So nBits must be recomputed whenever nTime moves, otherwise
+    // getblocktemplate refreshes the time on a cached template while still
+    // serving the nBits computed when that template was first built. Once the
+    // fresh timestamp crosses the reset threshold the validator expects the PoW
+    // limit, the mined block carries the stale value, and every block is
+    // rejected as bad-diffbits — which is how the chain stalled permanently at
+    // height 649.
+    //
+    // Recomputing unconditionally is safe: nBits is a pure function of
+    // (pindexPrev, nTime, params), so on a chain whose difficulty does not
+    // depend on the timestamp this returns exactly the same value. Note this
+    // only affects block *creation* — the validation rule in
+    // GetNextWorkRequired is untouched, so there is no fork risk.
+    pblock->nBits = GetNextWorkRequired(pindexPrev, pblock, consensusParams);
 
     return nNewTime - nOldTime;
 }
