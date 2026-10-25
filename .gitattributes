@@ -1,1 +1,29 @@
+# Normalise text in the repository; check out native on Windows.
+* text=auto
+
+# Anything executed directly must be LF — a CR in the shebang line makes the
+# kernel look for an interpreter literally named "/bin/sh\r".
+*.sh      text eol=lf
+*.py      text eol=lf
+*.bash    text eol=lf
+configure text eol=lf
+autogen.sh        text eol=lf
+config.guess      text eol=lf
+config.sub        text eol=lf
+install-sh        text eol=lf
+depcomp           text eol=lf
+missing           text eol=lf
+compile           text eol=lf
+ar-lib            text eol=lf
+test-driver       text eol=lf
+ltmain.sh         text eol=lf
+
+# Keep binary assets untouched.
+*.png binary
+*.ico binary
+*.jpg binary
+*.gif binary
+*.icns binary
+*.raw binary
+
 src/clientversion.cpp export-subst
