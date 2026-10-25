@@ -1,0 +1,170 @@
+name: Release binaries
+
+# Builds the Caps node for Windows and macOS.
+#
+# Why CI rather than a local build:
+#  - macOS: cross-compiling from Linux needs the Xcode 12.2 SDK, which Apple
+#    requires an account to download and whose licence does not permit
+#    redistribution. A macOS runner IS a Mac, so there is no SDK to obtain.
+#  - The dev box that builds the Linux release also runs the live caps nodes,
+#    the explorer and the wallet backend on 4 cores / 7 GB. A depends build
+#    there competes with production.
+#
+# Run manually from the Actions tab, or automatically on a v* tag (which also
+# publishes a GitHub Release with SHA256SUMS covering every artifact).
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    name: Windows x86_64 (cross-compiled)
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential autoconf automake libtool pkg-config \
+            bison curl python3 patch g++-mingw-w64-x86-64 nsis zip
+          # Bitcoin Core does not build against the win32 threading model.
+          sudo update-alternatives --set x86_64-w64-mingw32-gcc /usr/bin/x86_64-w64-mingw32-gcc-posix
+          sudo update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix
+
+      # depends is the slow part (~45-90 min cold). Key on the depends tree so
+      # it is only rebuilt when a dependency actually changes.
+      - name: Cache depends
+        uses: actions/cache@v4
+        with:
+          path: depends/x86_64-w64-mingw32
+          key: depends-win64-${{ hashFiles('depends/packages/*.mk', 'depends/hosts/*.mk', 'depends/*.mk') }}
+
+      - name: Build depends
+        run: make -C depends HOST=x86_64-w64-mingw32 NO_QT=1 NO_UPNP=1 NO_NATPMP=1 -j$(nproc)
+
+      - name: Configure and build
+        run: |
+          ./autogen.sh
+          ./configure --prefix=$PWD/depends/x86_64-w64-mingw32 \
+            --without-gui --without-bdb --disable-tests --disable-bench
+          make -j$(nproc)
+
+      - name: Package
+        run: |
+          V=$(grep -oP '(?<=_CLIENT_VERSION_MAJOR, )\d+' configure.ac).$(grep -oP '(?<=_CLIENT_VERSION_MINOR, )\d+' configure.ac).$(grep -oP '(?<=_CLIENT_VERSION_BUILD, )\d+' configure.ac)
+          D=caps-$V-win64
+          mkdir -p "$D"
+          for b in capsd caps-cli caps-tx caps-wallet; do
+            cp "src/$b.exe" "$D/" && x86_64-w64-mingw32-strip "$D/$b.exe"
+          done
+          cp README.md "$D/" 2>/dev/null || true
+          cat > "$D/caps.conf.example" <<'EOF'
+          server=1
+          daemon=1
+          txindex=1
+          rpcuser=choose_a_user
+          rpcpassword=choose_a_strong_password
+          addnode=caps.undergroundroots.ca
+          EOF
+          zip -r "$D.zip" "$D"
+          sha256sum "$D.zip" | tee "$D.zip.sha256"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: caps-win64
+          path: |
+            caps-*-win64.zip
+            caps-*-win64.zip.sha256
+
+  macos:
+    name: macOS ${{ matrix.arch }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # macos-14 runners are Apple Silicon; macos-13 are Intel. Building
+          # natively on each avoids cross-compiling and the Xcode SDK problem.
+          - { runner: macos-14, arch: arm64 }
+          - { runner: macos-13, arch: x86_64 }
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          brew install automake libtool pkg-config boost libevent zeromq sqlite berkeley-db@4 || true
+
+      - name: Configure and build
+        run: |
+          ./autogen.sh
+          ./configure --without-gui --without-bdb --disable-tests --disable-bench
+          make -j$(sysctl -n hw.ncpu)
+
+      - name: Smoke test
+        run: |
+          ./src/capsd -version
+          ./src/caps-cli -version
+
+      - name: Package
+        run: |
+          V=$(grep -oE '_CLIENT_VERSION_MAJOR, [0-9]+' configure.ac | grep -oE '[0-9]+').$(grep -oE '_CLIENT_VERSION_MINOR, [0-9]+' configure.ac | grep -oE '[0-9]+').$(grep -oE '_CLIENT_VERSION_BUILD, [0-9]+' configure.ac | grep -oE '[0-9]+')
+          D=caps-$V-macos-${{ matrix.arch }}
+          mkdir -p "$D"
+          for b in capsd caps-cli caps-tx caps-wallet; do
+            cp "src/$b" "$D/" && strip "$D/$b"
+          done
+          cp README.md "$D/" 2>/dev/null || true
+          cat > "$D/caps.conf.example" <<'EOF'
+          server=1
+          daemon=1
+          txindex=1
+          rpcuser=choose_a_user
+          rpcpassword=choose_a_strong_password
+          addnode=caps.undergroundroots.ca
+          EOF
+          # Unsigned and un-notarised: Gatekeeper will block these until the
+          # user clears the quarantine attribute. Documented, not hidden.
+          cat > "$D/MACOS_FIRST_RUN.txt" <<'EOF'
+          These binaries are not signed or notarised by Apple, so macOS will
+          refuse to run them until you clear the quarantine flag:
+
+              xattr -d com.apple.quarantine capsd caps-cli caps-tx caps-wallet
+
+          Verify the download against the published SHA256 before doing this.
+          EOF
+          tar czf "$D.tar.gz" "$D"
+          shasum -a 256 "$D.tar.gz" | tee "$D.tar.gz.sha256"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: caps-macos-${{ matrix.arch }}
+          path: |
+            caps-*-macos-*.tar.gz
+            caps-*-macos-*.tar.gz.sha256
+
+  release:
+    name: Publish release
+    needs: [windows, macos]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { path: artifacts, merge-multiple: true }
+      - name: Collect checksums
+        run: |
+          cd artifacts
+          rm -f ./*.sha256
+          sha256sum ./*.zip ./*.tar.gz > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/*.zip
+            artifacts/*.tar.gz
+            artifacts/SHA256SUMS.txt
