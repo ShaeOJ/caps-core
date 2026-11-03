@@ -75,7 +75,7 @@ public:
         m_chain_type = ChainType::MAIN;
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
-        consensus.nSubsidyHalvingInterval = 210000;
+        consensus.nSubsidyHalvingInterval = 420000;
         // BIP exceptions will be set after genesis block is mined
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256{};
@@ -135,13 +135,13 @@ public:
         vSeeds.emplace_back("174.4.45.33");  // Public seed node
         // vSeeds.emplace_back("seed.caps.example.com");  // Add DNS seed when available
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0x1C); // Addresses start with 'C'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,0x1D);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,0x9C);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0x19); // 25 -> addresses start with 'B' (BTLCAP)
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,0x32); // 50 -> P2SH starts with 'M'
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,0x99); // 0x19 + 0x80 (WIF convention)
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "caps";
+        bech32_hrp = "btlcap"; // native segwit: btlcap1q...
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_main), std::end(chainparams_seed_main));
 
@@ -233,7 +233,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "tcaps";
+        bech32_hrp = "tbtlcap";
 
   //      vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_test), std::end(chainparams_seed_test));
 
@@ -370,7 +370,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "tcaps";
+        bech32_hrp = "tbtlcap";
 
         fDefaultConsistencyChecks = false;
         m_is_mockable_chain = false;
@@ -499,7 +499,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "capsrt";
+        bech32_hrp = "btlcaprt";
     }
 };
 
