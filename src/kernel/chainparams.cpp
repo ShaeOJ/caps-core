@@ -132,7 +132,8 @@ public:
         // release ASAP to avoid it where possible.
 
         // Seed nodes - add IPs or DNS names of reliable nodes
-        vSeeds.emplace_back("174.4.45.33");  // Public seed node
+        vSeeds.emplace_back("caps.undergroundroots.ca");  // Public DNS seed node
+        vSeeds.emplace_back("174.4.45.33");  // Fallback seed node
         // vSeeds.emplace_back("seed.caps.example.com");  // Add DNS seed when available
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0x19); // 25 -> addresses start with 'B' (BTLCAP)
