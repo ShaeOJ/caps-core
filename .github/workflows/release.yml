@@ -84,8 +84,14 @@ jobs:
             caps-*-win64.zip.sha256
 
   linux:
-    name: Linux x86_64
-    runs-on: ubuntu-22.04
+    name: Linux ${{ matrix.arch }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { runner: ubuntu-22.04, arch: x86_64 }
+          - { runner: ubuntu-24.04-arm, arch: aarch64 }
+    runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
 
@@ -108,7 +114,7 @@ jobs:
       - name: Package
         run: |
           V=$(grep -oP '(?<=_CLIENT_VERSION_MAJOR, )\d+' configure.ac).$(grep -oP '(?<=_CLIENT_VERSION_MINOR, )\d+' configure.ac).$(grep -oP '(?<=_CLIENT_VERSION_BUILD, )\d+' configure.ac)
-          D=caps-$V-linux-x86_64
+          D=caps-$V-linux-${{ matrix.arch }}
           mkdir -p "$D"
           for b in capsd caps-cli caps-tx caps-wallet; do
             cp "src/$b" "$D/" && strip "$D/$b"
@@ -128,10 +134,10 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: caps-linux-x86_64
+          name: caps-linux-${{ matrix.arch }}
           path: |
-            caps-*-linux-x86_64.tar.gz
-            caps-*-linux-x86_64.tar.gz.sha256
+            caps-*-linux-${{ matrix.arch }}.tar.gz
+            caps-*-linux-${{ matrix.arch }}.tar.gz.sha256
 
   macos:
     name: macOS ${{ matrix.arch }}
